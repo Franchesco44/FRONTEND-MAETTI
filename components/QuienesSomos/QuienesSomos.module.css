@@ -1,0 +1,19 @@
+.containerQuienesSomos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+.containerQuienesSomos p{
+    width: 50%;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.containerQuienesSomos h2{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 50px;
+    font-weight: 500;
+}
