@@ -1,0 +1,38 @@
+.headerContainer{
+    overflow: hidden;
+    height: 85vh;
+    display: flex;
+}
+
+.containerUno{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    width: 50%;
+    background-color: #0A2239;
+    justify-content: center;
+}
+
+.containerUno a{
+    color: #F6F7EB;
+    padding: 10px 15px;
+    border: 2px solid #F6F7EB;
+    width: max-content;
+}
+
+.containerUno img{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.containerUno h2{
+    color: #F6F7EB;
+    font-size: 50px;
+}
+
+.containerDos{
+    width: 50%;
+    background-image: url("/Home.png");
+    background-size: cover;
+    background-position: center;
+}
