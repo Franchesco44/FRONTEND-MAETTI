@@ -14,9 +14,10 @@
 
 .cards{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-around;
     width: 100%;
+    margin-top: 30px;
 }
 
 .card{
@@ -47,14 +48,16 @@
 }
 
 .icono{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #0C0805;
-    width: 100px;
-    height: 100px;
     border-radius: 50%;
     position: absolute;
     top: -40px;
     left: 50%;
     transform: translateX(-50%);
+    padding: 20px;
 }
 
 @media screen and (max-width: 850px){

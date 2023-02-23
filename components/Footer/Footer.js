@@ -29,6 +29,15 @@ const Footer = () => {
                         />
                         <li>+5492944238597</li>
                     </div>
+                    <div className={styles.item}>
+                        <Image
+                        src={"/phone.png"}
+                        width={30}
+                        height={30}
+                        alt="Logo telefono"
+                        />
+                        <li>+541122920919</li>
+                    </div>
                     <a target={"_blank"} href="https://www.instagram.com/maettioficial/">
                         <Image
                         src={"/instagram.png"}
