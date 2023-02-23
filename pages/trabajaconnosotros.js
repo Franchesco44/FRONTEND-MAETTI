@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { useSelector } from 'react-redux'
+import HagamosEsto from '../components/HagamosEsto/HagamosEsto';
 import Header from "../components/Header/Header"
 
 const trabajaconnosotros = () => {
@@ -25,7 +26,7 @@ const trabajaconnosotros = () => {
                 linkButton={"/"}
             />
             }
-            
+            <HagamosEsto/>
         </> 
     )
 }

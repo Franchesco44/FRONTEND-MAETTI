@@ -1,0 +1,30 @@
+.hagamosEstoContainer{
+    display: flex;
+    padding: 80px;
+    align-items: center;
+    background-color: #23282e88;
+}
+
+.image{
+    width: 55vw;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 40px;
+}
+
+.hagamosEstoContainer h3{
+    color: #F6F7EB;
+    font-size: 50px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.hagamosEstoContainer li{
+    margin-top: 10px;
+}
+
+.hagamosEstoContainer strong{
+    letter-spacing: 3px;
+}
