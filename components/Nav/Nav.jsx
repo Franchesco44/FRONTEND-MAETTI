@@ -43,12 +43,14 @@ const Nav = () => {
                 <Link href={"/trabajaconnosotros"}>{isTranslate ? "Work with us" : "Trabaja con nosotros"}</Link>
                 <Link href={"/contacto"}>{isTranslate ? "Contact" : "Contacto"}</Link>
                 <Link href={"/propiedades"}>{isTranslate ? "Properties" : "Propiedades"}</Link>
+                <Link href={"/nosotros"}>{isTranslate ? "About us" : "Nosotros"}</Link>
             </div>
             <ul>
                 <Link href={"/"}>{isTranslate ? "Home" : "Inicio"}</Link>
                 <Link href={"/trabajaconnosotros"}>{isTranslate ? "Work with us" : "Trabaja con nosotros"}</Link>
                 <Link href={"/contacto"}>{isTranslate ? "Contact" : "Contacto"}</Link>
                 <Link href={"/propiedades"}>{isTranslate ? "Properties" : "Propiedades"}</Link>
+                <Link href={"/nosotros"}>{isTranslate ? "About us" : "Nosotros"}</Link>
                 <Dropdown>
                     <Dropdown.Button color={"default"} light>
                     Idioma

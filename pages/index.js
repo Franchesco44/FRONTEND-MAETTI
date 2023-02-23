@@ -18,13 +18,13 @@ export default function Home() {
       {isTranslate ?  
       <Header 
       text={"The optimization of your property's your property starts here."}
-      img={"/letrasmaetti.png"}
+      img={"/Home.png"}
       button={true}
       linkButton={"/trabajaconnosotros"}
       /> : 
       <Header
       text={"La optimización del alquiler de tu propiedad empieza acá."}
-      img={"/letrasmaetti.png"}
+      img={"/Home.png"}
       button={true}
       linkButton={"/trabajaconnosotros"}
       />}

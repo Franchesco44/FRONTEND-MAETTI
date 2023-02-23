@@ -1,0 +1,25 @@
+.acercaDeContainer{
+    padding: 30px;
+}
+
+.acercaDeContainer ul{
+    list-style: circle;
+}
+
+.acercaDeContainer ul li{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.acercaDeContainer h3{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.acercaDeContainer h2{
+    margin-bottom: 10px;
+    font-size: 25px;
+}

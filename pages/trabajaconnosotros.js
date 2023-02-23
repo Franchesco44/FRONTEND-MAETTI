@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { useSelector } from 'react-redux'
+import Header from "../components/Header/Header"
 
 const trabajaconnosotros = () => {
     const isTranslate = useSelector((state) => state.translate.value)
@@ -9,7 +10,22 @@ const trabajaconnosotros = () => {
             <Head>
                     <title>{isTranslate ? "Work with us" : "Trabaja con nosotros"}</title>
             </Head>
-            <h3>{isTranslate ? "Work with us" : "Trabaja con nosotros"}</h3>
+            {isTranslate ? 
+            <Header
+                text={"Do you have a property? we want to help you rent it."}
+                img={"/trabajaConNosotros.png"}
+                button={false}
+                linkButton={"/"}
+            />
+            : 
+            <Header
+                text={"Tenes una propiedad? queremos ayudarte a rentarla."}
+                img={"/trabajaConNosotros.png"}
+                button={false}
+                linkButton={"/"}
+            />
+            }
+            
         </> 
     )
 }

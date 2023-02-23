@@ -11,14 +11,16 @@ const Header = ({text, img, button, linkButton}) => {
             <div className={styles.containerUno}>
                 <h2>{text}</h2>
                 <Image
-                src={img}
+                src={"/letrasmaetti.png"}
                 width={150}
                 height={25}
                 alt="Logo letras maettti"
                 />
                 {button ? <Link href={linkButton}> {isTranslate ? "+ INFORMATION" : "+ INFORMACIÓN"} </Link> : ""}
             </div>
-            <div className={styles.containerDos}>
+            <div 
+            style={{backgroundImage: `url(${img})`}}
+            className={styles.containerDos}>
             </div>
         </div>
     )
