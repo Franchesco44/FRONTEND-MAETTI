@@ -1,0 +1,58 @@
+import styles from "./FormularioContacto.module.css"
+import { useSelector } from 'react-redux'
+import { useState } from "react"
+import axios from "axios"
+
+const FormularioContacto = () => {
+    const isTranslate = useSelector((state) => state.translate.value)
+    const params = new URLSearchParams();
+
+    const [dataForm, setDataForm] = useState({
+        nombre: "",
+        email: "",
+        telefono: "",
+        consulta: ""
+    })
+
+    const sendData = async (data) => {
+        params.append('nombre', data.nombre)
+        params.append('email', data.email)
+        params.append('telefono', data.telefono)
+        params.append('consulta', data.consulta)
+        try {
+            const response = await axios({
+                url: 'https://apicliente.onrender.com/submitForm',
+                method: 'POST',
+                data: params
+            })
+            console.log(response)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    
+    const handleSubmit = (e) => {
+        sendData(dataForm)
+        e.preventDefault()
+    }
+
+    const handleChange = (e) => {
+        const {name, value} = e.target
+        setDataForm({...dataForm, [name]: value })
+    }
+
+    return(
+        <div className={styles.containerFormulario}>
+            <h3>{isTranslate? "Let us know your question.":"Haznos saber tu consulta."}</h3>
+            <form onSubmit={handleSubmit}>
+                <input onChange={(e) => handleChange(e)} required type="text" name="nombre" id="nombre" placeholder={isTranslate? "First and last name" : "Nombre y apellido"}/>
+                <input onChange={(e) => handleChange(e)} required type="email" name="email" id="email" placeholder="Email"/>
+                <input onChange={(e) => handleChange(e)} required type="text" name="telefono" id="telefono" placeholder={isTranslate? "Phone number" : "Numero de telefono"}/>
+                <textarea onChange={(e) => handleChange(e)} required name="consulta" id="consulta" cols="30" rows="10" placeholder={isTranslate? "Your question" : "Tu consulta"}></textarea>
+                <input type="submit" value={isTranslate? "Send inquiry":"Enviar consulta"}/>
+            </form>
+        </div>
+    )
+}
+
+export default FormularioContacto

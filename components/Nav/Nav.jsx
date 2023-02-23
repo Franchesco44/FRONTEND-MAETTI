@@ -43,14 +43,12 @@ const Nav = () => {
                 <Link href={"/trabajaconnosotros"}>{isTranslate ? "Work with us" : "Trabaja con nosotros"}</Link>
                 <Link href={"/contacto"}>{isTranslate ? "Contact" : "Contacto"}</Link>
                 <Link href={"/propiedades"}>{isTranslate ? "Properties" : "Propiedades"}</Link>
-                <Link href={"/terminosycondiciones"}>{isTranslate ? "Terms and conditions" : "Terminos y condiciones"}</Link>
             </div>
             <ul>
                 <Link href={"/"}>{isTranslate ? "Home" : "Inicio"}</Link>
                 <Link href={"/trabajaconnosotros"}>{isTranslate ? "Work with us" : "Trabaja con nosotros"}</Link>
                 <Link href={"/contacto"}>{isTranslate ? "Contact" : "Contacto"}</Link>
                 <Link href={"/propiedades"}>{isTranslate ? "Properties" : "Propiedades"}</Link>
-                <Link href={"/terminosycondiciones"}>{isTranslate ? "Terms and conditions" : "Terminos y condiciones"}</Link>
                 <Dropdown>
                     <Dropdown.Button color={"default"} light>
                     Idioma
@@ -62,10 +60,10 @@ const Nav = () => {
                     onAction={(key)=>{key === "español" ? dispatch(español()) : dispatch(english())}}
                     >
                         <Dropdown.Item 
-                        key={"español"}
+                        key="español"
                         >Español</Dropdown.Item>
                         <Dropdown.Item
-                        key={"ingles"}
+                        key="ingles"
                         >Ingles</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>

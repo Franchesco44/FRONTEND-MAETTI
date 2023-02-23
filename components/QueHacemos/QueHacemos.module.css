@@ -1,0 +1,68 @@
+.containerQueHacemos{
+    background-color:#0d101388;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+.containerQueHacemos h3{
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.card{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #F6F7EB;
+    padding: 40px 15px;
+    width: 30%;
+}
+
+.card strong{
+    font-size: 25px;
+    padding-top: 50px;
+}
+
+.card ul{
+    background-color: #F6F7EB;
+    list-style: circle;
+    margin-top: 20px;
+    padding: 0px 30px;
+}
+
+.card ul li{
+    background-color: #F6F7EB;
+    margin-bottom: 20px;
+}
+
+.icono{
+    background-color: #0C0805;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media screen and (max-width: 850px){
+    .cards{
+        flex-direction: column;
+    }
+    .card{
+        width: 90%;
+        margin-bottom: 70px;
+    }
+}

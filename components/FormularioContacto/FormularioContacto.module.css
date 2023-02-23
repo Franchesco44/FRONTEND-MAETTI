@@ -1,0 +1,75 @@
+.containerFormulario form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 40%;
+}
+
+.containerFormulario{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerFormulario h3{
+    font-size: 50px;
+    text-align: center;
+}
+
+.containerFormulario input[type="text"]{
+    border: 1px solid #0A2239;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.containerFormulario input[type="email"]{
+    border: 1px solid #0A2239;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.containerFormulario input[type="email"]:focus{
+    border: 2px solid #0A2239;
+    outline: none;
+}
+
+.containerFormulario input[type="text"]:focus{
+    outline: none;
+    border: 2px solid #0A2239;
+}
+
+.containerFormulario textarea{
+    resize: none;
+    border: 1px solid #0A2239;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.containerFormulario textarea:focus{
+    outline: none;
+    border: 2px solid #0A2239;
+}
+
+.containerFormulario input[type="submit"]{
+    margin-top: 20px;
+    color: #0A2239;
+    border: 1px solid #0A2239;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 850px){
+    .containerFormulario form{
+        width: 70%;
+    }
+}

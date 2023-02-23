@@ -3,6 +3,7 @@ import '../styles/globals.css'
 import { Provider } from 'react-redux'
 import { store } from '../redux/store'
 import Head from 'next/head'
+import Footer from '../components/Footer/Footer'
 
 function MyApp({ Component, pageProps }) {
   return (  
@@ -16,6 +17,7 @@ function MyApp({ Component, pageProps }) {
             <div className='containerMain'>
               <Component {...pageProps} />
             </div>
+            <Footer/>
         </Provider>
         </>
   )
