@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { useSelector } from 'react-redux'
+import FormularioPropiedades from '../components/FormularioPropiedades/FormularioPropiedades';
 import HagamosEsto from '../components/HagamosEsto/HagamosEsto';
 import Header from "../components/Header/Header"
 
@@ -26,6 +27,7 @@ const trabajaconnosotros = () => {
                 linkButton={"/"}
             />
             }
+            <FormularioPropiedades/>
             <HagamosEsto/>
         </> 
     )

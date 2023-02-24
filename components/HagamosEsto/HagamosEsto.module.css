@@ -28,3 +28,9 @@
 .hagamosEstoContainer strong{
     letter-spacing: 3px;
 }
+
+@media screen and (max-width: 550px)  {
+    .hagamosEstoContainer .image{
+        display: none;
+    }
+}
