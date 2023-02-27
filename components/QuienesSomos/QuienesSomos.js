@@ -14,7 +14,7 @@ const QuienesSomos = () => {
             />
             <h2>{isTranslate ? "Who we are" : "Quiénes somos"} </h2>
             <p>
-            {isTranslate ? "At" : "En"} <strong>MAETTI</strong> {isTranslate ? "we manage properties for rent through various tourist accommodation platforms. Our mission is to ensure that your properties receive new guests throughout the year at the best prices on the market." : "gestionamos propiedades en alquiler mediante diversas plataformas de alojamientos turísticos. Nuestra misión es conseguir que tus viviendas reciban nuevos huéspedes durante todo el año a los mejores precios del mercado"}<strong>{isTranslate ? "(in dollars)": "(en dólares)"}</strong>, {isTranslate ? "with an average booking time of less than 48 hours after listing the property" : "con un promedio de reservación en menos de 48 horas luego de publicar la propiedad."}
+            {isTranslate ? "At" : "En"} <strong>MAETTI</strong> {isTranslate ? "we manage rental properties and tourist experiences through various online platforms. Our mission is to ensure that your properties and tourist experiences receive new clients throughout the year at the best prices in the marke" : "gestionamos propiedades en alquiler y experiencias turísticas mediante diversas plataformas online. Nuestra misión es conseguir que tus viviendas y experiencias turísticas reciban nuevos clientes durante todo el año a los mejores precios del mercado"} <strong> {isTranslate ? "(in dollars)." : "(en dólares)."} </strong>
             </p>
         </div>
     )

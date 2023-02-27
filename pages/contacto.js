@@ -12,14 +12,14 @@ const contacto = () => {
             </Head>
             {isTranslate ? 
             <Header
-                text={"If you have a question, we want to help you, please fill out the form below."}
+                text={"If you have a question, we want to help you, please fill in the following form."}
                 img={"/contacto.png"}
                 button={false}
                 linkButton={"/"}
             />
             : 
             <Header
-                text={"Tenes una consulta? queremos ayudarte, response el siguiente formulario."}
+                text={"Tenes una consulta? queremos ayudarte, responde el siguiente formulario."}
                 img={"/contacto.png"}
                 button={false}
                 linkButton={"/"}

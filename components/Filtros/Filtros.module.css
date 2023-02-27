@@ -1,0 +1,36 @@
+.filtrosContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 20%;
+}
+
+.filtrosContainer h3{
+    margin-bottom: 20px;
+}
+
+.filtrosContainer strong{
+    font-weight: 500;
+}
+
+.listaFiltros{
+    display: flex;
+    flex-direction: column;
+}
+
+.filtro{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.filtro input{
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 800px){
+    .filtrosContainer{
+        width: 40%;
+    }
+}

@@ -7,13 +7,15 @@ const WhatsApp = () => {
             zIndex: 150,
             bottom: 0,
             right: 0,
-            cursor: "pointer"
+            cursor: "pointer",
+            marginRight: 10,
+            marginBottom: 10
         }}>
             <a target={"_blank"} href="https://wa.me/5492944238597?text=Hola,%20Me%20gustaria%20mas%20informacion">
                 <Image
-                src={"/wp.png"}
-                width={80}
-                height={80}
+                src={"/wp2.png"}
+                width={65}
+                height={65}
                 alt="WhatsApp"
                 />
             </a>

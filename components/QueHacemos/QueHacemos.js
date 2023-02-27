@@ -20,8 +20,8 @@ const QueHacemos = () => {
                     </div>
                     <strong>{isTranslate? "MANAGEMENT AND ADMINISTRATION" : "GESTIÓN Y ADMINISTRACIÓN"}</strong>
                     <ul>
-                        <li>{isTranslate? "We manage your property (set up collections, make reservations, customer service, etc)." :"Gestionamos tu propiedad (configurar los cobros, concretar reservaciones, atención al cliente, etc)."}</li>
-                        <li>{isTranslate? "We create an attractive publication for the property." :"Creamos una publicación atractiva para la propiedad."}</li>
+                        <li>{isTranslate? "We manage your properties and/or experiences." :"Gestionamos tus propiedades y/o experiencias."}</li>
+                        <li>{isTranslate? "We create attractive publications to attract tourists' attention." :"Creamos publicaciones atractivas para llamar la atención de los turistas."}</li>
                     </ul>
                 </div>
                 <div className={styles.card}>
@@ -33,10 +33,11 @@ const QueHacemos = () => {
                         alt="dinero"
                         />
                     </div>
-                    <strong>{isTranslate? "MONEY MONEY MONEY" : "DINERO DINERO DINERO"}</strong>
+                    <strong>{isTranslate? "CHARGES" : "COBROS"}</strong>
                     <ul>
-                        <li>{isTranslate? "We establish your property on all platforms." : "Establecemos tu propiedad en todas las plataformas."}</li>
-                        <li>{isTranslate ? "We apply a range of prices to suit the different times of the year." : "Aplicamos un rango de precios que se ajusten a los distintos momentos del año."}</li>
+                        <li>{isTranslate? "The money generated from reservations of accommodations and tourist experiences will be automatically sent to your selected payment method." : "El dinero generado gracias a las reservaciones de alojamientos y experiencias turísticas sera enviado automáticamente a tu método de cobro seleccionado."}</li>
+                        {/* <li>{isTranslate? "We establish your property on all platforms." : "Establecemos tu propiedad en todas las plataformas."}</li>
+                        <li>{isTranslate ? "We apply a range of prices to suit the different times of the year." : "Aplicamos un rango de precios que se ajusten a los distintos momentos del año."}</li> */}
                     </ul>
                 </div>
                 <div className={styles.card}>

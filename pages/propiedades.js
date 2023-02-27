@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import { useSelector } from 'react-redux'
+import Filtros from '../components/Filtros/Filtros';
+import PropiedadesLista from "../components/PropiedadesLista/PropiedadesLista"
 
 const propiedades = () => {
     const isTranslate = useSelector((state) => state.translate.value)
@@ -9,7 +11,15 @@ const propiedades = () => {
             <Head>
                 <title>{isTranslate ? "Properties" : "Propiedades"}</title>
             </Head>
-            <h3>{isTranslate ? "Properties" : "Propiedades"}</h3>
+            <div
+            style={{
+                display: "flex",
+                width: "100%"
+            }}
+            >
+                <Filtros/>
+                <PropiedadesLista/>
+            </div>
         </>
     )
 }

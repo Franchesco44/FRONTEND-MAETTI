@@ -64,3 +64,18 @@
     width: max-content;
     margin-bottom: 20px;
 }
+
+
+@media screen and (max-width: 450px){
+    .formularioContainer h3{
+        font-size: 30px;
+    }
+    .formularios{
+        flex-direction: column;
+        align-items: center;
+    }
+    .formulario{
+        width: 70%;
+        margin-bottom: 20px;
+    }
+}
