@@ -35,3 +35,10 @@
         width: 40%;
     }
 }
+
+
+@media screen and (max-width: 360px)  {
+    .filtrosContainer{
+        width: 60%;
+    }
+}
