@@ -4,6 +4,7 @@
 
 .listaPropiedades{
     display: grid;
+    row-gap: 40px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     align-items: center;
     justify-items: center;
@@ -11,11 +12,13 @@
 
 .PropiedadesListaContainer h3{
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .propiedad{
     display: flex;
     flex-direction: column;
+    width: 60%;
 }
 
 .propiedad h4{
@@ -37,7 +40,7 @@
 }
 
 .propiedad .imagen{
-    width: 100%;
+    width: 250px;
     height: 200px;
     background-size: cover;
     background-position: center;

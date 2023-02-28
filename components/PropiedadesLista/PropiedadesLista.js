@@ -12,7 +12,7 @@ const PropiedadesLista = () => {
 
     const getPropiedades = async () => {
         try {
-            const propiedades = await axios.get('https://apicliente.onrender.com/propiedadesSubidas')
+            const propiedades = await axios.get('https://api-maetti.up.railway.app/propiedadesSubidas')
             const data = await propiedades.data
             dispatch(setPropiedades(data))
         } catch (error) {
@@ -33,10 +33,10 @@ const PropiedadesLista = () => {
                         <div className={styles.propiedad} key={index}>
                             <div
                             className={styles.imagen}
-                            style={{backgroundImage: `url(https://apicliente.onrender.com/${p.imagen})`}}
+                            style={{backgroundImage: `url(https://api-maetti.up.railway.app/${p.imagen})`}}
                             ></div>
                             <h4> {p.titulo} </h4>
-                            <strong> ${p.precio} ARS por {p.alquiler} </strong>
+                            <strong> ${p.precio} USD por {p.alquiler} </strong>
                             <a target={"_blank"} href={p.url}>{isTranslate ? "VIEW ON AIRBNB" : "VER EN AIRBNB"}</a>
                         </div>  
                     )

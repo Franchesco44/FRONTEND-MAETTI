@@ -69,11 +69,10 @@ const FormularioPropiedades = () => {
         params.append('infopagos', data.infopagos)
         try {
             const response = await axios({
-                url: 'https://apicliente.onrender.com/submitProperty',
+                url: 'https://api-maetti.up.railway.app/submitProperty',
                 method: 'POST',
                 data: params
             })
-            console.log(response)
             setIsLoading(false)
         } catch (error) {
             console.log(error)

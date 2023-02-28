@@ -23,7 +23,7 @@ const FormularioContacto = () => {
         params.append('consulta', data.consulta)
         try {
             const response = await axios({
-                url: 'https://apicliente.onrender.com/submitForm',
+                url: 'https://api-maetti.up.railway.app/submitForm',
                 method: 'POST',
                 data: params
             })
