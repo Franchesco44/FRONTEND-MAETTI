@@ -4,15 +4,18 @@ import { useSelector, useDispatch } from 'react-redux'
 import {español, english} from "../../redux/translateSlice/translateSlice"
 import { Dropdown } from "@nextui-org/react";
 import Image from 'next/image'
-import { useState } from "react";
+import {  useState } from "react";
+import { experiencias } from "../../utils/experiencias";
+import { useRouter } from "next/router";
 
 const Nav = () => {
     const dispatch = useDispatch()
     const isTranslate = useSelector((state) => state.translate.value)
     const [isOpen, setIsOpen] = useState(false)
+    const router = useRouter()
 
     return(
-        <nav className={styles.nav}>
+        <nav className={styles.nav} onClick={()=> console.log(experiencias)}>
             <Link href={"/"}>
                 <Image
                 src={"/logoletras.png"}
@@ -44,6 +47,27 @@ const Nav = () => {
                 <Link href={"/contacto"}>{isTranslate ? "Contact" : "Contacto"}</Link>
                 <Link href={"/propiedades"}>{isTranslate ? "Properties" : "Propiedades"}</Link>
                 <Link href={"/nosotros"}>{isTranslate ? "About us" : "Nosotros"}</Link>
+                <Dropdown>
+                    <Dropdown.Button color={"default"} light>
+                    {isTranslate ? "Experiences" : "Experiencias"}
+                    </Dropdown.Button>
+                    <Dropdown.Menu
+                    color={"default"}
+                    variant="light"
+                    aria-label="Actions"
+                    onAction={(key)=> router.push(`/experiencia/${key}`)}
+                    >
+                        {experiencias.map((e)=>{
+                            return(
+                            <Dropdown.Item 
+                            key={e.es.titulo}
+                            >
+                                {isTranslate ? e.en.titulo : e.es.titulo}
+                            </Dropdown.Item>
+                            )
+                        })}
+                    </Dropdown.Menu>
+                </Dropdown>
             </div>
             <ul>
                 <Link href={"/"}>{isTranslate ? "Home" : "Inicio"}</Link>
@@ -51,6 +75,29 @@ const Nav = () => {
                 <Link href={"/contacto"}>{isTranslate ? "Contact" : "Contacto"}</Link>
                 <Link href={"/propiedades"}>{isTranslate ? "Properties" : "Propiedades"}</Link>
                 <Link href={"/nosotros"}>{isTranslate ? "About us" : "Nosotros"}</Link>
+                <div className={styles.experienciasLink} >   
+                    <Dropdown>
+                        <Dropdown.Button color={"default"} light>
+                        {isTranslate ? "Experiences" : "Experiencias"}
+                        </Dropdown.Button>
+                        <Dropdown.Menu
+                        color={"default"}
+                        variant="light"
+                        aria-label="Actions"
+                        onAction={(key)=> router.push(`/experiencia/${key}`)}
+                        >
+                            {experiencias.map((e)=>{
+                                return(
+                                <Dropdown.Item 
+                                key={e.es.titulo}
+                                >
+                                    {isTranslate ? e.en.titulo : e.es.titulo}
+                                </Dropdown.Item>
+                                )
+                            })}
+                        </Dropdown.Menu>
+                    </Dropdown>
+                </div>
                 <Dropdown>
                     <Dropdown.Button color={"default"} light>
                     Idioma
