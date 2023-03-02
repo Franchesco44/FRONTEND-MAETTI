@@ -47,8 +47,12 @@
     border-radius: 10px;
 }
 
-@media screen and (max-width: 360px)  {
+@media screen and (max-width: 480px)  {
     .listaPropiedades{
         justify-items: flex-start;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .PropiedadesListaContainer{
+        padding: 5px;
     }
 }
