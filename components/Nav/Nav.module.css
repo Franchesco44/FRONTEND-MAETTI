@@ -45,12 +45,14 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
+    border-radius: 10px;
 }
 
 .navMobile a{
     color: black;
     font-weight: 500;
     margin-top: 20px;
+
 }
 
 

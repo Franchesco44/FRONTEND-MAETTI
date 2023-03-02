@@ -4,6 +4,7 @@
     padding: 20px;
     width: 20%;
     align-items: flex-start;
+    z-index: 80;
 }
 
 .filtrosContainer h3{
