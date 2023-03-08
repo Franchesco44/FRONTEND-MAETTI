@@ -27,6 +27,7 @@
     font-weight: 500;
     margin-top: 10px;
     margin-bottom: 10px;
+    color: black;
 }
 
 .propiedad a{
@@ -38,6 +39,10 @@
     border: none;
     width: max-content;
     margin-top: 10px;
+}
+
+.propiedad strong{
+    color: black;
 }
 
 .propiedad .imagen{

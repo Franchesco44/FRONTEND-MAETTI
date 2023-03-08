@@ -70,7 +70,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 40px 130px;
     background-color: #0E0D0D;
 }
 
@@ -83,7 +83,8 @@
     color: #F6F7EB;
     margin-bottom: 25px;
     font-size: 15px;
-    word-spacing: 5px;
+    word-spacing: 6px;
+    letter-spacing: 2px;
     line-height: 25px;
 }
 

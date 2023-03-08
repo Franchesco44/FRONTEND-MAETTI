@@ -38,13 +38,17 @@ const Footer = () => {
                         />
                         <li>+541122920919</li>
                     </div>
-                    <a target={"_blank"} href="https://www.instagram.com/maettioficial/">
+                    <a 
+                    style={{display: "flex", alignItems: "center"}}
+                    target={"_blank"} href="https://www.instagram.com/maettioficial/">
                         <Image
                         src={"/instagram.png"}
                         width={30}
                         height={30}
                         alt="Logo instagram"
+                        style={{marginRight:"10px"}}
                         />
+                        <li style={{marginBottom: "0px"}} >maettioficial</li>
                     </a>
                 </ul>
             </div>

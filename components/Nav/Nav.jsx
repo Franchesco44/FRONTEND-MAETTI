@@ -43,7 +43,7 @@ const Nav = () => {
                 onClick={() => setIsOpen(false)}
                 />
                 <Link href={"/"}>{isTranslate ? "Home" : "Inicio"}</Link>
-                <Link href={"/trabajaconnosotros"}>{isTranslate ? "Work with us" : "Trabaja con nosotros"}</Link>
+                <Link href={"/trabajaconnosotros"}>{isTranslate ? "Work with us" : "Trabajá con nosotros"}</Link>
                 <Link href={"/contacto"}>{isTranslate ? "Contact" : "Contacto"}</Link>
                 <Link href={"/propiedades"}>{isTranslate ? "Properties" : "Propiedades"}</Link>
                 <Link href={"/nosotros"}>{isTranslate ? "About us" : "Nosotros"}</Link>
@@ -71,7 +71,7 @@ const Nav = () => {
             </div>
             <ul>
                 <Link href={"/"}>{isTranslate ? "Home" : "Inicio"}</Link>
-                <Link href={"/trabajaconnosotros"}>{isTranslate ? "Work with us" : "Trabaja con nosotros"}</Link>
+                <Link href={"/trabajaconnosotros"}>{isTranslate ? "Work with us" : "Trabajá con nosotros"}</Link>
                 <Link href={"/contacto"}>{isTranslate ? "Contact" : "Contacto"}</Link>
                 <Link href={"/propiedades"}>{isTranslate ? "Properties" : "Propiedades"}</Link>
                 <Link href={"/nosotros"}>{isTranslate ? "About us" : "Nosotros"}</Link>

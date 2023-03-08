@@ -19,7 +19,7 @@ const contacto = () => {
             />
             : 
             <Header
-                text={"Tenes una consulta? queremos ayudarte, responde el siguiente formulario."}
+                text={"Tenes una consulta? Respondé el siguiente formulario."}
                 img={"/contacto.png"}
                 button={false}
                 linkButton={"/"}

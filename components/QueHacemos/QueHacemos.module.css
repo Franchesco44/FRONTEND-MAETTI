@@ -1,5 +1,5 @@
 .containerQueHacemos{
-    background-color:#0d101388;
+    background-color:#0A2239;
     color: black;
     display: flex;
     flex-direction: column;
@@ -8,6 +8,7 @@
 }
 
 .containerQueHacemos h3{
+    color: #F6F7EB;
     font-size: 50px;
     margin-bottom: 50px;
 }
@@ -24,7 +25,7 @@
     display: flex;
     position: relative;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     background-color: #F6F7EB;
     padding: 40px 15px;
     width: 30%;

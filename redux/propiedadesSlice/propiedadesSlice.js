@@ -17,6 +17,14 @@ export const propiedadesSlice = createSlice({
         state.dataCopy = state.data
       }else if(payload.payload === "noche" || payload.payload === "mensual"){
         state.dataCopy = state.data.filter((p) => p.alquiler === payload.payload)
+      }else if(payload.payload === "menor a mayor"){
+        state.dataCopy = state.dataCopy.sort(function(a, b) {
+          return a.precio - b.precio;
+        })
+      }else if(payload.payload === "mayor a menor"){
+        state.dataCopy = state.dataCopy.sort(function(a, b) {
+          return a.precio - b.precio;
+        }).reverse()
       }else{
         state.dataCopy = state.data.filter((p) => p.ubicacion === payload.payload)
       }

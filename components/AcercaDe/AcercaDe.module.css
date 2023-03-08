@@ -1,5 +1,5 @@
 .acercaDeContainer{
-    padding: 30px;
+    padding: 30px 130px;
 }
 
 .acercaDeContainer ul{
@@ -14,8 +14,8 @@
 
 .acercaDeContainer h3{
     text-align: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 55px;
+    margin-bottom: 55px;
     font-size: 25px;
 }
 

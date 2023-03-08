@@ -20,7 +20,7 @@ const Nosotros = () => {
             />
             : 
             <Header
-                text={"Te contamos mas acerca de nosotros!"}
+                text={"Sobre nosotros"}
                 img={"/Nosotros.png"}
                 button={false}
                 linkButton={"/"}

@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import styles from "./Header.module.css"
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 const Header = ({text, img, button, linkButton}) => {
     const isTranslate = useSelector((state) => state.translate.value)

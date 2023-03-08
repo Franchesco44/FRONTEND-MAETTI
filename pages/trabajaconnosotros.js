@@ -21,7 +21,7 @@ const trabajaconnosotros = () => {
             />
             : 
             <Header
-                text={"Tenes una propiedad? queremos ayudarte a rentarla."}
+                text={"Tenés una propiedad? Queremos ayudarte a rentarla."}
                 img={"/trabajaConNosotros.png"}
                 button={false}
                 linkButton={"/"}

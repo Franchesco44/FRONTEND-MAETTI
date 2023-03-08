@@ -65,6 +65,27 @@ const Filtros = () => {
                     })}
                 </Dropdown.Menu>
             </Dropdown>
+            <Dropdown>
+                <Dropdown.Button color={"default"} light>
+                    {isTranslate ? "Price" :"Precio"}
+                </Dropdown.Button>
+                <Dropdown.Menu
+                    color={"default"}
+                    variant="light"
+                    aria-label="Actions"
+                    onAction={(key)=> dispatch(setFilter(key))}
+                >
+                    <Dropdown.Item 
+                        key="todo"
+                    >{isTranslate ? "See all" : "Ver todo"}</Dropdown.Item>
+                    <Dropdown.Item
+                    key="menor a mayor"
+                    > {isTranslate ? "Lowest to highest" : "Menor a mayor"} </Dropdown.Item>
+                    <Dropdown.Item
+                    key="mayor a menor"
+                    > {isTranslate ? "Highest to lowest" : "Mayor a menor"} </Dropdown.Item>
+                </Dropdown.Menu>
+            </Dropdown>
         </div>
     )
 }

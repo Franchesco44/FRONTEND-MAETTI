@@ -1,0 +1,15 @@
+.HeaderDosContainer{
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0A2239;
+    color: white;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 400px){
+    .HeaderDosContainer{
+        font-size: 30px;
+    }
+}
