@@ -85,6 +85,13 @@ const FormularioPropiedades = () => {
 
     const handleChange = (e) => {
         const {name, value} = e.target
+        if(name == "nacimiento"){
+            if(value.length === 2){
+                e.target.value = e.target.value + "/"
+            }else if(value.length === 5){
+                e.target.value = e.target.value + "/"
+            }
+        }
         setDataForm({...dataForm, [name]: value })
     }
 
@@ -127,23 +134,23 @@ const FormularioPropiedades = () => {
                     <label for="cantidadhuespedes">{isTranslate? "Number of guests" : "Cantidad de huéspedes"}</label>
                     <input onChange={(e) => handleChange(e)} required type="number" name="cantidadhuespedes" placeholder={isTranslate? "Insert only number" : "Colocar solo numeros"}/>
                     <label for="limpiezatarifa">{isTranslate? "Cleaning fee" : "Tarifa de limpieza"}</label>
-                    <input onChange={(e) => handleChange(e)} required type="number" name="limpiezatarifa" placeholder={isTranslate? "Insert only number" : "Colocar solo numeros"}/>
+                    <input onChange={(e) => handleChange(e)} required type="text" name="limpiezatarifa" placeholder={isTranslate? "For example: 5USD" : "Ej: 5USD"}/>
                     <label for="estadiaminima">{isTranslate? "Minimum length of stay" : "Duración mínima de la estadía"}</label>
                     <input onChange={(e) => handleChange(e)} required type="number" name="estadiaminima" placeholder={isTranslate? "Insert only number of days" : "Colocar solo numero de dias"}/>
-                    <label for="estadiaminima">{isTranslate? "Maximum length of stay" : "Duración maxima de la estadía"}</label>
+                    <label for="estadiamaxima">{isTranslate? "Maximum length of stay (optional)" : "Duración maxima de la estadía (opcional)"}</label>
                     <input onChange={(e) => handleChange(e)} required type="number" name="estadiamaxima" placeholder={isTranslate? "Insert only number of days" : "Colocar solo numero de dias"}/>
                     <label for="diasaviso">{isTranslate? "How many days' notice do you need":"¿Cuántos días de pre aviso necesita?"}</label>
                     <input onChange={(e) => handleChange(e)} required type="number" name="diasaviso" placeholder={isTranslate? "Insert only number of days" : "Colocar solo numero de dias"}/>
                     <label for="tiempopreparacion">{isTranslate? "How much preparation time between host and host do you need (0,1 or 2 days max)?":"¿Cuánto tiempo de preparación entre huésped y huésped necesita? (0, 1 o 2 días max)"}</label>
                     <input onChange={(e) => handleChange(e)} required type="number" name="tiempopreparacion" placeholder={isTranslate? "Insert only number of days" : "Colocar solo numero de dias"}/>
                     <label for="diasrestringidos">{isTranslate? "Restricted check-in days":"Días restringidos para hacer el check in"}</label>
-                    <input onChange={(e) => handleChange(e)} required type="number" name="diasrestringidos" placeholder={isTranslate? "Insert only number of days" : "Colocar solo numero de dias"}/>
+                    <input onChange={(e) => handleChange(e)} required type="text" name="diasrestringidos" placeholder={isTranslate? "For example: Sunday" : "Ej: Domingo"}/>
                     <label for="horariocheckin">{isTranslate? "Time range for check in":"Rango horario para check in"}</label>
-                    <input onChange={(e) => handleChange(e)} required type="text" name="horariocheckin" placeholder={isTranslate? "For example: 10:00AM to 12:00AM" : "Ej: 10:00AM a 12:00AM"}/>
+                    <input onChange={(e) => handleChange(e)} required type="text" name="horariocheckin" placeholder={isTranslate? "For example: 10:00 to 12:00 or flexible" : "Ej: 10:00 a 12:00 o flexible"}/>
                     <label for="horariocheckout">{isTranslate? "Time range for check out":"Rango horario para check out"}</label>
-                    <input onChange={(e) => handleChange(e)} required type="text" name="horariocheckout" placeholder={isTranslate? "For example: 10:00AM to 12:00AM" : "Ej: 10:00AM a 12:00AM"}/>
+                    <input onChange={(e) => handleChange(e)} required type="text" name="horariocheckout" placeholder={isTranslate? "For example: 10:00 to 12:00 or flexible" : "Ej: 10:00 a 12:00 o flexible"}/>
                     <label for="infomascotas">{isTranslate? "Do you accept pets or not, if you accept pets do you charge an extra fee for accepting them?":"¿Acepta o no mascotas? de si aceptar mascotas ¿Cobra una tarifa extra por aceptarlas?"}</label>
-                    <input onChange={(e) => handleChange(e)} required type="text" name="infomascotas"/>
+                    <input onChange={(e) => handleChange(e)} required type="text" name="infomascotas" placeholder={isTranslate ? "For example: Yes i accept, 25USD" : "Ej: Si acepto, 25USD"} />
                     <label for="infofumar">{isTranslate? "Do you allow electronic cigarettes or smoking?":"¿Permite cigarrillos electrónicos o fumar?"}</label>
                     <input onChange={(e) => handleChange(e)} required type="text" name="infofumar"/>
                     <label for="infoadicionales">{isTranslate? "Additional standards":"Normas adicionales"}</label>

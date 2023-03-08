@@ -40,7 +40,7 @@ const Filtros = () => {
                         >{isTranslate ? "Rent per night" : "Alquiler por noche"}</Dropdown.Item>
                     <Dropdown.Item
                         key="mensual"
-                        >{isTranslate ? "Monthly rent" : "Alquiler mensual"}</Dropdown.Item>
+                        >{isTranslate ? "Monthly rent" : "Alquiler Semi-Permanente"}</Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
             <Dropdown>

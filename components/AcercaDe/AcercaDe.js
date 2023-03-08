@@ -5,6 +5,7 @@ const AcercaDe = () => {
     const isTranslate = useSelector((state) => state.translate.value)
     return(
         <div className={styles.acercaDeContainer}>
+            <h3> {isTranslate ? "" : "NOSOTROS"} </h3>
             <p>{isTranslate ?"We are a team dedicated to manage properties through online rental platforms. We take care of getting your properties rented as fast as possible at the best prices in the market, in dollars.":"Somos un equipo de trabajo que se dedica a gestionar propiedades mediante plataformas de alquileres online. Nos encargamos de hacer que tus propiedades se alquilen lo más rápido posible a los mejores precios del mercado, en dólares."}
             </p>
             <ul>

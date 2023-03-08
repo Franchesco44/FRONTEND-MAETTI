@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from "react"
 import axios from "axios"
 import { setPropiedades } from "../../redux/propiedadesSlice/propiedadesSlice"
+import Link from "next/link"
 
 const PropiedadesLista = () => {
 
@@ -37,7 +38,7 @@ const PropiedadesLista = () => {
                             ></div>
                             <h4> {p.titulo} </h4>
                             <strong> ${p.precio} USD por {p.alquiler} </strong>
-                            <a target={"_blank"} href={p.url}>{isTranslate ? "VIEW ON AIRBNB" : "VER EN AIRBNB"}</a>
+                            <Link href={`/propiedad/${p._id}`}>{isTranslate ? "VIEW MORE" : "VER MAS"}</Link>
                         </div>  
                     )
                 })}
