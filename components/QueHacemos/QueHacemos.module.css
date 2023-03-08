@@ -34,6 +34,7 @@
 .card strong{
     font-size: 25px;
     padding-top: 50px;
+    color: black;
 }
 
 .card ul{
@@ -46,6 +47,7 @@
 .card ul li{
     background-color: #F6F7EB;
     margin-bottom: 20px;
+    color: black;
 }
 
 .icono{

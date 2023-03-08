@@ -6,7 +6,7 @@
 .listaPropiedades{
     display: grid;
     row-gap: 40px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25%, 25%));
     justify-items: center;
     width: 100%;
 }
