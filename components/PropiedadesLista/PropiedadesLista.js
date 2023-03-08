@@ -34,10 +34,10 @@ const PropiedadesLista = () => {
                         <div className={styles.propiedad} key={index}>
                             <div
                             className={styles.imagen}
-                            style={{backgroundImage: `url(https://api-maetti.up.railway.app/${p.imagen})`}}
+                            style={{backgroundImage: `url(https://api-maetti.up.railway.app/${p.imagen[0]})`}}
                             ></div>
                             <h4> {p.titulo} </h4>
-                            <strong> ${p.precio} USD por {p.alquiler} </strong>
+                            <strong> ${p.precio} USD | {p.alquiler} </strong>
                             <Link href={`/propiedad/${p._id}`}>{isTranslate ? "VIEW MORE" : "VER MAS"}</Link>
                         </div>  
                     )

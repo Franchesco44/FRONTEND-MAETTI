@@ -26,7 +26,7 @@ export const propiedadesSlice = createSlice({
           return a.precio - b.precio;
         }).reverse()
       }else{
-        state.dataCopy = state.data.filter((p) => p.ubicacion === payload.payload)
+        state.dataCopy = state.data.filter((p) => p.zona === payload.payload)
       }
     }
   }

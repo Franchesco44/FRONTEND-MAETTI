@@ -12,8 +12,8 @@ const Filtros = () => {
     const ubicacionesArray = []
 
     useEffect(()=>{
-        propiedades.forEach((element, index) => {
-            ubicacionesArray.push(element.ubicacion)
+        propiedades.forEach((element) => {
+            ubicacionesArray.push(element.zona)
         });
         const ubicacionesSinDuplicados = new Set(ubicacionesArray)
         setUbicaciones([...ubicacionesSinDuplicados])

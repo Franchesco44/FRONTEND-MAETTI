@@ -3,6 +3,7 @@
     flex-direction: column;
     padding: 20px;
     width: 20%;
+    height: 80vh;
     align-items: flex-start;
     z-index: 80;
     background-color: #0A2239;
