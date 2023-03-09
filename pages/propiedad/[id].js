@@ -39,32 +39,28 @@ const propiedad = () => {
     return(
         <div className={styles.propiedadContenedor} >
             <div className={styles.propiedad}>
-                <Carousel>
-                    {propiedad?.imagen?.map((i,index)=>{
-                        return(
-                            <Carousel.Item key={index}>
-                                <div
-                                style={{height: "420px", backgroundImage: `url(https://api-maetti.up.railway.app/${i})`
-                                , backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover"
-                            }}
-                                className="d-block w-100"
-                                />
-                            </Carousel.Item>
-                        )
-                    })}
-                </Carousel>
-                <div className={styles.descripcionPrecioContainer}>
-                    <div className={styles.descripcionContainer}>
-                        <h2> {propiedad.titulo} </h2>
-                        <ul className={styles.descripcion}>
-                            {descripcion.map((item, index)=>{
+                <div className={styles.carruselPrecioContainer}>
+                    <div className={styles.carruselContainer} >
+                        <Carousel>
+                            {propiedad?.imagen?.map((i,index)=>{
                                 return(
-                                    <li key={index}> {item} </li>
+                                    <Carousel.Item key={index}>
+                                        <div
+                                        style={{height: "550px", backgroundImage: `url(https://api-maetti.up.railway.app/${i})`
+                                        , backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover"
+                                    }}
+                                        className="d-block w-100"
+                                        />
+                                    </Carousel.Item>
                                 )
                             })}
-                        </ul>
+                        </Carousel>
                     </div>
                     <div className={styles.precio}>
+                        <h2> {propiedad.titulo} </h2>
+                        <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                            <div className={styles.separador}></div>
+                        </div>
                         <h3> {propiedad.precio}USD | {propiedad.alquiler?.toUpperCase()} </h3>
                         {propiedad.alquiler === "mensual" ? 
                         <a target={"_blank"} href={`https://wa.me/5492944238597?text=Hola!%20Como%20estas?%20Estoy%20interesado%20en%20la%20propiedad%20${tituloWp}`} className={styles.wp}>
@@ -97,6 +93,18 @@ const propiedad = () => {
                         }
                         <strong className={styles.zona}> {propiedad.zona} </strong>
                     </div>
+                </div>
+                <div className={styles.descripcionPrecioContainer}>
+                    <div className={styles.descripcionContainer}>
+                        <ul className={styles.descripcion}>
+                            {descripcion.map((item, index)=>{
+                                return(
+                                    <li key={index}> {item} </li>
+                                )
+                            })}
+                        </ul>
+                    </div>
+                    
                 </div>
             </div>
         </div>
