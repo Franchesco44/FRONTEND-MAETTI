@@ -11,11 +11,16 @@ import { useRouter } from "next/router";
 const Nav = () => {
     const dispatch = useDispatch()
     const isTranslate = useSelector((state) => state.translate.value)
+    const isFixed = useSelector((state) => state.nav.isFixed)
     const [isOpen, setIsOpen] = useState(false)
     const router = useRouter()
 
+
+
     return(
-        <nav className={styles.nav} onClick={()=> console.log(experiencias)}>
+        <nav className={styles.nav}
+        onClick={()=>console.log(isFixed)}
+        style={isFixed ? {position: "fixed"} : {position: "relative"}}>
             <Link href={"/"}>
                 <Image
                 src={"/logoletras.png"}

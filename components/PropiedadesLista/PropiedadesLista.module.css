@@ -6,7 +6,7 @@
 .listaPropiedades{
     display: grid;
     row-gap: 40px;
-    grid-template-columns: repeat(auto-fit, minmax(25%, 25%));
+    grid-template-columns: repeat(auto-fit, minmax(33%, 33%));
     justify-items: center;
     width: 100%;
 }
@@ -52,9 +52,17 @@
     border-radius: 10px;
 }
 
-@media screen and (max-width: 480px)  {
+@media screen and (max-width: 840px)  {
     .listaPropiedades{
-        justify-items: flex-start;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .PropiedadesListaContainer{
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 570px)  {
+    .listaPropiedades{
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
     .PropiedadesListaContainer{

@@ -21,7 +21,7 @@ const Filtros = () => {
 
     return(
         <div className={styles.filtrosContainer} >
-            <h3 onClick={() => console.log(ubicaciones)}>{isTranslate ? "Filter by":"Filtrar por"} </h3>
+            <h3>{isTranslate ? "Filter by":"Filtrar por"} </h3>
             <Dropdown>
                 <Dropdown.Button color={"default"} light>
                     {isTranslate ? "Type of rental" :"Tipo de alquiler"}
@@ -59,6 +59,7 @@ const Filtros = () => {
                     {ubicaciones.map((p, index)=>{
                         return(
                             <Dropdown.Item
+                            css={{marginTop: "20px", marginBottom: "20px"}}
                             key={p}
                             >{p}</Dropdown.Item>
                         )
