@@ -73,7 +73,7 @@ const propiedad = () => {
                             width={30}
                             height={30}
                             />
-                            <a target={"_blank"} href={`https://wa.me/5492944238597?text=Hola!%20Como%20estas?%20Estoy%20interesado%20en%20la%20propiedad%20${tituloWp}`}>CONSULTAR POR WHATSAPP</a>
+                            <a className={styles.textoBoton} target={"_blank"} href={`https://wa.me/5492944238597?text=Hola!%20Como%20estas?%20Estoy%20interesado%20en%20la%20propiedad%20${tituloWp}`}>CONSULTAR POR WHATSAPP</a>
                         </div>
                         : 
                         <div className={styles.botones}>
@@ -83,7 +83,7 @@ const propiedad = () => {
                                 width={30}
                                 height={30}
                                 />
-                                <a target={"_blank"} href={propiedad.url}>VER EN AIRBNB</a>
+                                <a className={styles.textoBoton} target={"_blank"} href={propiedad.url}>VER EN AIRBNB</a>
                             </div>
                             <div className={styles.wp}>
                                 <Image
@@ -91,7 +91,7 @@ const propiedad = () => {
                                 width={30}
                                 height={30}
                                 />
-                                <a target={"_blank"} href={`https://wa.me/5492944238597?text=Hola!%20Como%20estas?%20Estoy%20interesado%20en%20la%20propiedad%20${tituloWp}`} >CONSULTAR POR WHATSAPP</a>
+                                <a className={styles.textoBoton} target={"_blank"} href={`https://wa.me/5492944238597?text=Hola!%20Como%20estas?%20Estoy%20interesado%20en%20la%20propiedad%20${tituloWp}`} >CONSULTAR POR WHATSAPP</a>
                             </div>
                         </div>
                         }

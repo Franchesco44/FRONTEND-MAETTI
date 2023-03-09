@@ -17,14 +17,17 @@
     color: black;
 }
 
+.propiedadContenedor h2{
+    font-size: 22px;
+}
+
 .propiedad strong{
     color: black;
 }
 
 .propiedad h3{
-    font-size: 30px;
+    font-size: 22px;
     font-weight: bold;
-    
 }
 
 .zona{
@@ -147,6 +150,52 @@
 .descripcion li{
     color: black;
     list-style-type: circle;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 400;
 }
+
+@media screen and (max-width: 1300px){
+    .wp a{
+        color: white;
+        font-weight: 500;
+        font-size: 10px;
+        margin-left: 5px;
+        margin-top: 0;
+    }
+    .airbnb a{
+        color: white;
+        font-weight: 500;
+        margin-left: 5px;
+        font-size: 10px;
+        margin-top: 0;
+    }
+    .propiedad h3{
+        font-size: 15px;
+    }
+    .descripcionContainer{
+        width: 60%;
+    }
+    .precio{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        padding: 15px 5px;
+    }
+    
+}   
+
+@media screen and (max-width:750px){
+    .propiedad{
+        width: 90%;;
+    }
+}
+
+@media screen and (max-width:580px){
+    .propiedadContenedor h2{
+        font-size: 18px;
+    }
+    .textoBoton{
+        display: none;
+    }
+}
+
