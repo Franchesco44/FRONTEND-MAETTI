@@ -204,6 +204,37 @@
     }
 }
 
+@media screen and (max-width: 650px){
+    .carruselPrecioContainer{
+        flex-direction: column;
+    }
+    
+    .carruselContainer{
+        width: 100%;
+    }
+    .precio{
+        width: 100%;
+        padding: 5px;
+    }
+    .zona{
+        margin-top: 15px;
+    }
+    .precio h2{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .propiedad h3{
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+    .airbnb{
+        margin-bottom: 10px;
+    }
+    .descripcionPrecioContainer{
+        padding-top: 0px;
+    }
+}
+
 @media screen and (max-width:580px){
     .botones{
         flex-direction: row;
@@ -228,4 +259,3 @@
         font-size: 13px;
     }
 }
-
