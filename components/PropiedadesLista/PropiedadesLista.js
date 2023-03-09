@@ -27,7 +27,6 @@ const PropiedadesLista = () => {
 
     return(
         <div className={styles.PropiedadesListaContainer} >
-            <h3>{isTranslate ? "Available properties" : "Propiedades disponibles"}</h3>
             <div className={styles.listaPropiedades} >
                 {propiedades.map((p, index)=>{
                     return(

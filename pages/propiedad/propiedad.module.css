@@ -9,8 +9,8 @@
 .propiedad{
     background-color: white;
     width: 70%;
-    height: 90%;
-    border-radius: 20px;
+    height: 100%;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     overflow: auto;
@@ -37,6 +37,7 @@
 
 .descripcionPrecioContainer{
     display: flex;
+    padding-top: 20px;
 }
 
 .precio{
@@ -59,7 +60,6 @@
 }
 
 .propiedad a{
-    margin-top: 15px;
     text-decoration: none;
 }
 
@@ -129,17 +129,12 @@
 }
 
 .propiedad::-webkit-scrollbar-track {
-    background: rgba(255, 166, 0, 0);        /* color of the tracking area */
+    background: rgba(255, 166, 0, 0);        
 }
 
 .propiedad::-webkit-scrollbar-thumb {
     background-color: #0A2239;
-    border-radius: 20px;
     border: 2px solid #0A2239;
-}
-
-.propiedad::-webkit-scrollbar-track {
-    border-radius: 10px;  
 }
 
 .descripcion{
@@ -191,11 +186,24 @@
 }
 
 @media screen and (max-width:580px){
+    .botones{
+        flex-direction: row;
+    }
+    .airbnb{
+        margin-right: 10px;
+        margin-bottom: 0px;
+    }
     .propiedadContenedor h2{
         font-size: 18px;
     }
     .textoBoton{
         display: none;
+    }
+    .propiedad{
+        padding: 10px;
+    }
+    .descripcionContainer{
+        padding: 5px;
     }
 }
 

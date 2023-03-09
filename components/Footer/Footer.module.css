@@ -1,7 +1,10 @@
 .footer{
     display: flex;
     padding: 30px;
+    position: relative;
+    z-index: 99;
     justify-content: space-around;
+    align-items: center;
 }
 
 .footer strong{

@@ -15,6 +15,7 @@ const Footer = () => {
                     <Link href={"/trabajaconnosotros"}>{isTranslate ? "Work with us" : "Trabaja con nosotros"}</Link>
                     <Link href={"/contacto"}>{isTranslate ? "Contact" : "Contacto"}</Link>
                     <Link href={"/propiedades"}>{isTranslate ? "Properties" : "Propiedades"}</Link>
+                    <Link href={"/nosotros"}>{isTranslate ? "About us" : "Nosotros"}</Link>
                 </ul>
             </div>
             <div className={styles.contacto}>

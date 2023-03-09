@@ -38,14 +38,14 @@ const propiedad = () => {
 
     return(
         <div className={styles.propiedadContenedor} >
-            <div className={styles.propiedad} onClick={()=>console.log(descripcion)}>
+            <div className={styles.propiedad}>
                 <Carousel>
                     {propiedad?.imagen?.map((i,index)=>{
                         return(
                             <Carousel.Item key={index}>
                                 <div
-                                style={{height: "450px", backgroundImage: `url(https://api-maetti.up.railway.app/${i})`
-                                , backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover", borderRadius: "10px"
+                                style={{height: "420px", backgroundImage: `url(https://api-maetti.up.railway.app/${i})`
+                                , backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover"
                             }}
                                 className="d-block w-100"
                                 />
@@ -67,32 +67,32 @@ const propiedad = () => {
                     <div className={styles.precio}>
                         <h3> {propiedad.precio}USD | {propiedad.alquiler?.toUpperCase()} </h3>
                         {propiedad.alquiler === "mensual" ? 
-                        <div className={styles.wp}>
+                        <a target={"_blank"} href={`https://wa.me/5492944238597?text=Hola!%20Como%20estas?%20Estoy%20interesado%20en%20la%20propiedad%20${tituloWp}`} className={styles.wp}>
                             <Image
                             src={'/wpblanco.png'}
                             width={30}
                             height={30}
                             />
-                            <a className={styles.textoBoton} target={"_blank"} href={`https://wa.me/5492944238597?text=Hola!%20Como%20estas?%20Estoy%20interesado%20en%20la%20propiedad%20${tituloWp}`}>CONSULTAR POR WHATSAPP</a>
-                        </div>
+                            <a className={styles.textoBoton} target={"_blank"} href={`https://wa.me/5492944238597?text=Hola!%20Como%20estas?%20Estoy%20interesado%20en%20la%20propiedad%20${tituloWp}`} >CONSULTAR POR WHATSAPP</a>
+                        </a>
                         : 
                         <div className={styles.botones}>
-                            <div className={styles.airbnb}>
+                            <a target={"_blank"} href={propiedad.url} className={styles.airbnb}>
                                 <Image
                                 src={'/airbnb.png'}
                                 width={30}
                                 height={30}
                                 />
                                 <a className={styles.textoBoton} target={"_blank"} href={propiedad.url}>VER EN AIRBNB</a>
-                            </div>
-                            <div className={styles.wp}>
+                            </a>
+                            <a target={"_blank"} href={`https://wa.me/5492944238597?text=Hola!%20Como%20estas?%20Estoy%20interesado%20en%20la%20propiedad%20${tituloWp}`} className={styles.wp}>
                                 <Image
                                 src={'/wpblanco.png'}
                                 width={30}
                                 height={30}
                                 />
                                 <a className={styles.textoBoton} target={"_blank"} href={`https://wa.me/5492944238597?text=Hola!%20Como%20estas?%20Estoy%20interesado%20en%20la%20propiedad%20${tituloWp}`} >CONSULTAR POR WHATSAPP</a>
-                            </div>
+                            </a>
                         </div>
                         }
                         <strong className={styles.zona}> {propiedad.zona} </strong>
