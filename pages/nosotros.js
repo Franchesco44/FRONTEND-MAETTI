@@ -1,11 +1,17 @@
 import Head from 'next/head';
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import AcercaDe from '../components/AcercaDe/AcercaDe';
 import Header from "../components/Header/Header"
+import { setStaticNav } from '../redux/navSlice/navSlice';
+import { useEffect } from 'react';
 
 const Nosotros = () => {
     const isTranslate = useSelector((state) => state.translate.value)
+    const dispatch = useDispatch()
 
+    useEffect(()=>{
+        dispatch(setStaticNav(true))
+    }, [])
     return(
         <>
             <Head>

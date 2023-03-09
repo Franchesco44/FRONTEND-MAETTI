@@ -1,10 +1,17 @@
 import Head from 'next/head';
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import Header from "../components/Header/Header"
 import FormularioContacto from "../components/FormularioContacto/FormularioContacto"
+import { setStaticNav } from '../redux/navSlice/navSlice';
+import { useEffect } from 'react';
 
 const contacto = () => {
     const isTranslate = useSelector((state) => state.translate.value)
+    const dispatch = useDispatch()
+
+    useEffect(()=>{
+        dispatch(setStaticNav(true))
+    }, [])
     return(
         <>
             <Head>

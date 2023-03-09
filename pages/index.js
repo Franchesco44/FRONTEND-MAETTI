@@ -5,11 +5,18 @@ import Header from '../components/Header/Header';
 import QuienesSomos from '../components/QuienesSomos/QuienesSomos';
 import QueHacemos from '../components/QueHacemos/QueHacemos';
 import FormularioContacto from '../components/FormularioContacto/FormularioContacto';
+import { setStaticNav } from '../redux/navSlice/navSlice';
+import { useEffect } from 'react';
 
 export default function Home() {
 
   const dispatch = useDispatch()
   const isTranslate = useSelector((state) => state.translate.value)
+
+  useEffect(()=>{
+      dispatch(setStaticNav(true))
+  }, [])
+
 
   return (
     <div className={styles.container}>

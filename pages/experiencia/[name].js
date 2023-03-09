@@ -6,7 +6,8 @@ import DiasTarjeta from "../../components/DiasTarjeta/DiasTarjeta";
 import { experiencias } from "../../utils/experiencias";
 import styles from "./experiencia.module.css"
 import FormularioContacto from "../../components/FormularioContacto/FormularioContacto"
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { setStaticNav } from "../../redux/navSlice/navSlice";
 
 const experiencia = () => {
     const router = useRouter()
@@ -15,11 +16,15 @@ const experiencia = () => {
     const [isLoading, setIsLoading] = useState(true)
     const [experiencia, setExperiencia] = useState({})
     const experienciaFiltrada = experiencias.filter((x) => x.es.titulo == name);
+    const dispatch = useDispatch()
+
+    useEffect(()=>{
+        dispatch(setStaticNav(true))
+    }, [])
 
     useEffect(()=>{
         setExperiencia(experienciaFiltrada[0])
         setIsLoading(false)
-        console.log(experiencia)
     }, [experienciaFiltrada])
 
     return(

@@ -1,13 +1,19 @@
 import Head from 'next/head';
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import Filtros from '../components/Filtros/Filtros';
-import Header from '../components/Header/Header';
 import HeaderDos from '../components/HeaderDos/HeaderDos';
 import PropiedadesLista from "../components/PropiedadesLista/PropiedadesLista"
+import { setStaticNav } from '../redux/navSlice/navSlice';
+import { useEffect } from 'react';
 
 const propiedades = () => {
     const isTranslate = useSelector((state) => state.translate.value)
+    const dispatch = useDispatch()
 
+    useEffect(()=>{
+        dispatch(setStaticNav(true))
+    }, [])
+    
     return(
         <>
             <Head>
