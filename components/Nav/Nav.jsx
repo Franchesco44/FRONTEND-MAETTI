@@ -15,8 +15,6 @@ const Nav = () => {
     const [isOpen, setIsOpen] = useState(false)
     const router = useRouter()
 
-
-
     return(
         <nav className={styles.nav}
         onClick={()=>console.log(isFixed)}
@@ -47,11 +45,11 @@ const Nav = () => {
                 alt="closemenu"
                 onClick={() => setIsOpen(false)}
                 />
-                <Link href={"/"}>{isTranslate ? "Home" : "Inicio"}</Link>
-                <Link href={"/trabajaconnosotros"}>{isTranslate ? "Work with us" : "Trabajá con nosotros"}</Link>
-                <Link href={"/contacto"}>{isTranslate ? "Contact" : "Contacto"}</Link>
-                <Link href={"/propiedades"}>{isTranslate ? "Properties" : "Propiedades"}</Link>
-                <Link href={"/nosotros"}>{isTranslate ? "About us" : "Nosotros"}</Link>
+                <Link onClick={() => setIsOpen(false)} href={"/"}>{isTranslate ? "Home" : "Inicio"}</Link>
+                <Link onClick={() => setIsOpen(false)} href={"/trabajaconnosotros"}>{isTranslate ? "Work with us" : "Trabajá con nosotros"}</Link>
+                <Link onClick={() => setIsOpen(false)} href={"/contacto"}>{isTranslate ? "Contact" : "Contacto"}</Link>
+                <Link onClick={() => setIsOpen(false)} href={"/propiedades"}>{isTranslate ? "Properties" : "Propiedades"}</Link>
+                <Link onClick={() => setIsOpen(false)} href={"/nosotros"}>{isTranslate ? "About us" : "Nosotros"}</Link>
                 <Dropdown>
                     <Dropdown.Button color={"default"} light>
                     {isTranslate ? "Experiences" : "Experiencias"}
@@ -66,6 +64,7 @@ const Nav = () => {
                             return(
                             <Dropdown.Item 
                             key={e.es.titulo}
+                            onClick={() => setIsOpen(false)}
                             >
                                 {isTranslate ? e.en.titulo : e.es.titulo}
                             </Dropdown.Item>

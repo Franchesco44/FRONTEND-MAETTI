@@ -7,7 +7,7 @@ const QueHacemos = () => {
 
     return(
         <div className={styles.containerQueHacemos}>
-            <h3>{isTranslate?"What we do?":"Que hacemos?"}</h3>
+            <h3>{isTranslate?"What we do":"Que hacemos"}</h3>
             <div className={styles.cards}>
                 <div className={styles.card}>
                     <div className={styles.icono}>

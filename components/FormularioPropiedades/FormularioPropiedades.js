@@ -101,7 +101,7 @@ const FormularioPropiedades = () => {
             {isLoading ? <Loading type="points" /> : 
             <div className={styles.formularios}>
                 <div className={styles.formulario}>
-                    <h4> {isTranslate? "Owner information" : "Informacion de propietario"} </h4>
+                    <h4> {isTranslate? "Owner information" : "Información de propietario"} </h4>
                     <label for="nombre">{isTranslate? "First and last name" : "Nombre y apellido"}</label>
                     <input onChange={(e) => handleChange(e)} required type="text" name="nombre"/>
                     <label for="nacimiento">{isTranslate? "Date of birth" : "Fecha de nacimiento"}</label>
@@ -120,7 +120,7 @@ const FormularioPropiedades = () => {
                     <textarea onChange={(e) => handleChange(e)} cols="30" rows="10" required type="text" name="contacto"/>
                 </div>
                 <div className={styles.formulario}>
-                    <h4> {isTranslate? "Property information." : "Informacion de propiedad."} </h4>
+                    <h4> {isTranslate? "Property information." : "Información de propiedad"} </h4>
                     <label for="direccion">{isTranslate? "Address" : "Direccion"}</label>
                     <input onChange={(e) => handleChange(e)} required type="text" name="direccion"/>
                     <label for="ciudad">{isTranslate? "City" : "Ciudad"}</label>
