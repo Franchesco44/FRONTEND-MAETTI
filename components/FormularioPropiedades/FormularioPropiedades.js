@@ -22,7 +22,7 @@ const FormularioPropiedades = () => {
         barrio: "",
         rangoprecio: "",
         servicios: "",
-        cantidadhuespedes: "",
+        cantidadhuesped: "",
         limpiezatarifa: "",
         estadiaminima: "",
         estadiamaxima: "",
@@ -53,7 +53,8 @@ const FormularioPropiedades = () => {
         params.append('ciudad', data.ciudad)
         params.append('barrio', data.barrio)
         params.append('rangoprecio', data.rangoprecio)
-        params.append('cantidadhuespedes', data.cantidadhuespedes)
+        params.append('servicios', data.servicios)
+        params.append('cantidadhuesped', data.cantidadhuesped)
         params.append('limpiezatarifa', data.limpiezatarifa)
         params.append('estadiaminima', data.estadiaminima)
         params.append('estadiamaxima', data.estadiamaxima)
@@ -131,8 +132,8 @@ const FormularioPropiedades = () => {
                     <input onChange={(e) => handleChange(e)} required type="text" name="rangoprecio" placeholder={isTranslate? "For example: 200$ to 500$" : "Ej: 200$ a 500$"}/>
                     <label for="servicios">{isTranslate? "What services do you have" : "Qué servicios tiene"}</label>
                     <input onChange={(e) => handleChange(e)} required type="text" name="servicios"/>
-                    <label for="cantidadhuespedes">{isTranslate? "Number of guests" : "Cantidad de huéspedes"}</label>
-                    <input onChange={(e) => handleChange(e)} required type="number" name="cantidadhuespedes" placeholder={isTranslate? "Insert only number" : "Colocar solo numeros"}/>
+                    <label for="cantidadhuesped">{isTranslate? "Number of guests" : "Cantidad de huéspedes"}</label>
+                    <input onChange={(e) => handleChange(e)} required type="number" name="cantidadhuesped" placeholder={isTranslate? "Insert only number" : "Colocar solo numeros"}/>
                     <label for="limpiezatarifa">{isTranslate? "Cleaning fee" : "Tarifa de limpieza"}</label>
                     <input onChange={(e) => handleChange(e)} required type="text" name="limpiezatarifa" placeholder={isTranslate? "For example: 5USD" : "Ej: 5USD"}/>
                     <label for="estadiaminima">{isTranslate? "Minimum length of stay" : "Duración mínima de la estadía"}</label>
