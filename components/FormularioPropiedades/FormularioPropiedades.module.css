@@ -53,11 +53,13 @@
     border-radius: 10px;
     background-color: white;
     width: 100%;
+    color: black;
 }
 
 .formulario textarea:focus{
     outline: none;
     border: 2px solid #0A2239;
+    color: black;
 }
 
 .formularioContainer button{
