@@ -46,9 +46,9 @@ const Nav = () => {
                 onClick={() => setIsOpen(false)}
                 />
                 <Link onClick={() => setIsOpen(false)} href={"/"}>{isTranslate ? "Home" : "Inicio"}</Link>
+                <Link onClick={() => setIsOpen(false)} href={"/propiedades"}>{isTranslate ? "Properties" : "Propiedades"}</Link>
                 <Link onClick={() => setIsOpen(false)} href={"/trabajaconnosotros"}>{isTranslate ? "Work with us" : "Trabajá con nosotros"}</Link>
                 <Link onClick={() => setIsOpen(false)} href={"/contacto"}>{isTranslate ? "Contact" : "Contacto"}</Link>
-                <Link onClick={() => setIsOpen(false)} href={"/propiedades"}>{isTranslate ? "Properties" : "Propiedades"}</Link>
                 <Link onClick={() => setIsOpen(false)} href={"/nosotros"}>{isTranslate ? "About us" : "Nosotros"}</Link>
                 <Dropdown>
                     <Dropdown.Button color={"default"} light>
@@ -75,9 +75,9 @@ const Nav = () => {
             </div>
             <ul>
                 <Link href={"/"}>{isTranslate ? "Home" : "Inicio"}</Link>
+                <Link href={"/propiedades"}>{isTranslate ? "Properties" : "Propiedades"}</Link>
                 <Link href={"/trabajaconnosotros"}>{isTranslate ? "Work with us" : "Trabajá con nosotros"}</Link>
                 <Link href={"/contacto"}>{isTranslate ? "Contact" : "Contacto"}</Link>
-                <Link href={"/propiedades"}>{isTranslate ? "Properties" : "Propiedades"}</Link>
                 <Link href={"/nosotros"}>{isTranslate ? "About us" : "Nosotros"}</Link>
                 <div className={styles.experienciasLink} >   
                     <Dropdown>
