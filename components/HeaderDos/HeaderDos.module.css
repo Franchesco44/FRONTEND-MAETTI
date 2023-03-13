@@ -10,6 +10,7 @@
 
 .HeaderDosContainer h2{
     margin: 0;
+    letter-spacing: 2.5px;
 }
 
 @media screen and (max-width: 400px){
