@@ -19,7 +19,7 @@ const contacto = () => {
             </Head>
             {isTranslate ? 
             <Header
-                text={"If you have a question, we want to help you, please fill in the following form."}
+                text={"Do you have a question? Please fill the form and we will contact you."}
                 img={"/contacto.png"}
                 button={false}
                 linkButton={"/"}

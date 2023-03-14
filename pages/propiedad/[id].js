@@ -46,10 +46,10 @@ const propiedad = () => {
                                 return(
                                     <Carousel.Item key={index}>
                                         <div
-                                        style={{height: "550px", backgroundImage: `url(https://api-maetti.up.railway.app/${i})`
-                                        , backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover"
+                                        style={{backgroundImage: `url(https://api-maetti.up.railway.app/${i})`
+                                        , backgroundPosition: "center", backgroundRepeat: "no-repeat"
                                     }}
-                                        className="d-block w-100"
+                                        className={styles.carruselItem}
                                         />
                                     </Carousel.Item>
                                 )

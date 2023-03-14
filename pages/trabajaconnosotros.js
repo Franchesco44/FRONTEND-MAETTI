@@ -21,7 +21,7 @@ const trabajaconnosotros = () => {
             </Head>
             {isTranslate ? 
             <Header
-                text={"Do you have a property? we want to help you rent it."}
+                text={"Do you have a property? we can help you rent it."}
                 img={"/trabajaConNosotros.png"}
                 button={false}
                 linkButton={"/"}

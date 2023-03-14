@@ -98,7 +98,7 @@ const FormularioPropiedades = () => {
 
     return(
         <div className={styles.formularioContainer}>
-            <h3>{isTranslate? "Register your property and we will contact you":"Registrá tu propiedad y nos contactaremos contigo"}</h3>
+            <h3>{isTranslate? "Register your property and we will reach you":"Registrá tu propiedad y nos contactaremos contigo"}</h3>
             {isLoading ? <Loading type="points" /> : 
             <div className={styles.formularios}>
                 <div className={styles.formulario}>
@@ -140,9 +140,9 @@ const FormularioPropiedades = () => {
                     <input onChange={(e) => handleChange(e)} required type="number" name="estadiaminima" placeholder={isTranslate? "Insert only number of days" : "Colocar solo numero de dias"}/>
                     <label for="estadiamaxima">{isTranslate? "Maximum length of stay (optional)" : "Duración maxima de la estadía (opcional)"}</label>
                     <input onChange={(e) => handleChange(e)} required type="number" name="estadiamaxima" placeholder={isTranslate? "Insert only number of days" : "Colocar solo numero de dias"}/>
-                    <label for="diasaviso">{isTranslate? "How many days' notice do you need":"¿Cuántos días de pre aviso necesita?"}</label>
+                    <label for="diasaviso">{isTranslate? "How many days notice do you need?":"¿Cuántos días de pre aviso necesita?"}</label>
                     <input onChange={(e) => handleChange(e)} required type="number" name="diasaviso" placeholder={isTranslate? "Insert only number of days" : "Colocar solo numero de dias"}/>
-                    <label for="tiempopreparacion">{isTranslate? "How much preparation time between host and host do you need (0,1 or 2 days max)?":"¿Cuánto tiempo de preparación entre huésped y huésped necesita? (0, 1 o 2 días max)"}</label>
+                    <label for="tiempopreparacion">{isTranslate? "How much preparation time between guest and guest do you need (1 or 2 days max).":"¿Cuánto tiempo de preparación entre huésped y huésped necesita? (0, 1 o 2 días max)"}</label>
                     <input onChange={(e) => handleChange(e)} required type="number" name="tiempopreparacion" placeholder={isTranslate? "Insert only number of days" : "Colocar solo numero de dias"}/>
                     <label for="diasrestringidos">{isTranslate? "Restricted check-in days":"Días restringidos para hacer el check in"}</label>
                     <input onChange={(e) => handleChange(e)} required type="text" name="diasrestringidos" placeholder={isTranslate? "For example: Sunday" : "Ej: Domingo"}/>
@@ -158,7 +158,7 @@ const FormularioPropiedades = () => {
                     <input onChange={(e) => handleChange(e)} required type="text" name="infoadicionales"/>
                     <label for="infowifi">{isTranslate? "Wifi network information":"Información sobre la red wifi"}</label>
                     <input onChange={(e) => handleChange(e)} required type="text" name="infowifi"/>
-                    <label for="infopagos">{isTranslate? "Where you wish to receive payments (Paypal or foreign bank account)":"Donde desea recibir los pagos (Paypal o Cuenta bancaria en el extranjero)"}</label>
+                    <label for="infopagos">{isTranslate? "Where do you want to receive your payments? (Paypal, Payonner or bank account).":"Donde desea recibir los pagos (Paypal o Cuenta bancaria en el extranjero)"}</label>
                     <input onChange={(e) => handleChange(e)} required type="text" name="infopagos"/>
                 </div>
             </div>

@@ -17,6 +17,13 @@
     color: black;
 }
 
+.carruselItem{
+    display: block;
+    width: 100%;
+    background-size: cover;
+    height: 550px;
+}
+
 .carruselPrecioContainer{
     display: flex;
 }
@@ -26,13 +33,14 @@
 }
 
 .precio h2{
-    font-size: 28px;
+    font-size: 26px;
     margin-bottom: 30px;
-    letter-spacing: 2px;
+    font-family: 'Agrandir';
 }
 
 .propiedad strong{
     color: black;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .propiedad h3{
@@ -41,6 +49,7 @@
     letter-spacing: 1px;
     margin-top: 30px;
     margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .zona{
@@ -257,5 +266,9 @@
     }
     .zona{
         font-size: 13px;
+    }
+    .carruselItem{
+        background-size: contain;
+        height: 300px;
     }
 }

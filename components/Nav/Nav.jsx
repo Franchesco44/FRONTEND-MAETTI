@@ -17,7 +17,6 @@ const Nav = () => {
 
     return(
         <nav className={styles.nav}
-        onClick={()=>console.log(isFixed)}
         style={isFixed ? {position: "fixed"} : {position: "relative"}}>
             <Link href={"/"}>
                 <Image

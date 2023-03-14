@@ -46,7 +46,7 @@ const FormularioContacto = () => {
 
     return(
         <div className={styles.containerFormulario}>
-            <h3>{isTranslate? "Let us know your question.":"Hacé tu consulta."}</h3>
+            <h3>{isTranslate? "Send your inquiry.":"Hacé tu consulta."}</h3>
             {isLoading ? <Loading type="points" /> : 
             <form onSubmit={(e) => {
                 setIsLoading(true)

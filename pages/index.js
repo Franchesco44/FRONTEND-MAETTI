@@ -24,7 +24,7 @@ export default function Home() {
       </Head>
       {isTranslate ?  
       <Header 
-      text={"The optimization of your property's your property starts here."}
+      text={"The optimization of your property starts here. "}
       img={"/Home.png"}
       button={true}
       linkButton={"/trabajaconnosotros"}
