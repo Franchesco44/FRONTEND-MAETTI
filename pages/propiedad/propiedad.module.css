@@ -33,9 +33,11 @@
 }
 
 .precio h2{
-    font-size: 26px;
+    font-size: 28px;
+    letter-spacing: 2px;
     margin-bottom: 30px;
-    font-family: 'Agrandir';
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
 .propiedad strong{
