@@ -1,5 +1,6 @@
 .acercaDeContainer{
     padding: 30px 130px;
+    text-align: center;
 }
 
 .acercaDeContainer ul{
@@ -8,6 +9,15 @@
 
 .acercaDeContainer p{
     color: black;
+}
+
+.acercaDeContainer strong{
+    color: black;
+    text-align: center;
+}
+
+.acercaDeContainer ul{
+    text-align: start;
 }
 
 .acercaDeContainer ul li{
@@ -27,4 +37,10 @@
     margin-bottom: 10px;
     font-size: 25px;
     color: black;
+}
+
+@media screen and (max-width:800px){
+    .acercaDeContainer{
+        padding: 30px 70px;
+    }
 }

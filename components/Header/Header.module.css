@@ -30,6 +30,10 @@
     font-size: 50px;
 }
 
+.containerMobile{
+    display: none;
+}
+
 .containerDos{
     width: 50%;
     background-size: cover;
@@ -40,6 +44,47 @@
     .containerUno{
         transition: 0.5s;
         width: 100%;
+        display: none;
+    }
+    .containerMobile{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        padding: 30px;
+        width: 100%;
+        justify-content: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .fondoAzul{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #0A2239;
+        z-index: 10;
+        opacity: 0.7;
+    }
+    .containerMobile a{
+        position: relative;
+        z-index: 11;
+        color: #F6F7EB;
+        padding: 10px 15px;
+        border: 2px solid #F6F7EB;
+        width: max-content;
+    }
+    .containerMobile h2{
+        position: relative;
+        z-index: 11;
+        color: #F6F7EB;
+        font-size: 50px;
+    }
+    .containerMobile img{
+        position: relative;
+        z-index: 11;
+        margin-top: 40px;
+        margin-bottom: 40px;
     }
     .containerUno h2{
         font-size: 40px;
