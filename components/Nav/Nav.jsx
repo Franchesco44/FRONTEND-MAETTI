@@ -49,7 +49,7 @@ const Nav = () => {
                 <Link onClick={() => setIsOpen(false)} href={"/trabajaconnosotros"}>{isTranslate ? "Work with us" : "Trabajá con nosotros"}</Link>
                 <Link onClick={() => setIsOpen(false)} href={"/contacto"}>{isTranslate ? "Contact" : "Contacto"}</Link>
                 <Link onClick={() => setIsOpen(false)} href={"/nosotros"}>{isTranslate ? "About us" : "Nosotros"}</Link>
-                <Dropdown>
+                {/* <Dropdown>
                     <Dropdown.Button color={"default"} light>
                     {isTranslate ? "Experiences" : "Experiencias"}
                     </Dropdown.Button>
@@ -70,7 +70,7 @@ const Nav = () => {
                             )
                         })}
                     </Dropdown.Menu>
-                </Dropdown>
+                </Dropdown> */}
             </div>
             <ul>
                 <Link href={"/"}>{isTranslate ? "Home" : "Inicio"}</Link>
@@ -78,7 +78,7 @@ const Nav = () => {
                 <Link href={"/trabajaconnosotros"}>{isTranslate ? "Work with us" : "Trabajá con nosotros"}</Link>
                 <Link href={"/contacto"}>{isTranslate ? "Contact" : "Contacto"}</Link>
                 <Link href={"/nosotros"}>{isTranslate ? "About us" : "Nosotros"}</Link>
-                <div className={styles.experienciasLink} >   
+                {/* <div className={styles.experienciasLink} >   
                     <Dropdown>
                         <Dropdown.Button color={"default"} light>
                         {isTranslate ? "Experiences" : "Experiencias"}
@@ -100,7 +100,7 @@ const Nav = () => {
                             })}
                         </Dropdown.Menu>
                     </Dropdown>
-                </div>
+                </div> */}
                 <Dropdown>
                     <Dropdown.Button color={"default"} light>
                     Idioma

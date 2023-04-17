@@ -73,14 +73,14 @@ const propiedad = () => {
                         </a>
                         : 
                         <div className={styles.botones}>
-                            <a target={"_blank"} href={propiedad.url} className={styles.airbnb}>
+                            {/* <a target={"_blank"} href={propiedad.url} className={styles.airbnb}>
                                 <Image
                                 src={'/airbnb.png'}
                                 width={30}
                                 height={30}
                                 />
                                 <a className={styles.textoBoton} target={"_blank"} href={propiedad.url}>VER EN AIRBNB</a>
-                            </a>
+                            </a> */}
                             <a target={"_blank"} href={`https://wa.me/5492944238597?text=Hola!%20Como%20estas?%20Estoy%20interesado%20en%20la%20propiedad%20${tituloWp}`} className={styles.wp}>
                                 <Image
                                 src={'/wpblanco.png'}
