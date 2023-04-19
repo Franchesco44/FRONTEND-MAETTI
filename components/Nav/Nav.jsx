@@ -103,7 +103,7 @@ const Nav = () => {
                 </div> */}
                 <Dropdown>
                     <Dropdown.Button color={"default"} light>
-                    Idioma
+                    {isTranslate ? "Language" : "Idioma"}
                     </Dropdown.Button>
                     <Dropdown.Menu
                     color={"default"}
@@ -113,10 +113,10 @@ const Nav = () => {
                     >
                         <Dropdown.Item 
                         key="español"
-                        >Español</Dropdown.Item>
+                        >{isTranslate ? "Spanish" : "Español"}</Dropdown.Item>
                         <Dropdown.Item
                         key="ingles"
-                        >Ingles</Dropdown.Item>
+                        >{isTranslate ? "English" : "Ingles"}</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
             </ul>
