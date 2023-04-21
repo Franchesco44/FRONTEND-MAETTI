@@ -16,6 +16,7 @@ const PropiedadesLista = () => {
             const propiedades = await axios.get('https://api-maetti.up.railway.app/propiedadesSubidas')
             const data = await propiedades.data
             dispatch(setPropiedades(data))
+            console.log(data)
         } catch (error) {
             console.log(error)
         }
@@ -35,7 +36,7 @@ const PropiedadesLista = () => {
                             className={styles.imagen}
                             style={{backgroundImage: `url(https://api-maetti.up.railway.app/${p.imagen[0]})`}}
                             ></div>
-                            <h4> {p.titulo} </h4>
+                            <h4> {isTranslate ? p.tituloIngles : p.titulo} </h4>
                             <strong> ${p.precio} USD | {p.alquiler} </strong>
                             <Link href={`/propiedad/${p._id}`}>{isTranslate ? "VIEW MORE" : "VER MAS"}</Link>
                         </div>  

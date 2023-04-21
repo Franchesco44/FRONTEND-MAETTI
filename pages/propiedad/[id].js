@@ -14,6 +14,7 @@ const propiedad = () => {
     const {id} = router.query;
     const [propiedad, setPropiedad] = useState({})
     const [descripcion, setDescripcion] = useState([])
+    const [descripcionIngles, setDescripcionIngles] = useState([])
     const [tituloWp, setTituloWp] = useState("")
 
     const getPropiedad = async () => {
@@ -21,8 +22,10 @@ const propiedad = () => {
         setPropiedad(propiedad.data[0])
         const nuevaDescripcion = propiedad.data[0].descripcion.split('-')
         const nuevoTituloParaWp = propiedad.data[0].titulo.replaceAll(' ', '%20')
+        const nuevaDescripcionIngles = propiedad.data[0].descripcionIngles.split('-')
         setTituloWp(nuevoTituloParaWp)
         setDescripcion(nuevaDescripcion)
+        setDescripcionIngles(nuevaDescripcionIngles)
     } 
 
     useEffect(()=>{
@@ -57,7 +60,7 @@ const propiedad = () => {
                         </Carousel>
                     </div>
                     <div className={styles.precio}>
-                        <h2> {propiedad.titulo} </h2>
+                        <h2>{isTranslate ? propiedad.tituloIngles : propiedad.titulo}</h2>
                         <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                             <div className={styles.separador}></div>
                         </div>
@@ -97,11 +100,19 @@ const propiedad = () => {
                 <div className={styles.descripcionPrecioContainer}>
                     <div className={styles.descripcionContainer}>
                         <ul className={styles.descripcion}>
-                            {descripcion.map((item, index)=>{
+                            {isTranslate ?
+                            descripcionIngles.map((item, index)=>{
                                 return(
                                     <li key={index}> {item} </li>
                                 )
-                            })}
+                            })
+                            :
+                            descripcion.map((item, index)=>{
+                                return(
+                                    <li key={index}> {item} </li>
+                                )
+                            })
+                            }
                         </ul>
                     </div>
                     
