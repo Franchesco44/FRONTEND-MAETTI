@@ -293,8 +293,38 @@
         display: flex;
         flex-direction: column;
         padding: 10px 10px;
-        flex-wrap: wrap;
+        height: 300px;
+        overflow: auto;
     }   
+    .filterOpen::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+    
+    .filterOpen::-webkit-scrollbar:vertical {
+        width:7px;
+    }
+    
+    .filterOpen::-webkit-scrollbar-button:increment ,.body::-webkit-scrollbar-button {
+        display: none;
+    } 
+    
+    .filterOpen::-webkit-scrollbar:horizontal {
+        height: 10px;
+    }
+    
+    .filterOpen::-webkit-scrollbar-track {
+        background: rgba(255, 166, 0, 0);        /* color of the tracking area */
+    }
+    
+    .filterOpen::-webkit-scrollbar-thumb {
+        background-color: #0A2239;
+        border-radius: 20px;
+        border: 2px solid #0A2239;
+    }
+    
+    .filterOpen::-webkit-scrollbar-track {
+        border-radius: 10px;  
+    }
     .inputsContainer{
         display: flex;
         align-items: center;

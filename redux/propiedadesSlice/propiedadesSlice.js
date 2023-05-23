@@ -70,7 +70,6 @@ export const propiedadesSlice = createSlice({
         }else if(payload.payload.max !== 0  && payload.payload.min === 0 ){
           state.dataCopy = state.data.filter((p) => p.precio < payload.payload.max)
         }else{
-          console.log("ambos precios")
           state.dataCopy = state.data.filter((p) => p.precio > payload.payload.min)
           state.dataCopy = state.dataCopy.filter((p) => p.precio < payload.payload.max)
         }

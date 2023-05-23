@@ -73,14 +73,12 @@ const FiltrosNav = () =>{
         setPrecio({
             ...precio, min: Number(event.target.value)
         })
-        console.log(precio)
     }
 
     const priceMax = (event) => {
         setPrecio({
             ...precio, max: Number(event.target.value)
         })
-        console.log(precio)
     }
 
     return(
@@ -117,7 +115,6 @@ const FiltrosNav = () =>{
             onClick={() => {
                 dispatch(setFilterAll())
                 setUbicacion("")
-
                 setIconDeleteFilter(false)
             }}
             >
@@ -134,7 +131,6 @@ const FiltrosNav = () =>{
             onClick={()=>{
                 setIsOpen(false)
                 setIconDeleteFilter(true)
-                console.log(precio)
                 dispatch(setPrice(precio))
             }}
             >
