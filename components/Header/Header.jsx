@@ -3,7 +3,7 @@ import Link from "next/link"
 import styles from "./Header.module.css"
 import { useSelector } from 'react-redux'
 
-const Header = ({text, img, button, linkButton}) => {
+const Header = ({text, img, button}) => {
     const isTranslate = useSelector((state) => state.translate.value)
 
     return(
@@ -17,7 +17,7 @@ const Header = ({text, img, button, linkButton}) => {
                 height={25}
                 alt="Logo letras maettti"
                 />
-                {button ? <Link href={linkButton}> {isTranslate ? "+ INFORMATION" : "+ INFORMACIÓN"} </Link> : ""}
+                {button ? <a href="#quehacemos"> {isTranslate ? "+ INFORMATION" : "+ INFORMACIÓN"} </a> : ""}
             </div>
             <div 
             style={{backgroundImage: `url(${img})`}}
@@ -29,7 +29,7 @@ const Header = ({text, img, button, linkButton}) => {
                 height={25}
                 alt="Logo letras maettti"
                 />
-                {button ? <Link href={linkButton}> {isTranslate ? "+ INFORMATION" : "+ INFORMACIÓN"} </Link> : ""}
+                {button ? <Link href={"#quehacemos"}> {isTranslate ? "+ INFORMATION" : "+ INFORMACIÓN"} </Link> : ""}
                 <div className={styles.fondoAzul}></div>
             </div>
             <div 

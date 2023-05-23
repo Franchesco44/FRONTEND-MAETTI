@@ -1,22 +1,21 @@
-import styles from "./PropiedadesLista.module.css"
+import styles from "./VehiculosLista.module.css"
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from "react"
-import axios from "axios"
-import { setPropiedades } from "../../redux/propiedadesSlice/propiedadesSlice"
 import Link from "next/link"
 import Carousel from 'react-bootstrap/Carousel'
+import axios from "axios"
+import { setVehiculos } from "../../redux/vehiculosSlice/vehiculosSlice"
 
-const PropiedadesLista = () => {
-
+const VehiculosLista = () => {
     const dispatch = useDispatch()
-    const propiedades = useSelector((state)=> state.propiedades.dataCopy)
+    const vehiculos = useSelector((state)=> state.vehiculos.dataCopy)
     const isTranslate = useSelector((state) => state.translate.value)
 
-    const getPropiedades = async () => {
+    const getVehiculos = async () => {
         try {
-            const propiedades = await axios.get('https://api-maetti.up.railway.app/propiedadesSubidas')
-            const data = await propiedades.data
-            dispatch(setPropiedades(data))
+            const vehiculos = await axios.get('https://api-maetti.up.railway.app/vehiculosSubidos')
+            const data = await vehiculos.data
+            dispatch(setVehiculos(data))
             console.log(data)
         } catch (error) {
             console.log(error)
@@ -24,15 +23,15 @@ const PropiedadesLista = () => {
     }
 
     useEffect(()=>{
-        getPropiedades()
+        getVehiculos()
     }, [])
 
     return(
-        <div className={styles.PropiedadesListaContainer} >
-            <div className={styles.listaPropiedades} >
-                {propiedades.map((p, index)=>{
+        <div className={styles.containerVehiculos}>
+            <div className={styles.listaVehiculos} >
+                {vehiculos.map((p, index)=>{
                     return(
-                        <div className={styles.propiedad} key={index}>
+                        <div className={styles.vehiculos} key={index}>
                             <Carousel interval={null}>
                                 {p.imagen.map((i,index)=>{
                                     return(
@@ -48,9 +47,9 @@ const PropiedadesLista = () => {
                                 })}
                             </Carousel>
                             <div className={styles.infoContainer}>
-                                <h4> {isTranslate ? p.tituloIngles : p.titulo} </h4>
-                                <strong> ${p.precio} USD | {p.alquiler} </strong>
-                                <Link href={`/propiedad/${p._id}`} className={styles.viewmore}>{isTranslate ? "VIEW MORE" : "VER MAS"}</Link>
+                                <h4> {p.titulo} </h4>
+                                <strong> ${p.precio} USD | {isTranslate ? "Day" : "Dia"} </strong>
+                                <Link href={`/vehiculo/${p._id}`} className={styles.viewmore}>{isTranslate ? "VIEW MORE" : "VER MAS"}</Link>
                             </div>
                         </div>  
                     )
@@ -60,4 +59,4 @@ const PropiedadesLista = () => {
     )
 }
 
-export default PropiedadesLista
+export default VehiculosLista

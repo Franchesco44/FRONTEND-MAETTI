@@ -1,0 +1,32 @@
+.headerContainer{
+    overflow: hidden;
+    height: 40vh;
+    display: flex;
+    background-image: url("/headerbeneficios.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    border-bottom: 2px solid #0A2239;
+}
+
+.buttonsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.buttonsContainer a{
+    color: white;
+    font-weight: 600;
+    font-size: 25px;
+    padding: 10px 15px;
+    border: 2px solid white;
+    background-color: #0a2239b1;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

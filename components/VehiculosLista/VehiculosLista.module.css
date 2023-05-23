@@ -1,40 +1,44 @@
-.PropiedadesListaContainer{
+.containerVehiculos{
     padding: 20px;
     width: 100%;
     overflow: auto;
 }
 
-.PropiedadesListaContainer::-webkit-scrollbar {
+.containerVehiculos::-webkit-scrollbar {
     -webkit-appearance: none;
 }
 
-.PropiedadesListaContainer::-webkit-scrollbar:vertical {
+.containerVehiculos::-webkit-scrollbar:vertical {
     width:7px;
 }
 
-.PropiedadesListaContainer::-webkit-scrollbar-button:increment ,.body::-webkit-scrollbar-button {
+.containerVehiculos::-webkit-scrollbar-button:increment ,.body::-webkit-scrollbar-button {
     display: none;
 } 
 
-.PropiedadesListaContainer::-webkit-scrollbar:horizontal {
+.containerVehiculos::-webkit-scrollbar:horizontal {
     height: 10px;
 }
 
-.PropiedadesListaContainer::-webkit-scrollbar-track {
+.containerVehiculos::-webkit-scrollbar-track {
     background: rgba(255, 166, 0, 0);        /* color of the tracking area */
 }
 
-.PropiedadesListaContainer::-webkit-scrollbar-thumb {
+.containerVehiculos::-webkit-scrollbar-thumb {
     background-color: #0A2239;
     border-radius: 20px;
     border: 2px solid #0A2239;
 }
 
-.PropiedadesListaContainer::-webkit-scrollbar-track {
+.containerVehiculos::-webkit-scrollbar-track {
     border-radius: 10px;  
 }
 
-.listaPropiedades{
+.containerVehiculos h3{
+    color: black;
+}
+
+.listaVehiculos{
     display: grid;
     row-gap: 40px;
     grid-template-columns: repeat(auto-fit, minmax(20%, 20%));
@@ -42,17 +46,17 @@
     width: 100%;
 }
 
-.PropiedadesListaContainer h3{
+.containerVehiculos h3{
     margin-bottom: 20px;
 }
 
-.propiedad{
+.vehiculos{
     display: flex;
     flex-direction: column;
     width: 90%;
 }
 
-.propiedad h4{
+.vehiculos h4{
     font-size: 15px;
     font-weight: 500;
     margin-top: 10px;
@@ -88,11 +92,11 @@
     height: 100%;
 }
 
-.propiedad strong{
+.vehiculos strong{
     color: white;
 }
 
-.propiedad .imagen{
+.vehiculos .imagen{
     height: 200px;
     background-size: cover;
     background-position: center;
@@ -107,39 +111,29 @@
     border-radius: 10px 10px 0px 0px;
 }
 
-@media screen and (max-width: 950px)  {
-    .listaPropiedades{
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-    .PropiedadesListaContainer{
-        padding: 5px;
-    }
-}
-
 @media screen and (max-width: 840px)  {
-    .listaPropiedades{
+    .listaVehiculos{
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
-    .PropiedadesListaContainer{
+    .containerVehiculos{
         padding: 5px;
     }
 }
 
 @media screen and (max-width: 570px)  {
-    .listaPropiedades{
+    .listaVehiculos{
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
-    .PropiedadesListaContainer{
+    .containerVehiculos{
         padding: 5px;
     }
-    .propiedad strong{
+    .vehiculos strong{
         font-size: 13px;
     }
-    
-    .propiedad .imagen{
+    .vehiculos .imagen{
         height: 150px;
     }
-    .propiedad h4{
+    .vehiculos h4{
         font-size: 13px;
         margin-top: 5px;
         margin-bottom: 5px;

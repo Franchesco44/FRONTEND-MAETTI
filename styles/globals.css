@@ -9,6 +9,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body{
+  scroll-behavior: smooth;
 }
 
 ul{
@@ -22,4 +27,5 @@ a{
 
 .containerMain{
   z-index: 90;
+  scroll-behavior: smooth;
 }
