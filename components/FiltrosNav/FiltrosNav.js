@@ -71,13 +71,13 @@ const FiltrosNav = () =>{
 
     const priceMin = (event) => {
         setPrecio({
-            ...precio, min: event.target.value
+            ...precio, min: Number(event.target.value)
         })
     }
 
     const priceMax = (event) => {
         setPrecio({
-            ...precio, max: event.target.value
+            ...precio, max: Number(event.target.value)
         })
     }
 
