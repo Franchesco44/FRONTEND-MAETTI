@@ -119,7 +119,12 @@
     margin-top: 0;
 }
 
-
+.containerBoton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
 
 .wp:hover{
     color: white;
