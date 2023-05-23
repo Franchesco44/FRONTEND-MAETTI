@@ -22,7 +22,7 @@ const FormularioPropiedades = () => {
         barrio: "",
         rangoprecio: "",
         servicios: "",
-        cantidadhuespedes: "",
+        cantidadhuesped: "",
         limpiezatarifa: "",
         estadiaminima: "",
         estadiamaxima: "",
@@ -53,7 +53,8 @@ const FormularioPropiedades = () => {
         params.append('ciudad', data.ciudad)
         params.append('barrio', data.barrio)
         params.append('rangoprecio', data.rangoprecio)
-        params.append('cantidadhuespedes', data.cantidadhuespedes)
+        params.append('servicios', data.servicios)
+        params.append('cantidadhuesped', data.cantidadhuesped)
         params.append('limpiezatarifa', data.limpiezatarifa)
         params.append('estadiaminima', data.estadiaminima)
         params.append('estadiamaxima', data.estadiamaxima)
@@ -85,16 +86,23 @@ const FormularioPropiedades = () => {
 
     const handleChange = (e) => {
         const {name, value} = e.target
+        if(name == "nacimiento"){
+            if(value.length === 2){
+                e.target.value = e.target.value + "/"
+            }else if(value.length === 5){
+                e.target.value = e.target.value + "/"
+            }
+        }
         setDataForm({...dataForm, [name]: value })
     }
 
     return(
         <div className={styles.formularioContainer}>
-            <h3>{isTranslate? "Register your property and we will contact you!":"Registra tu propiedad y nos contactaremos contigo!"}</h3>
+            <h3>{isTranslate? "Register your property and we will reach you":"Registrá tu propiedad y nos contactaremos contigo"}</h3>
             {isLoading ? <Loading type="points" /> : 
             <div className={styles.formularios}>
                 <div className={styles.formulario}>
-                    <h4> {isTranslate? "Owner information." : "Informacion de propietario."} </h4>
+                    <h4> {isTranslate? "Owner information" : "Información de propietario"} </h4>
                     <label for="nombre">{isTranslate? "First and last name" : "Nombre y apellido"}</label>
                     <input onChange={(e) => handleChange(e)} required type="text" name="nombre"/>
                     <label for="nacimiento">{isTranslate? "Date of birth" : "Fecha de nacimiento"}</label>
@@ -103,17 +111,17 @@ const FormularioPropiedades = () => {
                     <input onChange={(e) => handleChange(e)} required type="number" name="dni"/>
                     <label for="email">{isTranslate? "Email" : "Email"}</label>
                     <input onChange={(e) => handleChange(e)} required type="email" name="email" placeholder={isTranslate? "youremail@hotmail.com" : "tuemail@hotmail.com"}/>
-                    <label for="telefono">{isTranslate? "Email" : "Numero de telefono"}</label>
+                    <label for="telefono">{isTranslate? "Phone number" : "Número de telefono"}</label>
                     <input onChange={(e) => handleChange(e)} required type="number" name="telefono" placeholder={isTranslate? "Only numbers" : "Solo numeros"}/>
                     <label for="ciudadnatal">{isTranslate? "Hometown" : "Ciudad natal"}</label>
                     <input onChange={(e) => handleChange(e)} required type="text" name="ciudadnatal"/>
-                    <label for="codigopostal">{isTranslate? "Zip Code" : "Codigo postal"}</label>
+                    <label for="codigopostal">{isTranslate? "Zip Code" : "Código postal"}</label>
                     <input onChange={(e) => handleChange(e)} required type="text" name="codigopostal"/>
                     <label for="contacto">{isTranslate? "Reason for contact" : "Motivo de contacto"}</label>
                     <textarea onChange={(e) => handleChange(e)} cols="30" rows="10" required type="text" name="contacto"/>
                 </div>
                 <div className={styles.formulario}>
-                    <h4> {isTranslate? "Property information." : "Informacion de propiedad."} </h4>
+                    <h4> {isTranslate? "Property information." : "Información de propiedad"} </h4>
                     <label for="direccion">{isTranslate? "Address" : "Direccion"}</label>
                     <input onChange={(e) => handleChange(e)} required type="text" name="direccion"/>
                     <label for="ciudad">{isTranslate? "City" : "Ciudad"}</label>
@@ -124,33 +132,33 @@ const FormularioPropiedades = () => {
                     <input onChange={(e) => handleChange(e)} required type="text" name="rangoprecio" placeholder={isTranslate? "For example: 200$ to 500$" : "Ej: 200$ a 500$"}/>
                     <label for="servicios">{isTranslate? "What services do you have" : "Qué servicios tiene"}</label>
                     <input onChange={(e) => handleChange(e)} required type="text" name="servicios"/>
-                    <label for="cantidadhuespedes">{isTranslate? "Number of guests" : "Cantidad de huéspedes"}</label>
-                    <input onChange={(e) => handleChange(e)} required type="number" name="cantidadhuespedes" placeholder={isTranslate? "Insert only number" : "Colocar solo numeros"}/>
+                    <label for="cantidadhuesped">{isTranslate? "Number of guests" : "Cantidad de huéspedes"}</label>
+                    <input onChange={(e) => handleChange(e)} required type="number" name="cantidadhuesped" placeholder={isTranslate? "Insert only number" : "Colocar solo numeros"}/>
                     <label for="limpiezatarifa">{isTranslate? "Cleaning fee" : "Tarifa de limpieza"}</label>
-                    <input onChange={(e) => handleChange(e)} required type="number" name="limpiezatarifa" placeholder={isTranslate? "Insert only number" : "Colocar solo numeros"}/>
+                    <input onChange={(e) => handleChange(e)} required type="text" name="limpiezatarifa" placeholder={isTranslate? "For example: 5USD" : "Ej: 5USD"}/>
                     <label for="estadiaminima">{isTranslate? "Minimum length of stay" : "Duración mínima de la estadía"}</label>
                     <input onChange={(e) => handleChange(e)} required type="number" name="estadiaminima" placeholder={isTranslate? "Insert only number of days" : "Colocar solo numero de dias"}/>
-                    <label for="estadiaminima">{isTranslate? "Maximum length of stay" : "Duración maxima de la estadía"}</label>
+                    <label for="estadiamaxima">{isTranslate? "Maximum length of stay (optional)" : "Duración maxima de la estadía (opcional)"}</label>
                     <input onChange={(e) => handleChange(e)} required type="number" name="estadiamaxima" placeholder={isTranslate? "Insert only number of days" : "Colocar solo numero de dias"}/>
-                    <label for="diasaviso">{isTranslate? "How many days' notice do you need":"Cuántos días de pre aviso necesita"}</label>
+                    <label for="diasaviso">{isTranslate? "How many days notice do you need?":"¿Cuántos días de pre aviso necesita?"}</label>
                     <input onChange={(e) => handleChange(e)} required type="number" name="diasaviso" placeholder={isTranslate? "Insert only number of days" : "Colocar solo numero de dias"}/>
-                    <label for="tiempopreparacion">{isTranslate? "How much preparation time between host and host do you need (0,1 or 2 days max)?":"Cuánto tiempo de preparación entre huésped y huésped necesita? (0, 1 o 2 días max)"}</label>
+                    <label for="tiempopreparacion">{isTranslate? "How much preparation time between guest and guest do you need (1 or 2 days max).":"¿Cuánto tiempo de preparación entre huésped y huésped necesita? (0, 1 o 2 días max)"}</label>
                     <input onChange={(e) => handleChange(e)} required type="number" name="tiempopreparacion" placeholder={isTranslate? "Insert only number of days" : "Colocar solo numero de dias"}/>
                     <label for="diasrestringidos">{isTranslate? "Restricted check-in days":"Días restringidos para hacer el check in"}</label>
-                    <input onChange={(e) => handleChange(e)} required type="number" name="diasrestringidos" placeholder={isTranslate? "Insert only number of days" : "Colocar solo numero de dias"}/>
+                    <input onChange={(e) => handleChange(e)} required type="text" name="diasrestringidos" placeholder={isTranslate? "For example: Sunday" : "Ej: Domingo"}/>
                     <label for="horariocheckin">{isTranslate? "Time range for check in":"Rango horario para check in"}</label>
-                    <input onChange={(e) => handleChange(e)} required type="text" name="horariocheckin" placeholder={isTranslate? "For example: 10:00AM to 12:00AM" : "Ej: 10:00AM a 12:00AM"}/>
+                    <input onChange={(e) => handleChange(e)} required type="text" name="horariocheckin" placeholder={isTranslate? "For example: 10:00 to 12:00 or flexible" : "Ej: 10:00 a 12:00 o flexible"}/>
                     <label for="horariocheckout">{isTranslate? "Time range for check out":"Rango horario para check out"}</label>
-                    <input onChange={(e) => handleChange(e)} required type="text" name="horariocheckout" placeholder={isTranslate? "For example: 10:00AM to 12:00AM" : "Ej: 10:00AM a 12:00AM"}/>
-                    <label for="infomascotas">{isTranslate? "Do you accept pets or not, if you accept pets do you charge an extra fee for accepting them?":"Acepta o no mascotas, de si aceptar mascotas cobra una tarifa extra por aceptarlas?"}</label>
-                    <input onChange={(e) => handleChange(e)} required type="text" name="infomascotas"/>
+                    <input onChange={(e) => handleChange(e)} required type="text" name="horariocheckout" placeholder={isTranslate? "For example: 10:00 to 12:00 or flexible" : "Ej: 10:00 a 12:00 o flexible"}/>
+                    <label for="infomascotas">{isTranslate? "Do you accept pets or not, if you accept pets do you charge an extra fee for accepting them?":"¿Acepta o no mascotas? de si aceptar mascotas ¿Cobra una tarifa extra por aceptarlas?"}</label>
+                    <input onChange={(e) => handleChange(e)} required type="text" name="infomascotas" placeholder={isTranslate ? "For example: Yes i accept, 25USD" : "Ej: Si acepto, 25USD"} />
                     <label for="infofumar">{isTranslate? "Do you allow electronic cigarettes or smoking?":"¿Permite cigarrillos electrónicos o fumar?"}</label>
                     <input onChange={(e) => handleChange(e)} required type="text" name="infofumar"/>
                     <label for="infoadicionales">{isTranslate? "Additional standards":"Normas adicionales"}</label>
                     <input onChange={(e) => handleChange(e)} required type="text" name="infoadicionales"/>
                     <label for="infowifi">{isTranslate? "Wifi network information":"Información sobre la red wifi"}</label>
                     <input onChange={(e) => handleChange(e)} required type="text" name="infowifi"/>
-                    <label for="infopagos">{isTranslate? "Where you wish to receive payments (Paypal or foreign bank account)":"Donde desea recibir los pagos (Paypal o Cuenta bancaria en el extranjero)"}</label>
+                    <label for="infopagos">{isTranslate? "Where do you want to receive your payments? (Paypal, Payonner or bank account).":"Donde desea recibir los pagos (Paypal o Cuenta bancaria en el extranjero)"}</label>
                     <input onChange={(e) => handleChange(e)} required type="text" name="infopagos"/>
                 </div>
             </div>

@@ -42,7 +42,7 @@ export const experiencias = [
                     titulo: "DIA 5",
                     subtitulo: "El Chaltén, Trekking a la Laguna de los Trés, Monte Fitz Roy. Dificultad Alta: Recorrido de 20km totales (05 horas de ida y 05 horas de retorno)",
                     fecha: "26 ABRIL 2023",
-                    descripcion: "Nuestra jornada comenzará muy temprano por la mañana para el trekking más emblemático de la localidad, que tendrá como destino la Laguna de los Trés a los pies del Monte Fitz Roy. Considerado uno de los trekkings más fotogénicos del Mundo. Nos llevará dentro de una poblada vegetación de montaña entre ríos, lagos y muchos ángulos para fotografiar.Luego de una almuerzo en el Lago Capri, volveremos a nuestro Hotel para un merecido descanso."
+                    descripcion: "Nuestra jornada comenzará muy temprano por la mañana para el trekking más emblemático de la localidad, que tendrá como destino la Laguna de los Trés a los pies del Monte Fitz Roy. Considerado uno de los trekkings más fotogénicos del Mundo. Nos llevará dentro de una poblada vegetación de montaña entre ríos, lagos y muchos ángulos para fotografiar. Luego de una almuerzo en el Lago Capri, volveremos a nuestro Hotel para un merecido descanso."
                 },
                 {
                     titulo: "DIA 6",
@@ -60,7 +60,7 @@ export const experiencias = [
                     titulo: "DIA 9",
                     subtitulo: "El Calafate - FIN DEL VIAJE",
                     fecha: "30 ABRIL 2023",
-                    descripcion: "Nuestra gran Expedición Fotográfica por la Patagonia Argentina llega a su fin luego del desayuno,acompañaremos a cada participante al Aeropuerto Internacional de El Calafate para el transfert desde el Hotel. "
+                    descripcion: "Nuestra gran Expedición Fotográfica por la Patagonia Argentina llega a su fin luego del desayuno, acompañaremos a cada participante al Aeropuerto Internacional de El Calafate para el transfert desde el Hotel. "
                 }
             ]
         },

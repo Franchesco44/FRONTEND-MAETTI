@@ -9,6 +9,7 @@
     color: black;
     font-weight: 500;
     background-color: white;
+    border-bottom: 3px solid #011529;
 }
 
 .nav button{
@@ -52,7 +53,94 @@
     color: black;
     font-weight: 500;
     margin-top: 20px;
+}
 
+.dropdown span{
+    height: inherit!important;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.dropdown h2{
+    font-size: 16px;
+    color: white;
+    font-weight: 400;
+}
+
+.containerDropdown{
+    position: relative;
+    margin-right: 30px;
+}
+
+.dropdownTitle strong{
+    font-size: 25px;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.dropdownTitle{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dropdown{
+    display: unset;
+    flex-direction: column;
+    position: absolute;
+    padding: 10px;
+    border: 2px solid #011529;
+    border-radius: 10px;
+    background-color: white;
+    top: 100%;
+    right: 0;
+    margin-top: 10px;
+    width: max-content;
+    padding-right: 20px;
+}
+
+.dropdownOcult{
+    display: none;
+}
+
+.dropdownItem{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.dropdownItem a{
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 5px;
+    color: #011529 !important;
+}
+
+.dropdownItem strong{
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 5px;
+    color: #011529 !important;
+}
+
+.lenguajeContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.lenguajeContainerOcult{
+    display: none;
+}
+
+.lenguajeContainer small{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    color: #011529;
 }
 
 
@@ -76,3 +164,21 @@
         display: none;
     }
 }
+
+@media screen and (max-width: 650px) {
+    .logo{
+        width: 68px;
+        height: 40px;
+    }
+    .dropdownTitle strong{
+        font-size: 15px;
+    }
+    .nav{
+        padding: 10px 10px;
+        flex-wrap: wrap;
+    }
+    .containerDropdown{
+        margin-right: 0px;
+    }
+}
+

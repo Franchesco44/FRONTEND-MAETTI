@@ -1,11 +1,18 @@
 import Head from 'next/head';
-import { useSelector } from 'react-redux'
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux'
 import FormularioPropiedades from '../components/FormularioPropiedades/FormularioPropiedades';
 import HagamosEsto from '../components/HagamosEsto/HagamosEsto';
 import Header from "../components/Header/Header"
+import { setStaticNav } from '../redux/navSlice/navSlice';
 
 const trabajaconnosotros = () => {
     const isTranslate = useSelector((state) => state.translate.value)
+    const dispatch = useDispatch()
+
+    useEffect(()=>{
+        dispatch(setStaticNav(true))
+    }, [])
 
     return(
         <>
@@ -14,14 +21,14 @@ const trabajaconnosotros = () => {
             </Head>
             {isTranslate ? 
             <Header
-                text={"Do you have a property? we want to help you rent it."}
+                text={"Do you have a property? we can help you rent it."}
                 img={"/trabajaConNosotros.png"}
                 button={false}
                 linkButton={"/"}
             />
             : 
             <Header
-                text={"Tenes una propiedad? queremos ayudarte a rentarla."}
+                text={"Tenés una propiedad? Queremos ayudarte a rentarla."}
                 img={"/trabajaConNosotros.png"}
                 button={false}
                 linkButton={"/"}

@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from "react"
 import axios from "axios"
 import { setPropiedades } from "../../redux/propiedadesSlice/propiedadesSlice"
+import Link from "next/link"
+import Carousel from 'react-bootstrap/Carousel'
 
 const PropiedadesLista = () => {
 
@@ -15,6 +17,7 @@ const PropiedadesLista = () => {
             const propiedades = await axios.get('https://api-maetti.up.railway.app/propiedadesSubidas')
             const data = await propiedades.data
             dispatch(setPropiedades(data))
+            console.log(data)
         } catch (error) {
             console.log(error)
         }
@@ -26,18 +29,29 @@ const PropiedadesLista = () => {
 
     return(
         <div className={styles.PropiedadesListaContainer} >
-            <h3>{isTranslate ? "Available properties" : "Propiedades disponibles"}</h3>
             <div className={styles.listaPropiedades} >
                 {propiedades.map((p, index)=>{
                     return(
                         <div className={styles.propiedad} key={index}>
-                            <div
-                            className={styles.imagen}
-                            style={{backgroundImage: `url(https://api-maetti.up.railway.app/${p.imagen})`}}
-                            ></div>
-                            <h4> {p.titulo} </h4>
-                            <strong> ${p.precio} USD por {p.alquiler} </strong>
-                            <a target={"_blank"} href={p.url}>{isTranslate ? "VIEW ON AIRBNB" : "VER EN AIRBNB"}</a>
+                            <Carousel interval={null}>
+                                {p.imagen.map((i,index)=>{
+                                    return(
+                                        <Carousel.Item key={index}>
+                                            <div
+                                            style={{backgroundImage: `url(https://api-maetti.up.railway.app/${i})`
+                                            , backgroundPosition: "center", backgroundRepeat: "no-repeat"
+                                        }}
+                                            className={styles.carruselItem}
+                                            />
+                                        </Carousel.Item>
+                                    )
+                                })}
+                            </Carousel>
+                            <div className={styles.infoContainer}>
+                                <h4> {isTranslate ? p.tituloIngles : p.titulo} </h4>
+                                <strong> ${p.precio} USD | {p.alquiler} </strong>
+                                <Link href={`/propiedad/${p._id}`} className={styles.viewmore}>{isTranslate ? "VIEW MORE" : "VER MAS"}</Link>
+                            </div>
                         </div>  
                     )
                 })}

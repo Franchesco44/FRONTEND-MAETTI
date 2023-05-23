@@ -9,6 +9,8 @@
     width: 50%;
     text-align: center;
     letter-spacing: 1px;
+    color: black;
+    font-weight: 600;
 }
 
 .containerQuienesSomos h2{
@@ -16,6 +18,13 @@
     margin-bottom: 30px;
     font-size: 50px;
     font-weight: 500;
+    color: black;
     text-align: center;
+}
+
+@media screen and (max-width:800px){
+    .containerQuienesSomos p{
+        width: 100%;
+    }
 }
 

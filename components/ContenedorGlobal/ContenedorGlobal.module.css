@@ -1,0 +1,16 @@
+
+.fixed{
+  z-index: 90;
+  padding-top: 100px;
+}
+
+.nofixed{
+  z-index: 90;
+  padding-top: 0;
+}
+
+@media screen and (max-width: 650px){
+  .fixed{
+    padding-top: 60px;
+  }
+}

@@ -10,6 +10,7 @@
     font-size: 15px;
     font-style: italic;
     font-weight: 500;
+    color: black;
 }
 
 .diaTarjeta p{
@@ -17,4 +18,5 @@
     word-spacing: 5px;
     line-height: 25px;
     font-size: 13px;
+    letter-spacing: 2px;
 }

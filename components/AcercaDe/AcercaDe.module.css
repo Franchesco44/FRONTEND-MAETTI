@@ -1,25 +1,16 @@
 .acercaDeContainer{
-    padding: 30px;
-}
-
-.acercaDeContainer ul{
-    list-style: circle;
-}
-
-.acercaDeContainer ul li{
-    margin-top: 30px;
-    margin-bottom: 30px;
-    font-weight: 500;
+    padding: 30px 130px;
+    text-align: center;
+    background-color: white;
 }
 
 .acercaDeContainer h3{
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    font-size: 25px;
+    color: #0A2239;
+    font-size: 35px;
 }
 
-.acercaDeContainer h2{
-    margin-bottom: 10px;
-    font-size: 25px;
+@media screen and (max-width:800px){
+    .acercaDeContainer{
+        padding: 30px 70px;
+    }
 }

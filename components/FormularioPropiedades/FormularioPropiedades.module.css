@@ -9,6 +9,7 @@
     font-size: 50px;
     margin-bottom: 30px;
     margin-top: 30px;
+    color: black;
 }
 
 .formularios{
@@ -19,6 +20,7 @@
 
 .formulario label{
     font-weight: 500;
+    color: black;
 }
 
 .formulario{
@@ -30,15 +32,18 @@
 .formulario h4{
     margin-bottom: 20px;
     font-size: 25px;
+    color: black;
 }
 
 .formulario input{
     border: 1px solid #0A2239;
     padding: 10px;
+    background-color: white;
     border-radius: 10px;
     margin-bottom: 10px;
     margin-top: 10px;
     width: 100%;
+    color: black;
 }
 
 .formulario textarea{
@@ -46,12 +51,15 @@
     border: 1px solid #0A2239;
     padding: 10px;
     border-radius: 10px;
+    background-color: white;
     width: 100%;
+    color: black;
 }
 
 .formulario textarea:focus{
     outline: none;
     border: 2px solid #0A2239;
+    color: black;
 }
 
 .formularioContainer button{
@@ -63,7 +71,16 @@
     border-radius: 10px;
     width: max-content;
     margin-bottom: 20px;
+    background-color: white;
 }
+
+.formulario input[type=number]::-webkit-inner-spin-button,
+.formulario input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+.formulario input[type=number] { -moz-appearance:textfield; }
+
 
 
 @media screen and (max-width: 450px){

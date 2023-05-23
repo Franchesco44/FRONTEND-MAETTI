@@ -11,11 +11,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #0A2239;
 }
 
 .containerFormulario h3{
     font-size: 50px;
     text-align: center;
+    color: white;
+    padding: 10px 20px;
+    border: 3px solid white;
 }
 
 .containerFormulario input[type="text"]{
@@ -25,15 +29,19 @@
     margin-bottom: 10px;
     margin-top: 10px;
     width: 100%;
+    background-color: white;
+    color: black;
 }
 
 .containerFormulario input[type="email"]{
     border: 1px solid #0A2239;
+    background-color: white;
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
     margin-top: 10px;
     width: 100%;
+    color: black;
 }
 
 .containerFormulario input[type="email"]:focus{
@@ -49,9 +57,11 @@
 .containerFormulario textarea{
     resize: none;
     border: 1px solid #0A2239;
+    background-color: white;
     padding: 10px;
     border-radius: 10px;
     width: 100%;
+    color: black;
 }
 
 .containerFormulario textarea:focus{
@@ -63,9 +73,12 @@
     margin-top: 20px;
     color: #0A2239;
     border: 1px solid #0A2239;
-    padding: 10px 15px;
+    padding: 10px 30px;
     cursor: pointer;
+    background-color: white;
     border-radius: 10px;
+    font-size: 25px;
+    font-weight: 600;
 }
 
 @media screen and (max-width: 850px){
