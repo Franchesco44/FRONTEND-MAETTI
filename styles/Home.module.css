@@ -1,6 +1,14 @@
 .container{
     scroll-behavior: smooth;
+    padding-top: 100px;
 }
+
+@media screen and (max-width: 650px){
+    .container{
+        padding-top: 60px;
+    }
+}
+
 
 
 @media screen and (max-width: 570px){
@@ -9,3 +17,8 @@
     }
 }
 
+@media screen and (max-width: 520px){
+    .container{
+        padding-top: 33px;
+    }
+}

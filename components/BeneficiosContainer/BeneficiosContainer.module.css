@@ -99,6 +99,12 @@
     font-size: 25px;
 }
 
+@media screen and (max-width: 1345px){
+    .cardSocial strong{
+        font-size: 20px;
+    }
+}
+
 @media screen and (max-width: 1140px){
         .containerInfo{
             display: flex;
@@ -109,7 +115,6 @@
         .containerInfo strong{
             color: #0A2239;
             font-size: 25px;
-            font-weight: 400;
         }
         .containerSocial{
             padding: 5px;
@@ -211,6 +216,9 @@
     .error{
         padding: 0px;
     }
+    .beneficiosLista{
+        width: 98%;
+    }
 }
 
 @media screen and (max-width: 370px){
@@ -222,9 +230,6 @@
     }
     .tituloContainer p{
         font-size: 10px;
-    }
-    .beneficiosLista{
-        width: 98%;
     }
 }
 
