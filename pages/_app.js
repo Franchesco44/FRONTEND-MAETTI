@@ -44,9 +44,7 @@ function MyApp({ Component, pageProps }) {
             <NextUIProvider theme={lightTheme}>
               <Nav/>
               <WhatsApp/>
-              {/* <ContenedorGlobal  > */}
-                <Component {...pageProps} />
-              {/* </ContenedorGlobal> */}
+              <Component {...pageProps} />
               <Footer/>
             </NextUIProvider>
         </Provider>
