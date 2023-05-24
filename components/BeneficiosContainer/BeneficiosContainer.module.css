@@ -1,7 +1,7 @@
 .beneficiosContainer{
     display: flex;
     flex-direction: column;
-    padding-top: 20px;
+    padding-top: 30px;
 }   
 
 .tituloContainer{
@@ -12,7 +12,7 @@
 }
 
 .tituloContainer h2{
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     font-weight: 600;
     letter-spacing: 2px;
     font-size: 40px;
@@ -26,22 +26,24 @@
 }
 
 .beneficiosLista{
-    padding: 10px 30px;
+    padding: 10px 0px;
     display: flex;
     flex-direction: column;
     margin-top: 20px;
     margin-bottom: 20px;
+    align-items: center;
+    width: 90%;
 }
 
 .cardBeneficios{
     display: flex;
     align-items: center;
     border: 2px solid #0A2239;
-
+    width: 100%;
 }
 
 .logoContainer{
-    width: 200px;
+    width: 250px;
     height: 200px;
     background-size: cover;
     background-position: center;
@@ -54,6 +56,7 @@
     flex-direction: column;
     align-items: center;
     padding: 0px 30px;
+    width: 100%;
 }
 
 .containerInfo strong{
@@ -66,6 +69,8 @@
     display: flex;
     align-items: center;
     padding: 10px;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .cardSocial{
@@ -86,7 +91,7 @@
     display: flex;
     align-items: center;
     padding: 10px 30px;
-
+    text-align: center;
 }
 
 .error strong{
@@ -124,37 +129,108 @@
     .containerInfo{
         padding: 0px 5px;
     }
-    .containerSocial{
-        flex-wrap: wrap;
-    }
-    .logoContainer{
-        margin-top: 10px;
-        border-radius: 10px;
-    }
     .cardSocial{
         margin-top: 10px;
         margin-bottom: 10px;
+    }
+    .cardSocial img{
+        width: 35px;
+        height: 35px;
     }
     .tituloContainer h2{
         font-size: 30px;
         text-align: center;
     }
-    
     .tituloContainer p{
         font-size: 22px;
         text-align: center;
     }
     .containerInfo strong{
-        font-size: 22px;
-    }
-    .cardBeneficios{
-        flex-wrap: wrap;
-        justify-content: center;
+        font-size: 15px;
     }
 }
 
-@media screen and (max-width: 450px){
+@media screen and (max-width: 820px){
+    .logoContainer{
+        width: 100px;
+        height: 100px;
+    }
+    .cardSocial{
+        margin: 0px;
+    }
     .containerInfo strong{
+        font-size: 10px;
+    }
+    .cardSocial img{
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media screen and (max-width: 520px){
+    .cardSocial strong{
+        margin-left: 5px;
+    }
+    .tituloContainer p{
         font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .beneficiosContainer{
+        padding: 0px 7px;
+        background-color: #0A2239;
+    }
+    .tituloContainer{
+        background-color: white;
+        padding-top: 20px;
+    }
+    .containerInfo{
+        padding: 0px;
+    }
+    .containerInfo strong{
+        font-size: 10px;
+    }
+    .cardSocial strong{
+        font-size: 7px;
+        margin-left: 2px;
+    }      
+    .cardSocial img{
+        width: 15px;
+        height: 15px;
+    }
+    .logoContainer{
+        height: 80px;
+    }
+    .tituloContainer h2{
+        font-size: 16px;
+    }
+    .error strong{
+        font-size: 15px;
+    }
+    .error{
+        padding: 0px;
+    }
+}
+
+@media screen and (max-width: 370px){
+    .tituloContainer h2{
+        font-size: 14px;
+    }
+    .error strong{
+        font-size: 14px;
+    }
+    .tituloContainer p{
+        font-size: 10px;
+    }
+    .beneficiosLista{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 350px){
+    .logoContainer{
+        height: 50px;
+        width: 50px;
     }
 }

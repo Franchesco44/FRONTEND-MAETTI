@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { STATIC_STATUS_PAGES } from 'next/dist/shared/lib/constants'
 
 const initialState = {
   data: [],
@@ -24,33 +23,42 @@ export const propiedadesSlice = createSlice({
         state.dataCopy = state.data
       }
     },
-    setNoche: (state, payload) => {
-      if(state.busqueda !== ""){
-        state.dataCopy = state.data.filter((p) => p.zona === state.busqueda)
+    setBusqueda: (state, payload) => {
+      //Ubicacion
+      if(payload.payload.ubicacion !== ""){
+        console.log(payload.payload.ubicacion)
+        state.dataCopy = state.data.filter((p) => p.zona === payload.payload.ubicacion)
+        state.busqueda = payload.payload.ubicacion
+      }else{
+        state.dataCopy = state.data
+      }
+      //Renta
+      if(payload.payload.renta == "noche"){
         state.dataCopy = state.dataCopy.filter((p) => p.alquiler === "noche")
-      }else{
-        state.dataCopy = state.data.filter((p) => p.alquiler === "noche")
-      }
-      
-    },
-    setMensual: (state, payload) => {
-      if(state.busqueda !== ""){
-        state.dataCopy = state.data.filter((p) => p.zona === state.busqueda)
+      }else if(payload.payload.renta == "mes"){
         state.dataCopy = state.dataCopy.filter((p) => p.alquiler === "mensual")
-      }else{
-        state.dataCopy = state.data.filter((p) => p.alquiler === "mensual")
       }
-      
-    },
-    setMayorAMenor: (state, payload) => {
-      state.dataCopy = state.dataCopy.sort(function(a, b) {
-        return a.precio - b.precio;
-      }).reverse()
-    },
-    setMenorAMayor: (state, payload) => {
-      state.dataCopy = state.dataCopy.sort(function(a, b) {
-        return a.precio - b.precio;
-      })
+      //Rango de precios
+      if(payload.payload.min === 0 && payload.payload.max === 0){
+        state.dataCopy = state.dataCopy.filter((p) => p.precio > 0)
+      }else if(payload.payload.min !== 0 && payload.payload.max === 0){
+        state.dataCopy = state.dataCopy.filter((p) => p.precio > payload.payload.min)
+      }else if(payload.payload.max !== 0  && payload.payload.min === 0 ){
+        state.dataCopy = state.dataCopy.filter((p) => p.precio < payload.payload.max)
+      }else{
+        state.dataCopy = state.dataCopy.filter((p) => p.precio > payload.payload.min)
+        state.dataCopy = state.dataCopy.filter((p) => p.precio < payload.payload.max)
+      }
+      //Orden
+      if(payload.payload.orden === "mayor a menor"){
+        state.dataCopy = state.dataCopy.sort(function(a, b) {
+          return a.precio - b.precio;
+        }).reverse()
+      }else if(payload.payload.orden === "menor a mayor"){
+        state.dataCopy = state.dataCopy.sort(function(a, b) {
+          return a.precio - b.precio;
+        })
+      }
     },
     setFilterAll: (state, payload) => {
       state.dataCopy = state.data
@@ -61,24 +69,11 @@ export const propiedadesSlice = createSlice({
     },
     setIsInicio: (state, payload) => {
       state.isInicio = payload.payload
-    },
-    setPrice: (state, payload) => {
-      if(payload.payload.min === 0 && payload.payload.max === 0){
-        state.dataCopy = state.data.filter((p) => p.precio > 0)
-      }else if(payload.payload.min !== 0 && payload.payload.max === 0){
-        state.dataCopy = state.data.filter((p) => p.precio > payload.payload.min)
-      }else if(payload.payload.max !== 0  && payload.payload.min === 0 ){
-        state.dataCopy = state.data.filter((p) => p.precio < payload.payload.max)
-      }else{
-        state.dataCopy = state.data.filter((p) => p.precio > payload.payload.min)
-        state.dataCopy = state.dataCopy.filter((p) => p.precio < payload.payload.max)
-      }
     }
   }
 })
 
-export const { setPropiedades, setFilterUbicacion, setFilterAlquiler, setFilterAll, setFilterProperties, setIsPropiedades, setIsInicio, 
-setLocalizacion, setNoche, setMensual, setMayorAMenor, setMenorAMayor, setPrice
+export const { setPropiedades, setFilterUbicacion, setFilterAlquiler, setFilterAll, setFilterProperties, setIsPropiedades, setIsInicio, setBusqueda
 } = propiedadesSlice.actions
 
 export default propiedadesSlice.reducer

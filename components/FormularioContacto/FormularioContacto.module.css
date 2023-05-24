@@ -86,3 +86,16 @@
         width: 70%;
     }
 }
+
+@media screen and (max-width: 550px){
+    .containerFormulario form{
+        width: 100%;
+    }
+    .containerFormulario h3{
+        font-size: 25px;
+    }
+    .containerFormulario input[type="submit"]{
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+}

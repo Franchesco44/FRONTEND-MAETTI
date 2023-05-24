@@ -75,6 +75,9 @@ const vehiculo = () => {
                             </a>
                         </div>
                         <strong className={styles.zona}> {vehiculoInfo.zona} </strong>
+                        <div style={{display: "flex", justifyContent: "center", alignItems: "center", marginTop: "10px"}}>
+                            <div className={styles.separador}></div>
+                        </div>
                     </div>
                     <div className={styles.precio}>
                         <h2>{vehiculoInfo.titulo}</h2>

@@ -58,14 +58,15 @@
 
 .filterOpen{
     display: unset;
-    padding: 10px 20px;
+    padding: 10px 60px;
     border-radius: 10px;
     margin-top: 10px;
     background-color: white;
     position: absolute; 
-    border: 1px solid #0A2239;
+    border: 2px solid #0A2239;
     top: 100%;
     z-index: 100;
+    left: -20%;
 }   
 
 .filterClose{
@@ -115,7 +116,7 @@
 .inputStyle{
     padding: 5px 10px;
     background-color: white;
-    border: 1px solid #0A2239;
+    border: 2px solid #0A2239;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -145,13 +146,13 @@
 
 .buttonInactive{
     background-color: white;
-    border: 1px solid #0A2239;
+    border: 2px solid #0A2239;
     color: #0A2239;
     padding: 10px 15px;
     border-radius: 10px;
 }
 
-.buttonInactive:hover{
+.buttonActive{
     transition: 0.3s;
     background-color: #0A2239;
     border: none;
@@ -252,6 +253,11 @@
     display: none;
 }
 
+.containerIconSearch img{
+    height: 20px;
+    width: 20px;
+}
+
 @media screen and (max-width: 780px)  {
     .containerFiltros{
         padding: 10px 10px;
@@ -290,60 +296,26 @@
 
 @media screen and (max-width: 650px) {
     .filterOpen{
-        display: flex;
-        flex-direction: column;
         padding: 10px 10px;
-        height: 300px;
-        overflow: auto;
-    }   
-    .filterOpen::-webkit-scrollbar {
-        -webkit-appearance: none;
-    }
-    
-    .filterOpen::-webkit-scrollbar:vertical {
-        width:7px;
-    }
-    
-    .filterOpen::-webkit-scrollbar-button:increment ,.body::-webkit-scrollbar-button {
-        display: none;
-    } 
-    
-    .filterOpen::-webkit-scrollbar:horizontal {
-        height: 10px;
-    }
-    
-    .filterOpen::-webkit-scrollbar-track {
-        background: rgba(255, 166, 0, 0);        /* color of the tracking area */
-    }
-    
-    .filterOpen::-webkit-scrollbar-thumb {
-        background-color: #0A2239;
-        border-radius: 20px;
-        border: 2px solid #0A2239;
-    }
-    
-    .filterOpen::-webkit-scrollbar-track {
-        border-radius: 10px;  
-    }
-    
-    .inputsContainer{
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-direction: column;
-        width: 100%;
+        display: unset;
+        padding: 10px 20px;
+        border-radius: 10px;
+        margin-top: 10px;
+        background-color: white;
+        position: absolute;
+        border: 1px solid #0A2239;
+        top: 100%;
+        z-index: 100;
+        width: max-content;
+        left: -50%;
     }
     .containerTitleInput h2{
-        font-size: 23px;
+        font-size: 20px;
         margin-bottom: 5px;
     }
-    .buttonsContainer{
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-    }
-    .optionsContainer{
-        flex-wrap: wrap;
+    .buttonInactive{
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
     .inputStyle{
         margin-top: 5px;
@@ -354,3 +326,115 @@
         margin-bottom: 5px;
     }
 }
+
+@media screen and (max-width: 650px){
+    .nav{
+        justify-content: space-around;
+    }
+    .containerFiltros{
+        padding: 5px 5px;
+    }
+    .separador{
+        height: 15px;
+    }
+    .filterIcon small{
+        margin-left: 5px;
+    }
+    .inputBusqueda{
+        width: 80px;
+    }
+    .containerIconSearch{
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@media screen and (max-width: 504px){
+    .filterOpen{
+        padding: 0px 0px;
+        width: 406px;
+        right: -40%;
+    }
+    .inputStyle{
+        width: 25%;
+        padding: 2px 10px;
+    }
+    .inputsContainer{
+        justify-content: center;
+    }   
+    .buttonInactive{
+        font-size: 12px;
+        padding: 5px 9px;
+    }
+    .buttonActive{
+        font-size: 12px;
+        padding: 5px 9px;
+    }
+}
+
+@media screen and (max-width: 444px){
+    .filterOpen{
+        left: -45%;
+        width: 390px;
+    }
+}
+
+@media screen and (max-width: 415px){
+    .filterOpen{
+        left: -40%;
+    }
+}
+
+@media screen and (max-width: 390px){
+    .filterOpen{
+        left: -30%;
+        width: 319px;
+    }
+    .buttonInactive{
+        font-size: 12px;
+        padding: 5px 9px;
+    }
+    .buttonActive{
+        font-size: 12px;
+        padding: 5px 9px;
+    }
+    .containerTitleInput h2{
+        font-size: 18px;
+    }
+    .filterIcon img{
+        width: 15px;
+        height: 15px;
+    }
+    .filterIcon small{
+        font-size: 7px;
+    }
+    .inputBusqueda::placeholder{
+        font-size: 10px;
+    }
+    .inputBusqueda{
+        font-size: 10px;
+    }
+    .sugerenciaCard strong{
+        margin-left: 10px;
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 350px){
+    .filterOpen{
+        left: -29%;
+        width: 305px;
+    }
+    .containerIconSearch{
+        height: 25px;
+        width: 25px;
+        margin-left: 3px;
+    }
+    .containerIconSearch img{
+        height: 15px;
+        width: 15px;
+    }
+}
+
+
+

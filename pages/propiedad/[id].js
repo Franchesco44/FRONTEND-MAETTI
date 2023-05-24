@@ -75,6 +75,9 @@ const propiedad = () => {
                             </a>
                         </div>
                         <strong className={styles.zona}> {propiedad.zona} </strong>
+                        <div style={{display: "flex", justifyContent: "center", alignItems: "center", marginTop: "10px"}}>
+                            <div className={styles.separador}></div>
+                        </div>
                     </div>
                     <div className={styles.precio}>
                         <h2 className={styles.ocultMobile}>{isTranslate ? propiedad.tituloIngles : propiedad.titulo}</h2>

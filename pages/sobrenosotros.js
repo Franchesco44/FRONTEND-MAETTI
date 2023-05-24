@@ -24,6 +24,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
+        <title>{isTranslate ? "About us" : "Sobre nosotros"}</title>
       </Head>
       {isTranslate ?  
       <Header 

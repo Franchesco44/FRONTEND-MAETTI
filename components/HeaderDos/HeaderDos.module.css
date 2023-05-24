@@ -73,6 +73,7 @@
     align-items: flex-end;
     justify-content: space-around;
     width: 100%;
+    margin-top: 0px;
   }
 
 @media screen and (max-width: 400px){
@@ -81,21 +82,15 @@
     }
 }
 
-
-
 @media screen and (max-width: 650px)  {
-  .HeaderDosContainer{
-    padding-top: 60px;
-  }
+
 }
 
 @media screen and (max-width: 443px)  {
-  .HeaderDosContainer{
-    padding-top: 100px;
-  }
+
 }
 
-@media screen and (max-width: 390px)  {
+@media screen and (max-width: 500px)  {
   .items li{
     font-size: 20px;
   }
