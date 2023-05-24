@@ -68,7 +68,7 @@
 
 @media screen and (max-width: 376px){
     .containerLogo img{
-        height: 80px;
+        height: 60px;
         width: 80px;
     }
     .itemFooter a{
