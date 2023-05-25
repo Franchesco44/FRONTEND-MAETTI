@@ -15,7 +15,6 @@ const BeneficiosContainer = () => {
             const beneficios = await axios.get('https://api-maetti.up.railway.app/beneficiosSubidos')
             const data = await beneficios.data
             dispatch(setBeneficios(data))
-            console.log(data)
         } catch (error) {
             console.log(error)
         }

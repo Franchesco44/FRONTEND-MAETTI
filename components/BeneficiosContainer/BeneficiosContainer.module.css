@@ -202,7 +202,6 @@
         font-size: 15px;
     }
     .containerSocial{
-        margin-top: 10px;
         padding: 5px 20px;
     }
     .descripcionBeneficio{
@@ -251,7 +250,7 @@
     }
 }
 
-@media screen and (max-width: 415px){
+@media screen and (max-width: 429px){
     .descripcionBeneficio{
         font-size: 9px;
     }
@@ -263,6 +262,11 @@
     }
 }
 
+@media screen and (max-width: 391px){
+    .cardSocial strong{
+        font-size: 5px;
+    }
+}
 
 @media screen and (max-width: 370px){
     .tituloContainer h2{
@@ -276,7 +280,7 @@
     }
 }
 
-@media screen and (max-width: 350px){
+@media screen and (max-width: 370px){
     .logoContainer{
         height: 50px;
         width: 50px;
