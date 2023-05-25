@@ -45,7 +45,7 @@ function MyApp({ Component, pageProps }) {
               <Nav/>
               <WhatsApp/>
               <Component {...pageProps} />
-              <Footer/>
+              {/* <Footer/> */}
             </NextUIProvider>
         </Provider>
         </>

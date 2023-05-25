@@ -88,7 +88,7 @@
     display: unset;
     flex-direction: column;
     position: absolute;
-    padding: 10px;
+    padding: 5px 10px;;
     border: 2px solid #011529;
     border-radius: 10px;
     background-color: white;
@@ -103,22 +103,24 @@
 }
 
 .dropdownItem{
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .dropdownItem a{
-    font-size: 20px;
+    font-size: 18px;
+    letter-spacing: 1px;
     font-weight: 600;
     color: #011529 !important;
 }
 
 .dropdownItem strong{
     cursor: pointer;
-    font-size: 20px;
+    font-size: 18px;
+    letter-spacing: 1px;
     margin-right: 5px;
     color: #011529 !important;
 }
@@ -188,30 +190,42 @@
 
 @media screen and (max-width: 520px) {
     .nav{
-        padding: 0;
+        padding: 0px 10px;
     }
-}
-
-@media screen and (max-width: 370px){
     .dropdownTitle strong{
-        font-size: 13px;
-    }
-    .dropdownItem a{
-        font-size: 13px;
+        font-size: 10px;
     }
     .dropdownItem strong{
+        font-size: 13px;
+    }
+    .dropdownItem{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .dropdownItem a{
         font-size: 13px;
     }
     .lenguajeContainer small{
         font-size: 13px;
     }
+    .dropdown{
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 370px){
     .logo{
         width: 54px;
         height: 32px;
-        margin-left: 5px;
     }
     .filterIcon img{
         height: 14px;
         width: 14px;
+    }
+}
+
+@media screen and (max-width: 347px){
+    .nav{
+        padding: 0px 5px;
     }
 }

@@ -69,11 +69,11 @@ const Nav = () => {
                         <small  onClick={() =>  {
                             dispatch(español())
                             setIsOpen(false)
-                        }}>{isTranslate ? "Spanish" : "Español"} </small>
+                        }}>{isTranslate ? "-Spanish" : "-Español"} </small>
                         <small  onClick={() => {
                             dispatch(english())
                             setIsOpen(false)
-                        }}>{isTranslate ? "English" : "Ingles"} </small>
+                        }}>{isTranslate ? "-English" : "-Ingles"} </small>
                     </div>
                     <div className={styles.dropdownItem} onClick={() => setIsOpen(false)}>
                         <Link href={"/sobrenosotros"}>{isTranslate ? "About us" : "Sobre nosotros"} </Link>

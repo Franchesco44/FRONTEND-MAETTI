@@ -37,10 +37,10 @@
 
 @media screen and (max-width:500px){
     .containerQuienesSomos p{
-        font-size: 15px;
+        font-size: 18px;
     }
     .containerQuienesSomos h2{
-        margin-top: 20px;
+        margin-top: 0px;
         margin-bottom: 20px;
         font-size: 35px;
     }

@@ -9,6 +9,7 @@ import { setStaticNav } from '../redux/navSlice/navSlice';
 import { useEffect } from 'react';
 import { setIsInicio } from '../redux/propiedadesSlice/propiedadesSlice';
 import AcercaDe from '../components/AcercaDe/AcercaDe';
+import Footer from '../components/Footer/Footer';
 
 export default function Home() {
 
@@ -42,6 +43,7 @@ export default function Home() {
       <QueHacemos/>
       <AcercaDe/>
       <FormularioContacto/>
+      <Footer/>
     </div>
   )
 }

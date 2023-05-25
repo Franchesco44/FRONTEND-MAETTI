@@ -8,9 +8,9 @@ const HeaderTres = () => {
         <div className={styles.headerContainer}>
             <div className={styles.containerFondoAzul}>
                 <Image
-                src={"/letrasmaetti.png"}
-                width={300}
-                height={50}
+                src={"/maettiagency.png"}
+                width={650}
+                height={150}
                 alt="logomaetti"
                 />
                 <div className={styles.buttonsContainer}>

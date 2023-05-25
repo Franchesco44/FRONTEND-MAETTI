@@ -216,7 +216,9 @@ const FiltrosNav = () =>{
                             height={35}
                             alt="ubicacionicono"
                             />
-                            <strong>{u}</strong>
+                            <div style={{display:"flex", width: "100%", justifyContent: "center"}}>
+                                <strong>{u}</strong>
+                            </div>
                         </div>
                     ))}
                 </div>
@@ -228,11 +230,11 @@ const FiltrosNav = () =>{
                     <h2>{isTranslate ? "Price range" : "Rango de precios"} </h2>
                     <div className={styles.inputsContainer}>
                         <div className={styles.inputStyle}>
-                            <small>Min</small>
+                            <strong>Min</strong>
                             <input type="number" placeholder="10" onChange={priceMinVehiculo}/>
                         </div>
                         <div className={styles.inputStyle}>
-                            <small>Max</small>
+                            <strong>Max</strong>
                             <input type="number" placeholder="300" onChange={priceMaxVehiculo}/>
                         </div>
                     </div>
@@ -275,11 +277,11 @@ const FiltrosNav = () =>{
                     <h2>{isTranslate ? "Price range" : "Rango de precios"} </h2>
                     <div className={styles.inputsContainer}>
                         <div className={styles.inputStyle}>
-                            <small>Min</small>
+                            <strong>Min</strong>
                             <input type="number" placeholder="10" onChange={priceMin}/>
                         </div>
                         <div className={styles.inputStyle}>
-                            <small>Max</small>
+                            <strong>Max</strong>
                             <input type="number" placeholder="300" onChange={priceMax}/>
                         </div>
                     </div>
@@ -287,7 +289,7 @@ const FiltrosNav = () =>{
                 <div className={styles.containerTitleInput}>
                     <h2>{isTranslate ? "Order from" : "Ordenar por"} </h2>
                     <div className={styles.buttonsContainer}>
-                        <button className={MayorAMenor ? styles.buttonActive :  styles.buttonInactive}
+                        <button style={{marginLeft:10, marginRight: 10}} className={MayorAMenor ? styles.buttonActive :  styles.buttonInactive}
                         onClick={()=>{
                             if(MenorAMayor){
                                 setMenorAMayor(false)
@@ -300,7 +302,7 @@ const FiltrosNav = () =>{
                             }
                         }}
                         >{isTranslate ? "Major to minor" : "Mayor a menor"} </button>
-                        <button className={MenorAMayor ? styles.buttonActive :  styles.buttonInactive}
+                        <button style={{marginLeft:10, marginRight: 10}} className={MenorAMayor ? styles.buttonActive :  styles.buttonInactive}
                         onClick={()=>{
                             if(MayorAMenor){
                                 setMayorAMenor(false)
@@ -323,31 +325,47 @@ const FiltrosNav = () =>{
                                 return(
                                     <button onClick={() => {
                                         setSelected("8")
-                                        setFiltro({...filtro, huespedes: 8})
+                                        if(selected == "8"){
+                                            setSelected("")
+                                            setFiltro({...filtro, huespedes: 0})
+                                        }else{
+                                            setSelected("8")
+                                            setFiltro({...filtro, huespedes: 8})
+                                        }
                                     }} className={selected == "8" ? styles.buttonActive : styles.buttonInactive}>+ {o} </button>
                                 )
                             }else if(o == "any"){
                                 return(
                                     <button onClick={() => {
-                                        setSelected(o)
-                                        setFiltro({...filtro, huespedes: o})
+                                        if(selected == "any"){
+                                            setSelected("")
+                                            setFiltro({...filtro, huespedes: 0})
+                                        }else{
+                                            setSelected("any")
+                                            setFiltro({...filtro, huespedes: "any"})
+                                        }
                                     }} className={selected == o ? styles.buttonActive : styles.buttonInactive}>{isTranslate ? "Any" : "Todo"} </button>
                                 )
                             }else{
                                 return(
                                     <button onClick={() => {
-                                        setSelected(o)
-                                        setFiltro({...filtro, huespedes: Number(o)})
+                                        if(selected == o){
+                                            setSelected("")
+                                            setFiltro({...filtro, huespedes: 0})
+                                        }else{
+                                            setSelected(o)
+                                            setFiltro({...filtro, huespedes: Number(o)})
+                                        }
                                     }} className={selected == o ? styles.buttonActive : styles.buttonInactive}>{o} </button>
                                 )
                             }
                         })}
                     </div>
                 </div>
-                <div className={styles.containerTitleInput}>
+                <div className={styles.containerTitleInput} style={{marginBottom: 5}}>
                     <h2>{isTranslate ? "Rental type" : "Tipo de alquiler"} </h2>
                     <div className={styles.buttonsContainer}>
-                        <button className={noche ? styles.buttonActive : styles.buttonInactive}
+                        <button style={{marginLeft:10, marginRight: 10}} className={noche ? styles.buttonActive : styles.buttonInactive}
                         onClick={()=>{
                             if(mes){
                                 setMes(false)
@@ -360,7 +378,7 @@ const FiltrosNav = () =>{
                             }
                         }}
                         >{isTranslate ? "Price per night " : "Precio por noche"} </button>
-                        <button className={mes ? styles.buttonActive : styles.buttonInactive}
+                        <button style={{marginLeft:10, marginRight: 10}} className={mes ? styles.buttonActive : styles.buttonInactive}
                         onClick={()=>{
                             if(noche){
                                 setNoche(false)

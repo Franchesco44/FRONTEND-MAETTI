@@ -4,6 +4,11 @@
     justify-content: center;
     background-color: white;
     font-size: 30px;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    top: 0;
+    padding-top: 106px;
 }
 
   .active {
@@ -15,7 +20,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 3px;
+    height: 2px;
     background-color: #0A2239;
     transition: width 1s, transform 1s;
   }
@@ -83,7 +88,24 @@
 }
 
 @media screen and (max-width: 650px)  {
+  .HeaderDosContainer{
+    padding-top: 74px;
+  }
+}
 
+@media screen and (max-width: 570px) {
+  .items{
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .HeaderDosContainer{
+    padding-top: 45px;
+  }
+  .items li{
+    font-size: 15px;
+  }
 }
 
 @media screen and (max-width: 443px)  {
@@ -92,6 +114,6 @@
 
 @media screen and (max-width: 500px)  {
   .items li{
-    font-size: 20px;
+    font-size: 15px;
   }
 }
