@@ -323,7 +323,7 @@ const FiltrosNav = () =>{
                         {options.map((o, index)=>{
                             if(o == "8"){
                                 return(
-                                    <button onClick={() => {
+                                    <button style={{width: "auto"}} onClick={() => {
                                         setSelected("8")
                                         if(selected == "8"){
                                             setSelected("")
@@ -336,7 +336,7 @@ const FiltrosNav = () =>{
                                 )
                             }else if(o == "any"){
                                 return(
-                                    <button onClick={() => {
+                                    <button style={{width: "auto"}} onClick={() => {
                                         if(selected == "any"){
                                             setSelected("")
                                             setFiltro({...filtro, huespedes: 0})
@@ -348,7 +348,7 @@ const FiltrosNav = () =>{
                                 )
                             }else{
                                 return(
-                                    <button onClick={() => {
+                                    <button style={{width: "auto"}} onClick={() => {
                                         if(selected == o){
                                             setSelected("")
                                             setFiltro({...filtro, huespedes: 0})

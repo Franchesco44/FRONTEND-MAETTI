@@ -405,8 +405,14 @@
         left: -50%;
     }
     .inputStyle{
-        width: 30%;
+        width: 40%;
         padding: 0px 10px;
+    }
+    .inputStyle input{
+        font-size: 10px;
+    }
+    .inputStyle input::placeholder{
+        font-size: 10px;
     }
     .inputStyle strong{
         font-size: 10px;
@@ -422,12 +428,14 @@
         padding: 5px 9px;
         margin-right: 5px;
         margin-left: 5px;
+        width: 40%;
     }
     .buttonActive{
         font-size: 12px;
         padding: 5px 9px;
         margin-right: 5px;
         margin-left: 5px;
+        width: 40%;
     }
     .containerTitleInput{
         margin-bottom: 5px;
@@ -441,9 +449,9 @@
     }
 }
 
-@media screen and (max-width: 415px){
+@media screen and (max-width: 419px){
     .filterOpen{
-        left: -40%;
+        left: -50%;
     }
 }
 
