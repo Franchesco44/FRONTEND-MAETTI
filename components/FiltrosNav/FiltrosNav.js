@@ -35,7 +35,7 @@ const FiltrosNav = () =>{
         min: 0,
         max: 0,
         orden: "",
-        huespedes: "",
+        huespedes: 0,
         renta: "",
         ubicacion: ""
     })
@@ -342,7 +342,7 @@ const FiltrosNav = () =>{
                                             setFiltro({...filtro, huespedes: 0})
                                         }else{
                                             setSelected("any")
-                                            setFiltro({...filtro, huespedes: "any"})
+                                            setFiltro({...filtro, huespedes: 0})
                                         }
                                     }} className={selected == o ? styles.buttonNumber : styles.buttonNumberInactive}>{isTranslate ? "Any" : "Todo"} </button>
                                 )

@@ -38,6 +38,10 @@ export const propiedadesSlice = createSlice({
       }else if(payload.payload.renta == "mes"){
         state.dataCopy = state.dataCopy.filter((p) => p.alquiler === "mensual")
       }
+      //Huespedes
+      if(payload.payload.huespedes > 0){
+        state.dataCopy = state.dataCopy.filter((p) => p.huespedes > payload.payload.huespedes)
+      }
       //Rango de precios
       if(payload.payload.min === 0 && payload.payload.max === 0){
         state.dataCopy = state.dataCopy.filter((p) => p.precio > 0)
