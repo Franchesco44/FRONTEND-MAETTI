@@ -1,9 +1,5 @@
 import styles from "./HeaderDos.module.css"
-<<<<<<< HEAD
-import React, { useState } from 'react';
-=======
 import React, { useEffect, useState } from 'react';
->>>>>>> ec7e09e45ade088d8ba4d394837a9722a0d08692
 import { useDispatch, useSelector } from "react-redux";
 import { setIsPropiedades } from "../../redux/propiedadesSlice/propiedadesSlice";
 import { setIsVehiculo } from "../../redux/vehiculosSlice/vehiculosSlice";
