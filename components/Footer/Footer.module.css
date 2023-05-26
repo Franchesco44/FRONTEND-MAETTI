@@ -1,67 +1,109 @@
 .footer{
     display: flex;
-    padding: 30px;
+    padding: 30px 10px;
     position: relative;
     z-index: 99;
-    justify-content: space-around;
     align-items: center;
+    background-color: #0A2239;
+    border-top: 2px solid white;
+}
+
+.containerItemsFooter{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    padding: 0px 20px;
 }
 
 .footer strong{
     margin-bottom: 15px;
 }
 
-.menu{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.containerLogo{
+    border: 3px solid white;
 }
 
-.menu ul{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.footer li{
-    text-decoration: none;
-    color: #0A2239;
-    margin-bottom: 20px;
-    font-weight: 500;
-}
-
-.footer a{
-    text-decoration: none;
-    color: #0A2239;
-    margin-bottom: 20px;
-    font-weight: 500;
-}
-
-.contacto{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.contacto ul{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.item{
+.itemFooter{
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.item li{
+.itemFooter a{
+    color: white;
+    font-weight: 600;
+    font-size: 28px;
+    letter-spacing: 2px;
     margin-left: 10px;
-    margin-bottom: 0px!important;
 }
 
-@media screen and (max-width: 580px){
+@media screen and (max-width: 643px){
     .footer{
-        flex-direction: column;
+        align-items: center;
     }
+    .containerLogo{
+        width: max-content;
+    }
+    .itemFooter a{
+        font-size: 15px;
+    }
+    .icono{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 460px){
+    .containerLogo img{
+        height: 118px;
+        width: 190px;
+    }
+    .itemFooter a{
+        font-size: 12px;
+    }
+    .footer{
+        padding: 10px 10px;
+    }
+    .icono{
+        width: 20px;
+        height: 20px;
+    }
+    .containerItemsFooter{
+        padding: 0px 0px;
+    }
+}
+
+@media screen and (max-width: 391px){
+    .itemFooter a{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 390px){
+    .containerLogo img{
+        height: 96px;
+        width: 137px;
+    }
+    .itemFooter a{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 332px){
+    .containerLogo img{
+        height: 60px;
+        width: 60px;
+    }
+    .itemFooter a{
+        font-size: 10px;
+    }
+    .icono{
+        width: 13px;
+        height: 13px;
+    }
+    
 }

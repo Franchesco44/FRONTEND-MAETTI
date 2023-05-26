@@ -1,46 +1,27 @@
 .acercaDeContainer{
     padding: 30px 130px;
     text-align: center;
-}
-
-.acercaDeContainer ul{
-    list-style: circle;
-}
-
-.acercaDeContainer p{
-    color: black;
-}
-
-.acercaDeContainer strong{
-    color: black;
-    text-align: center;
-}
-
-.acercaDeContainer ul{
-    text-align: start;
-}
-
-.acercaDeContainer ul li{
-    margin-top: 30px;
-    margin-bottom: 30px;
-    font-weight: 500;
-    color: black;
+    background-color: white;
 }
 
 .acercaDeContainer h3{
-    text-align: center;
-    font-size: 25px;
-    color: black;
-}
-
-.acercaDeContainer h2{
-    margin-bottom: 10px;
-    font-size: 25px;
-    color: black;
+    color: #0A2239;
+    font-size: 35px;
+    margin-bottom: 0px;
 }
 
 @media screen and (max-width:800px){
     .acercaDeContainer{
         padding: 30px 70px;
+    }
+}
+
+@media screen and (max-width:490px){
+    .acercaDeContainer{
+        padding: 20px 20px;
+    }
+    .acercaDeContainer h3{
+        color: #0A2239;
+        font-size: 20px;
     }
 }

@@ -2,124 +2,88 @@ import Link from "next/link"
 import styles from "./Nav.module.css"
 import { useSelector, useDispatch } from 'react-redux'
 import {español, english} from "../../redux/translateSlice/translateSlice"
-import { Dropdown } from "@nextui-org/react";
 import Image from 'next/image'
-import {  useState } from "react";
-import { experiencias } from "../../utils/experiencias";
+import {  useState, useRef, useEffect } from "react";
 import { useRouter } from "next/router";
+import FiltrosNav from "../FiltrosNav/FiltrosNav";
+
 
 const Nav = () => {
     const dispatch = useDispatch()
     const isTranslate = useSelector((state) => state.translate.value)
+    const isInicio = useSelector((state) => state.propiedades.isInicio)
     const isFixed = useSelector((state) => state.nav.isFixed)
     const [isOpen, setIsOpen] = useState(false)
+    const [isLanguaje, setIsLanguaje] = useState(false)
     const router = useRouter()
+    const dropdownRef = useRef(null);
+
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+            setIsOpen(false);
+            }
+        }
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
 
     return(
         <nav className={styles.nav}
         style={isFixed ? {position: "fixed"} : {position: "relative"}}>
             <Link href={"/"}>
                 <Image
-                src={"/logoletras.png"}
+                src={"/techologo.png"}
                 width={120}
                 height={60}
                 alt="LogoMaetti"
+                className={styles.logo}
                 />
             </Link>
-            <Image
-            src={"/menu.png"}
-            width={30}
-            height={30}
-            alt="menu"
-            onClick={() => setIsOpen(true)}
-            className={styles.menuIcon}
-            />
-            <div className={styles.navMobile}
-            style={isOpen ? {transform: "translate(0vh)"} : {transform: "translate(-500vw)"}}
-            >
-                <Image
-                src={"/circle.png"}
-                width={30}
-                height={30}
-                alt="closemenu"
-                onClick={() => setIsOpen(false)}
-                />
-                <Link onClick={() => setIsOpen(false)} href={"/"}>{isTranslate ? "Home" : "Inicio"}</Link>
-                <Link onClick={() => setIsOpen(false)} href={"/propiedades"}>{isTranslate ? "Properties" : "Propiedades"}</Link>
-                <Link onClick={() => setIsOpen(false)} href={"/trabajaconnosotros"}>{isTranslate ? "Work with us" : "Trabajá con nosotros"}</Link>
-                <Link onClick={() => setIsOpen(false)} href={"/contacto"}>{isTranslate ? "Contact" : "Contacto"}</Link>
-                <Link onClick={() => setIsOpen(false)} href={"/nosotros"}>{isTranslate ? "About us" : "Nosotros"}</Link>
-                {/* <Dropdown>
-                    <Dropdown.Button color={"default"} light>
-                    {isTranslate ? "Experiences" : "Experiencias"}
-                    </Dropdown.Button>
-                    <Dropdown.Menu
-                    color={"default"}
-                    variant="light"
-                    aria-label="Actions"
-                    onAction={(key)=> router.push(`/experiencia/${key}`)}
-                    >
-                        {experiencias.map((e)=>{
-                            return(
-                            <Dropdown.Item 
-                            key={e.es.titulo}
-                            onClick={() => setIsOpen(false)}
-                            >
-                                {isTranslate ? e.en.titulo : e.es.titulo}
-                            </Dropdown.Item>
-                            )
-                        })}
-                    </Dropdown.Menu>
-                </Dropdown> */}
+            {isInicio ? <FiltrosNav/> : ""}
+            <div className={styles.containerDropdown}>
+                <div className={styles.dropdownTitle}
+                onClick={()=>setIsOpen(!isOpen)}
+                >
+                    <strong>Menu</strong>
+                    <Image 
+                    src={"/arrowdown.png"}
+                    height={10}
+                    width={10}
+                    alt="arrowdownicon"
+                    />
+                </div>
+                <div className={isOpen ? styles.dropdown : styles.dropdownOcult} ref={dropdownRef}>
+                    <div className={styles.dropdownItem} onClick={() => setIsLanguaje(!isLanguaje)}>
+                        <strong>{isTranslate ? "Languaje" : "Lenguaje"} </strong>
+                        <Image 
+                        src={"/arrowdown.png"}
+                        height={10}
+                        width={10}
+                        alt="arrowdownicon"
+                        />
+                    </div>
+                    <div className={isLanguaje ? styles.lenguajeContainer : styles.lenguajeContainerOcult}>
+                        <small  onClick={() =>  {
+                            dispatch(español())
+                            setIsOpen(false)
+                        }}>{isTranslate ? "-Spanish" : "-Español"} </small>
+                        <small  onClick={() => {
+                            dispatch(english())
+                            setIsOpen(false)
+                        }}>{isTranslate ? "-English" : "-Ingles"} </small>
+                    </div>
+                    <div className={styles.dropdownItem} onClick={() => setIsOpen(false)}>
+                        <Link href={"/sobrenosotros"}>{isTranslate ? "About us" : "Sobre nosotros"} </Link>
+                    </div>
+                    <div className={styles.dropdownItem} onClick={() => setIsOpen(false)}>
+                        <Link href={"/beneficios"}>{isTranslate ? "Benefits" : "Beneficios"} </Link>
+                    </div>
+                    
+                </div>
             </div>
-            <ul>
-                <Link href={"/"}>{isTranslate ? "Home" : "Inicio"}</Link>
-                <Link href={"/propiedades"}>{isTranslate ? "Properties" : "Propiedades"}</Link>
-                <Link href={"/trabajaconnosotros"}>{isTranslate ? "Work with us" : "Trabajá con nosotros"}</Link>
-                <Link href={"/contacto"}>{isTranslate ? "Contact" : "Contacto"}</Link>
-                <Link href={"/nosotros"}>{isTranslate ? "About us" : "Nosotros"}</Link>
-                {/* <div className={styles.experienciasLink} >   
-                    <Dropdown>
-                        <Dropdown.Button color={"default"} light>
-                        {isTranslate ? "Experiences" : "Experiencias"}
-                        </Dropdown.Button>
-                        <Dropdown.Menu
-                        color={"default"}
-                        variant="light"
-                        aria-label="Actions"
-                        onAction={(key)=> router.push(`/experiencia/${key}`)}
-                        >
-                            {experiencias.map((e)=>{
-                                return(
-                                <Dropdown.Item 
-                                key={e.es.titulo}
-                                >
-                                    {isTranslate ? e.en.titulo : e.es.titulo}
-                                </Dropdown.Item>
-                                )
-                            })}
-                        </Dropdown.Menu>
-                    </Dropdown>
-                </div> */}
-                <Dropdown>
-                    <Dropdown.Button color={"default"} light>
-                    {isTranslate ? "Language" : "Idioma"}
-                    </Dropdown.Button>
-                    <Dropdown.Menu
-                    color={"default"}
-                    variant="light"
-                    aria-label="Actions"
-                    onAction={(key)=>{key === "español" ? dispatch(español()) : dispatch(english())}}
-                    >
-                        <Dropdown.Item 
-                        key="español"
-                        >{isTranslate ? "Spanish" : "Español"}</Dropdown.Item>
-                        <Dropdown.Item
-                        key="ingles"
-                        >{isTranslate ? "English" : "Ingles"}</Dropdown.Item>
-                    </Dropdown.Menu>
-                </Dropdown>
-            </ul>
         </nav>
     )
 }

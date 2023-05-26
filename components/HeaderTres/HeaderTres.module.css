@@ -1,0 +1,100 @@
+.headerContainer{
+    overflow: hidden;
+    height: 40vh;
+    display: flex;
+    background-image: url("/headerbeneficios.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    border-bottom: 2px solid #0A2239;
+}
+
+.containerFondoAzul{
+    width: 100%;
+    height: 100%;
+    background-color: #0a223947;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.buttonsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.buttonsContainer a{
+    color: white;
+    font-weight: 600;
+    font-size: 35px;
+    padding: 10px 15px;
+    border: 2px solid white;
+    background-color: #0a2239b1;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 978px){
+    .buttonsContainer a{
+        font-size: 25px;
+    }
+    .buttonsContainer{
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 756px){
+    .buttonsContainer a{
+        font-size: 20px;
+        padding: 5px 10px;
+    }
+    .containerFondoAzul img{
+        width: 384px;
+        height: 103px;
+    }
+}
+
+@media screen and (max-width: 590px){
+    .headerContainer{
+        height: 20vh;
+    }
+    .containerFondoAzul{
+        justify-content: center ;
+    }
+    .buttonsContainer a{
+        font-size: 15px;
+        padding: 5px 10px;
+    }
+    .containerFondoAzul img{
+        width: 223px;
+        height: 39px;
+    }
+    .buttonsContainer{
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 446px){
+    .buttonsContainer a{
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+    .containerFondoAzul img{
+        width: 230px;
+        height: 55px;
+    }
+}
+
+@media screen and (max-width: 314px){
+    .buttonsContainer a{
+        font-size: 7px;
+        padding: 3px 8px;
+    }
+}

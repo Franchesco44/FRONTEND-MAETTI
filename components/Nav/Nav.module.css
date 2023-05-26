@@ -9,6 +9,7 @@
     color: black;
     font-weight: 500;
     background-color: white;
+    border-bottom: 3px solid #011529;
 }
 
 .nav button{
@@ -52,7 +53,95 @@
     color: black;
     font-weight: 500;
     margin-top: 20px;
+}
 
+.dropdown span{
+    height: inherit!important;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.dropdown h2{
+    font-size: 16px;
+    color: white;
+    font-weight: 400;
+}
+
+.containerDropdown{
+    position: relative;
+    margin-right: 30px;
+}
+
+.dropdownTitle strong{
+    font-size: 25px;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.dropdownTitle{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dropdown{
+    display: unset;
+    flex-direction: column;
+    position: absolute;
+    padding: 5px 10px;;
+    border: 2px solid #011529;
+    border-radius: 10px;
+    background-color: white;
+    top: 100%;
+    right: 0;
+    margin-top: 10px;
+    width: max-content;
+}
+
+.dropdownOcult{
+    display: none;
+}
+
+.dropdownItem{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdownItem a{
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #011529 !important;
+}
+
+.dropdownItem strong{
+    cursor: pointer;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-right: 5px;
+    color: #011529 !important;
+}
+
+.lenguajeContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.lenguajeContainerOcult{
+    display: none;
+}
+
+.lenguajeContainer small{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    color: #011529;
 }
 
 
@@ -74,5 +163,69 @@
     }
     .menuIcon{
         display: none;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .logo{
+        width: 68px;
+        height: 40px;
+    }
+    .dropdownTitle strong{
+        font-size: 15px;
+    }
+    .nav{
+        padding: 10px 10px;
+    }
+    .containerDropdown{
+        margin-right: 0px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .nav{
+        border-bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .nav{
+        padding: 0px 10px;
+    }
+    .dropdownTitle strong{
+        font-size: 10px;
+    }
+    .dropdownItem strong{
+        font-size: 13px;
+    }
+    .dropdownItem{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .dropdownItem a{
+        font-size: 13px;
+    }
+    .lenguajeContainer small{
+        font-size: 13px;
+    }
+    .dropdown{
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 370px){
+    .logo{
+        width: 54px;
+        height: 32px;
+    }
+    .filterIcon img{
+        height: 14px;
+        width: 14px;
+    }
+}
+
+@media screen and (max-width: 347px){
+    .nav{
+        padding: 0px 5px;
     }
 }

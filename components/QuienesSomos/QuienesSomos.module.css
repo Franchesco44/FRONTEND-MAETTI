@@ -6,10 +6,12 @@
 }
 
 .containerQuienesSomos p{
-    width: 50%;
+    width: 90%;
     text-align: center;
     letter-spacing: 1px;
     color: black;
+    font-weight: 600;
+    font-size: 25px;
 }
 
 .containerQuienesSomos h2{
@@ -17,13 +19,30 @@
     margin-bottom: 30px;
     font-size: 50px;
     font-weight: 500;
-    color: black;
+    color: #0A2239;
     text-align: center;
 }
 
 @media screen and (max-width:800px){
     .containerQuienesSomos p{
         width: 100%;
+    }
+}
+
+@media screen and (max-width:550px){
+    .containerQuienesSomos{
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width:500px){
+    .containerQuienesSomos p{
+        font-size: 18px;
+    }
+    .containerQuienesSomos h2{
+        margin-top: 0px;
+        margin-bottom: 20px;
+        font-size: 35px;
     }
 }
 

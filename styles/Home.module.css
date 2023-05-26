@@ -1,0 +1,40 @@
+.container{
+    scroll-behavior: smooth;
+    padding-top: 100px;
+}
+
+.containerGlobalLista{
+    display: flex;
+    width: 100%;
+    min-height: 90vh;
+    background-color: white;
+    padding-top: 70px;
+}
+
+@media screen and (max-width: 650px){
+    .container{
+        padding-top: 60px;
+    }
+}
+
+
+
+@media screen and (max-width: 570px){
+    .containerGlobalLista{
+        background-color: #0A2239;
+        padding-top: 60px;
+    }
+}
+
+@media screen and (max-width: 520px){
+    .container{
+        padding-top: 33px;
+    }
+    .containerGlobalLista{
+        padding-top: 10px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    
+}

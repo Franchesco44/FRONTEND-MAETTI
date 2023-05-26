@@ -1,0 +1,559 @@
+.container{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.containerFiltros{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 20px;
+    background-color: #0A2239;
+    border-radius: 10px;
+}
+
+.separador{
+    width: 2px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.filterIcon{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+.filterIcon small{
+    color: white;
+    margin-left: 15px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+.inputStyle input[type=number]::-webkit-inner-spin-button,
+.inputStyle input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+.inputStyle input[type=number] { -moz-appearance:textfield; }
+
+.inputBusqueda{
+    background-color: #0A2239;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+.inputBusqueda::placeholder{
+    color: white;
+}
+
+.filterOpen{
+    display: unset;
+    padding: 10px 60px;
+    border-radius: 25px;
+    margin-top: 10px;
+    background-color: white;
+    position: absolute; 
+    border: 2px solid #0A2239;
+    top: 100%;
+    z-index: 100;
+    left: -20%;
+    transition: 0.5s;
+}   
+
+.filterClose{
+    display: none;
+}
+
+.containerIconSearch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    background-color: #0A2239;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.closeContainer{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.closeContainer img{
+    cursor: pointer;
+}
+
+.containerTitleInput{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.containerTitleInput h2{
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.inputsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.inputStyle{
+    padding: 0px 10px;
+    background-color: white;
+    border: 2px solid #0A2239;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.inputStyle input{
+    border: none;
+    background-color: white;
+    color: #0A2239;
+}
+
+.inputStyle strong{
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.buttonsContainer{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.optionsContainer{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.buttonInactive{
+    background-color: white;
+    border: 2px solid #0A2239;
+    color: #0A2239;
+    font-size: 15px;
+    padding: 5px 15px;
+    font-weight: bold!important;
+    border-radius: 10px;
+}
+
+.buttonActive{
+    transition: 0.3s;
+    background-color: #0A2239;
+    border: none;
+    color: white!important;
+    font-size: 15px;
+    border: 2px solid #0A2239;
+    padding: 5px 15px;
+    font-weight: bold!important;
+    border-radius: 10px;
+}
+
+.buttonNumberInactive{
+    background-color: white;
+    border: 2px solid #0A2239;
+    color: #0A2239;
+    font-size: 15px;
+    padding: 5px 15px;
+    font-weight: bold!important;
+    border-radius: 10px;
+}
+
+.buttonNumber{
+    transition: 0.3s;
+    background-color: #0A2239;
+    border: none;
+    color: white!important;
+    font-size: 15px;
+    border: 2px solid #0A2239;
+    padding: 5px 15px;
+    font-weight: bold!important;
+    border-radius: 10px;
+}
+
+.containerInputBusqueda{
+    position: relative;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.sugerencias{
+    display: unset;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 100%;
+    background-color: white;
+    position: absolute; 
+    border: 1px solid #0A2239;
+    top: 100%;
+    height: 300px;
+    z-index: 100;
+}   
+
+.listaSugerencias{
+    height: 90%;
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.listaSugerencias::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.listaSugerencias::-webkit-scrollbar:vertical {
+    width:7px;
+}
+
+.listaSugerencias::-webkit-scrollbar-button:increment ,.body::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.listaSugerencias::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.listaSugerencias::-webkit-scrollbar-track {
+    background: rgba(255, 166, 0, 0);        /* color of the tracking area */
+}
+
+.listaSugerencias::-webkit-scrollbar-thumb {
+    background-color: #0A2239;
+    border-radius: 20px;
+    border: 2px solid #0A2239;
+}
+
+.listaSugerencias::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
+
+
+.sugerenciaCard{
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    border-bottom: 1px solid #0A2239;
+    cursor: pointer;
+}
+
+.sugerenciaCard strong{
+    color: #0A2239;
+}
+
+.containerDeleteFilter{
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.sugerenciasOcult{
+    display: none;
+}
+
+.containerIconSearch img{
+    height: 20px;
+    width: 20px;
+}
+
+@media screen and (max-width: 780px)  {
+    .containerFiltros{
+        padding: 10px 10px;
+    }
+    .separador{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .filterIcon small{
+        margin-left: 10px;
+        font-size: 10px;
+    }
+    .inputStyle{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .inputBusqueda{
+        padding: 0px;
+    }
+    .inputBusqueda::placeholder{
+        font-size: 13px;
+    }
+    .containerIconSearch{
+        height: 40px;
+        width: 40px;
+        margin-left: 5px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .container{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .filterOpen{
+        padding: 10px 10px;
+        display: unset;
+        padding: 10px 20px;
+        border-radius: 10px;
+        margin-top: 10px;
+        background-color: white;
+        position: absolute;
+        border: 1px solid #0A2239;
+        top: 100%;
+        z-index: 100;
+        width: max-content;
+        left: -50%;
+    }
+    .containerTitleInput h2{
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    .buttonActive{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .buttonInactive{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .buttonNumberInactive{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .buttonNumber{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .inputStyle{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .nav{
+        justify-content: space-around;
+    }
+    .containerFiltros{
+        padding: 5px 5px;
+    }
+    .separador{
+        height: 15px;
+    }
+    .filterIcon small{
+        margin-left: 5px;
+    }
+    .inputBusqueda{
+        width: 80px;
+    }
+    .containerIconSearch{
+        height: 30px;
+        width: 30px;
+    }
+}
+
+
+@media screen and (max-width: 587px){
+    .filterOpen{
+        left: -60%;
+        width: 486px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .filterIcon img{
+        width: 15px;
+        height: 15px;
+    }
+    .filterIcon small{
+        font-size: 7px;
+    }
+    
+    .inputBusqueda::placeholder{
+        font-size: 10px;
+    }
+    .inputBusqueda{
+        font-size: 10px;
+    }
+    
+    .containerIconSearch{
+        height: 25px;
+        width: 25px;
+        margin-left: 3px;
+    }
+    .containerIconSearch img{
+        height: 15px;
+        width: 15px;
+    }
+    .containerFiltros{
+        padding: 0px 5px;
+    }
+}
+
+@media screen and (max-width: 504px){
+    .filterOpen{
+        padding: 0px 0px;
+        width: 406px;
+        right: -40%;
+        left: -50%;
+    }
+    .optionsContainer{
+        justify-content: center;
+    }
+    .inputStyle{
+        width: 44%;
+        padding: 0px 10px;
+    }
+    .inputStyle input{
+        font-size: 10px;
+    }
+    .inputStyle input::placeholder{
+        font-size: 10px;
+        color: rgb(55, 55, 55);
+    }
+    .inputStyle strong{
+        font-size: 10px;
+    }
+    .buttonsContainer{
+        justify-content: center;
+    }
+    .inputsContainer{
+        justify-content: center;
+    }   
+    .buttonInactive{
+        font-size: 12px;
+        padding: 5px 9px;
+        margin-right: 5px;
+        margin-left: 5px;
+        width: 40%;
+    }
+    .buttonActive{
+        font-size: 12px;
+        padding: 5px 9px;
+        margin-right: 5px;
+        margin-left: 5px;
+        width: 40%;
+    }
+    .buttonNumberInactive{
+        font-size: 12px;
+        padding: 3px 12px;
+        margin-right: 1px;
+        margin-left: 1px;
+    }
+    .buttonNumber{
+        font-size: 12px;
+        padding: 3px 12px;
+        margin-right: 1px;
+        margin-left: 1px;
+    }
+    .containerTitleInput{
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 444px){
+    .filterOpen{
+        left: -45%;
+        width: 390px;
+    }
+}
+
+@media screen and (max-width: 419px){
+    .filterOpen{
+        left: -50%;
+    }
+}
+
+@media screen and (max-width: 390px){
+    .filterOpen{
+        left: -30%;
+        width: 319px;
+    }
+    .buttonInactive{
+        font-size: 12px;
+        padding: 5px 9px;
+    }
+    .buttonActive{
+        font-size: 12px;
+        padding: 5px 9px;
+    }
+    .containerTitleInput h2{
+        font-size: 18px;
+    }
+    .sugerenciaCard strong{
+        margin-left: 10px;
+        font-size: 13px;
+    }
+    .buttonInactive{
+        font-size: 10px;
+        padding: 5px;
+    }
+    .buttonActive{
+        font-size: 10px;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 399px){
+    .buttonNumberInactive{
+        font-size: 8px;
+        padding: 3px 10px;
+        margin-right: 1px;
+        margin-left: 1px;
+        border-radius: 6px;
+    }
+    .buttonNumber{
+        font-size: 8px;
+        padding: 3px 10px;
+        margin-right: 1px;
+        margin-left: 1px;
+        border-radius: 6px;
+    }
+}
+
+@media screen and (max-width: 350px){
+    .filterOpen{
+        left: -29%;
+        width: 305px;
+    }
+}
+
+
+

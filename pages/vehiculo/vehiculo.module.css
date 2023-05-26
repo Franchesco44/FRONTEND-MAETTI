@@ -1,0 +1,304 @@
+.propiedadContenedor{
+    background-color: #0A2239;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.propiedad{
+    background-color: white;
+    width: 70%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+.carruselItem{
+    display: block;
+    width: 100%;
+    background-size: cover;
+    height: 550px;
+}
+
+.carruselPrecioContainer{
+    display: flex;
+}
+
+.carruselContainer{
+    width: 70%;
+}
+
+.precio h2{
+    font-size: 28px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.propiedad strong{
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.propiedad h3{
+    font-size: 23px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.zona{
+    margin-top: 60px;
+    font-weight: 600;
+    font-size: 25px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.descripcionPrecioContainer{
+    display: flex;
+    padding-top: 20px;
+}
+
+.precio{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    justify-content: center;
+    padding: 15px;
+    height: 100%;
+}
+
+.separador{
+    width: 90%;
+    padding: 2px;
+    background-color: #0A2239;
+    border-radius: 5px;
+}
+
+.descripcionContainer{
+    padding: 5px;
+    height: 100%;
+}
+
+.botones{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.propiedad a{
+    text-decoration: none;
+}
+
+.wp{
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: #25D366;
+    border: none;
+    display: flex;
+    align-items: center;
+    width: max-content;
+}
+
+.wp a{
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    margin-left: 8px;
+    margin-top: 0;
+}
+
+
+
+.wp:hover{
+    color: white;
+}
+
+.airbnb{
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: #FF5A5F;
+    border: none;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    margin-bottom: 30px;
+}
+
+.airbnb a{
+    color: white;
+    font-weight: 500;
+    margin-left: 8px;
+    font-size: 14px;
+    margin-top: 0;
+}
+
+.airbnb:hover{
+    color: white;
+}
+
+.propiedad::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.propiedad::-webkit-scrollbar:vertical {
+    width:7px;
+}
+
+.propiedad::-webkit-scrollbar-button:increment ,.body::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.propiedad::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.propiedad::-webkit-scrollbar-track {
+    background: rgba(255, 166, 0, 0);        
+}
+
+.propiedad::-webkit-scrollbar-thumb {
+    background-color: #0A2239;
+    border: 2px solid #0A2239;
+}
+
+.descripcion{
+    display: flex;
+    flex-direction: column;
+}
+
+.descripcion li{
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 1300px){
+    .wp a{
+        color: white;
+        font-weight: 500;
+        font-size: 10px;
+        margin-left: 5px;
+        margin-top: 0;
+    }
+    .airbnb a{
+        color: white;
+        font-weight: 500;
+        margin-left: 5px;
+        font-size: 10px;
+        margin-top: 0;
+    }
+    .propiedad h3{
+        font-size: 15px;
+    }
+    .precio{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        padding: 15px 5px;
+    }
+    
+}   
+
+@media screen and (max-width:750px){
+    .propiedad{
+        width: 90%;;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .ocultDesktop{
+        display: none;
+    }
+    .precioMobile{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .precioMobile{
+        display: flex;
+        flex-direction: column;
+    }
+    .ocultDesktop{
+        text-align: center;
+    }
+    .containerPrecioBoton{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-top: 10px;
+    }
+    .ocultMobile{
+        display: none;
+    }
+    .carruselPrecioContainer{
+        flex-direction: column;
+    }
+    
+    .carruselContainer{
+        width: 100%;
+    }
+    .precio{
+        display: none;
+        width: 100%;
+        padding: 5px;
+    }
+    .zona{
+        margin-top: 15px;
+    }
+    .precio h2{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .propiedad h3{
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+    .airbnb{
+        margin-bottom: 10px;
+    }
+    .descripcionPrecioContainer{
+        padding-top: 0px;
+    }
+}
+
+@media screen and (max-width:580px){
+    .botones{
+        flex-direction: row;
+    }
+    .airbnb{
+        margin-right: 10px;
+        margin-bottom: 0px;
+    }
+    .propiedadContenedor h2{
+        font-size: 13px;
+    }
+    .textoBoton{
+        display: none;
+    }
+    .propiedad{
+        padding: 10px;
+    }
+    .descripcionContainer{
+        padding: 5px;
+    }
+    .zona{
+        font-size: 13px;
+    }
+    .carruselItem{
+        background-size: contain;
+        height: 300px;
+    }
+}

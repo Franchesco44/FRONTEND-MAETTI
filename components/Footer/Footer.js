@@ -8,61 +8,49 @@ const Footer = () => {
 
     return(
         <footer className={styles.footer}>
-            <div className={styles.menu}>
-                <strong>MENU</strong>
-                <ul>
-                    <Link href={"/"}>{isTranslate ? "Home" : "Inicio"}</Link>
-                    <Link href={"/trabajaconnosotros"}>{isTranslate ? "Work with us" : "Trabaja con nosotros"}</Link>
-                    <Link href={"/contacto"}>{isTranslate ? "Contact" : "Contacto"}</Link>
-                    <Link href={"/propiedades"}>{isTranslate ? "Properties" : "Propiedades"}</Link>
-                    <Link href={"/nosotros"}>{isTranslate ? "About us" : "Nosotros"}</Link>
-                </ul>
-            </div>
-            <div className={styles.contacto}>
-                <strong>{isTranslate ? "CONTACT":"CONTACTO"}</strong>
-                <ul>
-                    <div className={styles.item}>
-                        <Image
-                        src={"/phone.png"}
-                        width={30}
-                        height={30}
-                        alt="Logo telefono"
-                        />
-                        <li>+5492944238597</li>
-                    </div>
-                    <div className={styles.item}>
-                        <Image
-                        src={"/phone.png"}
-                        width={30}
-                        height={30}
-                        alt="Logo telefono"
-                        />
-                        <li>+541122920919</li>
-                    </div>
-                    <a 
-                    style={{display: "flex", alignItems: "center"}}
-                    target={"_blank"} href="https://www.instagram.com/maettioficial/">
-                        <Image
-                        src={"/instagram.png"}
-                        width={30}
-                        height={30}
-                        alt="Logo instagram"
-                        style={{marginRight:"10px"}}
-                        />
-                        <li style={{marginBottom: "0px"}} >maettioficial</li>
-                    </a>
-                </ul>
-            </div>
-            <div className={styles.logo}>
+            <div className={styles.containerLogo}>
                 <Link href={"/"}>
-                    <Image
-                    src={"/logoletras.png"}
-                    width={120}
-                    height={60}
-                    alt="LogoMaetti"
+                    <Image 
+                    src={"/logo.JPG"}
+                    width={150}
+                    height={150}
+                    alt="logomaetti"
                     />
                 </Link>
             </div>
+            <div className={styles.containerItemsFooter}>
+                <div className={styles.itemFooter}>
+                    <Image 
+                    src={"/instagramwhite.png"}
+                    width={50}
+                    height={50}
+                    alt="instagrammaetti"
+                    className={styles.icono}
+                    />
+                    <a target={"_blank"} href="https://www.instagram.com/maettiagency/">@Maettiagency</a>
+                </div>
+                <div className={styles.itemFooter}>
+                    <Image 
+                    src={"/mailwhite.png"}
+                    width={50}
+                    height={50}
+                    alt="mailmaetti"
+                    className={styles.icono}
+                    />
+                    <a target={"_blank"} href="mailto:maettiagency@gmail.com">Maettiagency@gmail.com</a>
+                </div>
+                <div className={styles.itemFooter}>
+                    <Image 
+                    src={"/phonewhite.png"}
+                    width={50}
+                    height={50}
+                    alt="telefonomaetti"
+                    className={styles.icono}
+                    />
+                    <a target={"_blank"} href="https://wa.me/5491122920919?text=Hola,%20Me%20gustaria%20mas%20informacion">+54 9 11 2292-0919</a>
+                </div>
+            </div>
+            
         </footer>
     )
 }

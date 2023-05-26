@@ -10,7 +10,8 @@
 .containerQueHacemos h3{
     color: #F6F7EB;
     font-size: 50px;
-    margin-bottom: 50px;
+    border: 2px solid #F6F7EB;
+    padding: 10px 20px;
 }
 
 .cards{
@@ -18,7 +19,7 @@
     align-items: flex-start;
     justify-content: space-around;
     width: 100%;
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 .card{
@@ -26,51 +27,98 @@
     position: relative;
     flex-direction: column;
     align-items: center;
-    background-color: #F6F7EB;
-    padding: 40px 15px;
-    width: 30%;
+    width: 45%;
 }
 
 .card strong{
-    font-size: 25px;
-    padding-top: 50px;
-    color: black;
+    font-size: 35px;
+    color: white;
     text-align: center;
 }
 
 .card ul{
-    background-color: #F6F7EB;
+    background-color: white;
     list-style: circle;
-    margin-top: 20px;
-    padding: 0px 30px;
+    width: 100%;
+    margin: 0;
+    padding-left: 10px;
 }
 
 .card ul li{
-    background-color: #F6F7EB;
+    background-color: white;
     margin-bottom: 20px;
     color: black;
+    font-weight: 600;
+    font-size: 22px;
 }
 
-.icono{
+.cardPartOne{
+    background-color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background-color: #0C0805;
-    border-radius: 50%;
-    position: absolute;
-    top: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 20px;
+    width: 100%;
 }
 
-@media screen and (max-width: 850px){
-    .cards{
-        flex-direction: column;
-        align-items: center;
+.cardPartOne strong{
+    color: #0A2239;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.cardPartTwo{
+    width: 100%;
+    padding: 10px 20px;
+    background-color: white;
+}
+
+@media screen and (max-width: 810px){
+    .containerQueHacemos h3{
+        font-size: 30px;
     }
+    .containerQueHacemos{
+        padding: 10px;
+    }
+    .card strong{
+        font-size: 20px;
+    }
+    .cardPartOne strong{
+        font-size: 14px;
+    }
+    .card ul li{
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 495px){
     .card{
-        width: 90%;
-        margin-bottom: 70px;
+        width: 48%;
+    }
+    .containerQueHacemos h3{
+        font-size: 20px;
+    }
+    .card strong{
+        font-size: 15px;
+    }
+    .cardPartOne strong{
+        font-size: 10px;
+        
+    }
+    .cardPartOne{
+        padding: 7px;
+    }
+    .card ul li{
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+
+@media screen and (max-width: 361px){
+    .card strong{
+        font-size: 12px;
     }
 }

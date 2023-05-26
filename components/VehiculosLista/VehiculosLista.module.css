@@ -1,0 +1,150 @@
+.containerVehiculos{
+    padding: 20px;
+    width: 100%;
+    overflow: auto;
+}
+
+.containerVehiculos::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.containerVehiculos::-webkit-scrollbar:vertical {
+    width:7px;
+}
+
+.containerVehiculos::-webkit-scrollbar-button:increment ,.body::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.containerVehiculos::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.containerVehiculos::-webkit-scrollbar-track {
+    background: rgba(255, 166, 0, 0);        /* color of the tracking area */
+}
+
+.containerVehiculos::-webkit-scrollbar-thumb {
+    background-color: #0A2239;
+    border-radius: 20px;
+    border: 2px solid #0A2239;
+}
+
+.containerVehiculos::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
+
+.containerVehiculos h3{
+    color: black;
+}
+
+.listaVehiculos{
+    display: grid;
+    row-gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(20%, 20%));
+    justify-items: center;
+    width: 100%;
+}
+
+.containerVehiculos h3{
+    margin-bottom: 20px;
+}
+
+.vehiculos{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+}
+
+.vehiculos h4{
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.viewmore{
+    padding: 15px 20px;
+    font-weight: 600;
+    color: #F6F7EB;
+    background-color: #0A2239;
+    border-radius: 10px;
+    border: none;
+    width: max-content;
+    margin-top: 10px;
+    border: 1px solid white;
+}
+
+.viewmore:hover{
+    transition: 0.5s;
+    color: #F6F7EB;
+    border: 1px solid #0A2239;
+}
+
+.infoContainer{
+    background-color: #0A2239;
+    padding: 10px;
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.vehiculos strong{
+    color: white;
+}
+
+.vehiculos .imagen{
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.carruselItem{
+    display: block;
+    width: 100%;
+    background-size: cover;
+    height: 250px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+@media screen and (max-width: 840px)  {
+    .listaVehiculos{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .containerVehiculos{
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 570px)  {
+    .listaVehiculos{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .containerVehiculos{
+        background-color: white;
+        margin: 0px 10px;
+        padding: 33px 0px;
+    }
+    .vehiculos strong{
+        font-size: 13px;
+    }
+    .vehiculos .imagen{
+        height: 150px;
+    }
+    .vehiculos h4{
+        font-size: 13px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 330px){
+    .listaVehiculos{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}   

@@ -11,23 +11,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #0A2239;
 }
 
 .containerFormulario h3{
     font-size: 50px;
     text-align: center;
-    color: black;
+    color: white;
+    padding: 10px 20px;
+    border: 3px solid white;
 }
 
 .containerFormulario input[type="text"]{
     border: 1px solid #0A2239;
     padding: 10px;
     border-radius: 10px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
     width: 100%;
     background-color: white;
-    color: black;
+    color: #0A2239;
 }
 
 .containerFormulario input[type="email"]{
@@ -35,10 +38,10 @@
     background-color: white;
     padding: 10px;
     border-radius: 10px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
     width: 100%;
-    color: black;
+    color: #0A2239;
 }
 
 .containerFormulario input[type="email"]:focus{
@@ -58,7 +61,19 @@
     padding: 10px;
     border-radius: 10px;
     width: 100%;
-    color: black;
+    color: #0A2239;
+}
+
+.containerFormulario input[type="email"]::placeholder{
+    color: #0A2239;
+}
+
+.containerFormulario input[type="text"]::placeholder{
+    color: #0A2239;
+}
+
+.containerFormulario textarea::placeholder{
+    color: #0A2239;
 }
 
 .containerFormulario textarea:focus{
@@ -70,14 +85,50 @@
     margin-top: 20px;
     color: #0A2239;
     border: 1px solid #0A2239;
-    padding: 10px 15px;
+    padding: 10px 30px;
     cursor: pointer;
     background-color: white;
     border-radius: 10px;
+    font-size: 25px;
+    font-weight: 600;
 }
 
 @media screen and (max-width: 850px){
     .containerFormulario form{
         width: 70%;
     }
+}
+
+@media screen and (max-width: 550px){
+    .containerFormulario form{
+        width: 100%;
+    }
+    .containerFormulario input[type="text"]{
+        border: 1px solid #0A2239;
+        padding: 5px 10px;
+        border-radius: 10px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        width: 100%;
+        background-color: white;
+        color: #0A2239;
+    }
+    .containerFormulario input[type="email"]{
+        border: 1px solid #0A2239;
+        background-color: white;
+        padding: 5px 10px;
+        border-radius: 10px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        width: 100%;
+        color: #0A2239;
+    }
+    .containerFormulario h3{
+        font-size: 25px;
+    }
+    .containerFormulario input[type="submit"]{
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+
 }
