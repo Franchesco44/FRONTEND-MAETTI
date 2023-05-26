@@ -7,6 +7,7 @@ import Carousel from 'react-bootstrap/Carousel'
 import Image from "next/image";
 import { setStaticNav } from "../../redux/navSlice/navSlice";
 import { setIsInicio } from "../../redux/propiedadesSlice/propiedadesSlice";
+import Footer from "../../components/Footer/Footer";
 
 const vehiculo = () => {
     const router = useRouter()
@@ -42,81 +43,88 @@ const vehiculo = () => {
     }, [id])
 
     return(
-        <div className={styles.propiedadContenedor} >
-            <div className={styles.propiedad}>
-                <div className={styles.carruselPrecioContainer}>
-                <h2 className={styles.ocultDesktop}>{vehiculoInfo.titulo}</h2>
-                    <div className={styles.carruselContainer} >
-                        <Carousel interval={null}>
-                            {vehiculoInfo?.imagen?.map((i,index)=>{
-                                return(
-                                    <Carousel.Item key={index}>
-                                        <div
-                                        style={{backgroundImage: `url(https://api-maetti.up.railway.app/${i})`
-                                        , backgroundPosition: "center", backgroundRepeat: "no-repeat"
-                                    }}
-                                        className={styles.carruselItem}
-                                        />
-                                    </Carousel.Item>
-                                )
-                            })}
-                        </Carousel>
-                    </div>
-                    <div className={styles.precioMobile}>
-                        <div className={styles.containerPrecioBoton}>
-                            <h3> ${vehiculoInfo.precio}USD | {vehiculoInfo.alquiler?.toUpperCase()} </h3>
-                            <a target={"_blank"} href={`https://wa.me/5492944238597?text=Hola!%20Como%20estas?%20Estoy%20interesado%20en%20la%20propiedad%20${tituloWp}`} className={styles.wp}>
-                                <Image
-                                src={'/wpblanco.png'}
-                                width={30}
-                                height={30}
-                                />
-                                <a className={styles.textoBoton} target={"_blank"} href={`https://wa.me/5492944238597?text=Hola!%20Como%20estas?%20Estoy%20interesado%20en%20la%20propiedad%20${tituloWp}`} >CONSULTAR POR WHATSAPP</a>
-                            </a>
+        <>
+            <div className={styles.propiedadContenedor} >
+                <div className={styles.propiedad}>
+                    <div className={styles.carruselPrecioContainer}>
+                    <h2 className={styles.ocultDesktop}>{vehiculoInfo.titulo}</h2>
+                        <div className={styles.carruselContainer} >
+                            <Carousel interval={null}>
+                                {vehiculoInfo?.imagen?.map((i,index)=>{
+                                    return(
+                                        <Carousel.Item key={index}>
+                                            <div
+                                            style={{backgroundImage: `url(https://api-maetti.up.railway.app/${i})`
+                                            , backgroundPosition: "center", backgroundRepeat: "no-repeat"
+                                        }}
+                                            className={styles.carruselItem}
+                                            />
+                                        </Carousel.Item>
+                                    )
+                                })}
+                            </Carousel>
                         </div>
-                        <strong className={styles.zona}> {vehiculoInfo.zona} </strong>
-                    </div>
-                    <div className={styles.precio}>
-                        <h2>{vehiculoInfo.titulo}</h2>
-                        <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                            <div className={styles.separador}></div>
+                        <div className={styles.precioMobile}>
+                            <div className={styles.containerPrecioBoton}>
+                                <h3> ${vehiculoInfo.precio}USD | {vehiculoInfo.alquiler?.toUpperCase()} </h3>
+                                <a target={"_blank"} href={`https://wa.me/5492944238597?text=Hola!%20Como%20estas?%20Estoy%20interesado%20en%20la%20propiedad%20${tituloWp}`} className={styles.wp}>
+                                    <Image
+                                    src={'/wpblanco.png'}
+                                    width={30}
+                                    height={30}
+                                    />
+                                    <a className={styles.textoBoton} target={"_blank"} href={`https://wa.me/5492944238597?text=Hola!%20Como%20estas?%20Estoy%20interesado%20en%20la%20propiedad%20${tituloWp}`} >CONSULTAR POR WHATSAPP</a>
+                                </a>
+                            </div>
+                            <strong className={styles.zona}> {vehiculoInfo.zona} </strong>
+                            <div style={{display: "flex", justifyContent: "center", alignItems: "center", marginTop: "10px"}}>
+                                <div className={styles.separador}></div>
+                            </div>
                         </div>
-                        <h3> {vehiculoInfo.precio}USD | {isTranslate ? "Day" : "Dia"} </h3>
-                        <div className={styles.botones}>
-                            <a target={"_blank"} href={`https://wa.me/5492944238597?text=Hola!%20Como%20estas?%20Estoy%20interesado%20en%20el%20vehiculo%20${tituloWp}`} className={styles.wp}>
-                                <Image
-                                src={'/wpblanco.png'}
-                                width={30}
-                                height={30}
-                                />
-                                <a className={styles.textoBoton} target={"_blank"} href={`https://wa.me/5492944238597?text=Hola!%20Como%20estas?%20Estoy%20interesado%20en%20el%20vehiculo%20${tituloWp}`} >CONSULTAR POR WHATSAPP</a>
-                            </a>
+                        <div className={styles.precio}>
+                            <h2>{vehiculoInfo.titulo}</h2>
+                            <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                                <div className={styles.separador}></div>
+                            </div>
+                            <h3> {vehiculoInfo.precio}USD | {isTranslate ? "Day" : "Dia"} </h3>
+                            <div className={styles.botones}>
+                                <a target={"_blank"} href={`https://wa.me/5492944238597?text=Hola!%20Como%20estas?%20Estoy%20interesado%20en%20el%20vehiculo%20${tituloWp}`} className={styles.wp}>
+                                    <Image
+                                    src={'/wpblanco.png'}
+                                    width={30}
+                                    height={30}
+                                    />
+                                    <a className={styles.textoBoton} target={"_blank"} href={`https://wa.me/5492944238597?text=Hola!%20Como%20estas?%20Estoy%20interesado%20en%20el%20vehiculo%20${tituloWp}`} >CONSULTAR POR WHATSAPP</a>
+                                </a>
+                            </div>
+                            <strong className={styles.zona}> {vehiculoInfo.zona} </strong>
                         </div>
-                        <strong className={styles.zona}> {vehiculoInfo.zona} </strong>
                     </div>
-                </div>
-                <div className={styles.descripcionPrecioContainer}>
-                    <div className={styles.descripcionContainer}>
-                        <ul className={styles.descripcion}>
-                            {isTranslate ?
-                            descripcionIngles.map((item, index)=>{
-                                return(
-                                    <li key={index}> {item} </li>
-                                )
-                            })
-                            :
-                            descripcion.map((item, index)=>{
-                                return(
-                                    <li key={index}> {item} </li>
-                                )
-                            })
-                            }
-                        </ul>
+                    <div className={styles.descripcionPrecioContainer}>
+                        <div className={styles.descripcionContainer}>
+                            <ul className={styles.descripcion}>
+                                {isTranslate ?
+                                descripcionIngles.map((item, index)=>{
+                                    return(
+                                        <li key={index}> {item} </li>
+                                    )
+                                })
+                                :
+                                descripcion.map((item, index)=>{
+                                    return(
+                                        <li key={index}> {item} </li>
+                                    )
+                                })
+                                }
+                            </ul>
+                        </div>
+                        
                     </div>
-                    
                 </div>
             </div>
-        </div>
+            <Footer/>
+        </>
+        
     )
 }
 

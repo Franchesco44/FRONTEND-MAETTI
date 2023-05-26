@@ -31,6 +31,7 @@ const VehiculosLista = () => {
             <div className={styles.listaVehiculos} >
                 {vehiculos.map((p, index)=>{
                     return(
+<<<<<<< HEAD
                         <div className={styles.vehiculos} key={index}>
                             <Carousel interval={null}>
                                 {p.imagen.map((i,index)=>{
@@ -52,6 +53,31 @@ const VehiculosLista = () => {
                                 <Link href={`/vehiculo/${p._id}`} className={styles.viewmore}>{isTranslate ? "VIEW MORE" : "VER MAS"}</Link>
                             </div>
                         </div>  
+=======
+                        <Link href={`/vehiculo/${p._id}`} style={{width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center"}}>
+                            <div className={styles.vehiculos} key={index}>
+                                <Carousel interval={null}>
+                                    {p.imagen.map((i,index)=>{
+                                        return(
+                                            <Carousel.Item key={index}>
+                                                <div
+                                                style={{backgroundImage: `url(https://api-maetti.up.railway.app/${i})`
+                                                , backgroundPosition: "center", backgroundRepeat: "no-repeat"
+                                            }}
+                                                className={styles.carruselItem}
+                                                />
+                                            </Carousel.Item>
+                                        )
+                                    })}
+                                </Carousel>
+                                <div className={styles.infoContainer}>
+                                    <h4> {p.titulo} </h4>
+                                    <strong> ${p.precio} USD | {isTranslate ? "Day" : "Dia"} </strong>
+                                </div>
+                            </div>  
+                        </Link>
+                        
+>>>>>>> ec7e09e45ade088d8ba4d394837a9722a0d08692
                     )
                 })}
             </div>

@@ -3,9 +3,10 @@ import styles from "./Nav.module.css"
 import { useSelector, useDispatch } from 'react-redux'
 import {español, english} from "../../redux/translateSlice/translateSlice"
 import Image from 'next/image'
-import {  useState } from "react";
+import {  useState, useRef, useEffect } from "react";
 import { useRouter } from "next/router";
 import FiltrosNav from "../FiltrosNav/FiltrosNav";
+
 
 const Nav = () => {
     const dispatch = useDispatch()
@@ -15,6 +16,19 @@ const Nav = () => {
     const [isOpen, setIsOpen] = useState(false)
     const [isLanguaje, setIsLanguaje] = useState(false)
     const router = useRouter()
+    const dropdownRef = useRef(null);
+
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+            setIsOpen(false);
+            }
+        }
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
 
     return(
         <nav className={styles.nav}
@@ -41,7 +55,7 @@ const Nav = () => {
                     alt="arrowdownicon"
                     />
                 </div>
-                <div className={isOpen ? styles.dropdown : styles.dropdownOcult}>
+                <div className={isOpen ? styles.dropdown : styles.dropdownOcult} ref={dropdownRef}>
                     <div className={styles.dropdownItem} onClick={() => setIsLanguaje(!isLanguaje)}>
                         <strong>{isTranslate ? "Languaje" : "Lenguaje"} </strong>
                         <Image 
@@ -52,13 +66,19 @@ const Nav = () => {
                         />
                     </div>
                     <div className={isLanguaje ? styles.lenguajeContainer : styles.lenguajeContainerOcult}>
-                        <small  onClick={() =>  dispatch(español())}>{isTranslate ? "Spanish" : "Español"} </small>
-                        <small  onClick={() =>  dispatch(english())}>{isTranslate ? "English" : "Ingles"} </small>
+                        <small  onClick={() =>  {
+                            dispatch(español())
+                            setIsOpen(false)
+                        }}>{isTranslate ? "-Spanish" : "-Español"} </small>
+                        <small  onClick={() => {
+                            dispatch(english())
+                            setIsOpen(false)
+                        }}>{isTranslate ? "-English" : "-Ingles"} </small>
                     </div>
-                    <div className={styles.dropdownItem}>
+                    <div className={styles.dropdownItem} onClick={() => setIsOpen(false)}>
                         <Link href={"/sobrenosotros"}>{isTranslate ? "About us" : "Sobre nosotros"} </Link>
                     </div>
-                    <div className={styles.dropdownItem}>
+                    <div className={styles.dropdownItem} onClick={() => setIsOpen(false)}>
                         <Link href={"/beneficios"}>{isTranslate ? "Benefits" : "Beneficios"} </Link>
                     </div>
                     

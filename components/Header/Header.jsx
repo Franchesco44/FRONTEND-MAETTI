@@ -11,26 +11,30 @@ const Header = ({text, img, button}) => {
             <div 
             className={styles.containerUno}>
                 <h2>{text}</h2>
-                <Image
-                src={"/letrasmaetti.png"}
-                width={150}
-                height={25}
-                alt="Logo letras maettti"
-                />
-                {button ? <a href="#quehacemos"> {isTranslate ? "+ INFORMATION" : "+ INFORMACIÓN"} </a> : ""}
+                <div className={styles.containerLogoBoton}>
+                    <Image
+                    src={"/letrasmaetti.png"}
+                    width={220}
+                    height={40}
+                    alt="Logo letras maettti"
+                    />
+                    {button ? <a href="#quehacemos"> {isTranslate ? "+ INFORMATION" : "+ INFORMACIÓN"} </a> : ""}
+                </div>
             </div>
             <div 
             style={{backgroundImage: `url(${img})`}}
             className={styles.containerMobile}>
                 <h2>{text}</h2>
-                <Image
-                src={"/letrasmaetti.png"}
-                width={150}
-                height={25}
-                alt="Logo letras maettti"
-                />
-                {button ? <Link href={"#quehacemos"}> {isTranslate ? "+ INFORMATION" : "+ INFORMACIÓN"} </Link> : ""}
-                <div className={styles.fondoAzul}></div>
+                <div className={styles.containerLogoBoton}>
+                    <Image
+                    src={"/letrasmaetti.png"}
+                    width={150}
+                    height={25}
+                    alt="Logo letras maettti"
+                    />
+                    {button ? <Link href={"#quehacemos"}> {isTranslate ? "+ INFORMATION" : "+ INFORMACIÓN"} </Link> : ""}
+                    <div className={styles.fondoAzul}></div>
+                </div>
             </div>
             <div 
             style={{backgroundImage: `url(${img})`}}

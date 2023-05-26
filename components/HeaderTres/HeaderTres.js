@@ -6,16 +6,19 @@ const HeaderTres = () => {
     const isTranslate = useSelector((state) => state.translate.value)
     return(
         <div className={styles.headerContainer}>
-            <Image
-            src={"/letrasmaetti.png"}
-            width={300}
-            height={50}
-            alt="logomaetti"
-            />
-            <div className={styles.buttonsContainer}>
-                <a href="#huespedes">{isTranslate ? "Guests Benefits" : "Beneficios para los huéspedes"} </a>
-                <a href="#propietarios">{isTranslate ? "Owner Benefits" : "Beneficios para el propietario"}</a>
+            <div className={styles.containerFondoAzul}>
+                <Image
+                src={"/maettiagency.png"}
+                width={650}
+                height={150}
+                alt="logomaetti"
+                />
+                <div className={styles.buttonsContainer}>
+                    <a  href="#huespedes">{isTranslate ? "Guests Benefits" : "Beneficios de huéspedes"} </a>
+                    <a href="#propietarios">{isTranslate ? "Owner Benefits" : "Beneficios de propietario"}</a>
+                </div>
             </div>
+            
         </div>
     )
 }

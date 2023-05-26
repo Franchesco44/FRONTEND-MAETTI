@@ -7,10 +7,21 @@
 .acercaDeContainer h3{
     color: #0A2239;
     font-size: 35px;
+    margin-bottom: 0px;
 }
 
 @media screen and (max-width:800px){
     .acercaDeContainer{
         padding: 30px 70px;
+    }
+}
+
+@media screen and (max-width:490px){
+    .acercaDeContainer{
+        padding: 20px 20px;
+    }
+    .acercaDeContainer h3{
+        color: #0A2239;
+        font-size: 20px;
     }
 }

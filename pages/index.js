@@ -6,6 +6,9 @@ import { setStaticNav } from '../redux/navSlice/navSlice';
 import { useEffect } from 'react';
 import VehiculosLista from '../components/VehiculosLista/VehiculosLista'
 import { setIsInicio } from '../redux/propiedadesSlice/propiedadesSlice';
+import styles from "../styles/Home.module.css"
+import ContenedorGlobal from '../components/ContenedorGlobal/ContenedorGlobal';
+import Footer from '../components/Footer/Footer';
 
 const propiedades = () => {
     const isTranslate = useSelector((state) => state.translate.value)
@@ -22,16 +25,13 @@ const propiedades = () => {
             <Head>
                 <title>{isTranslate ? "Home" : "Inicio"}</title>
             </Head>
-            <HeaderDos/>
-            <div
-            style={{
-                display: "flex",
-                width: "100%",
-                height: "80vh"
-            }}
-            >
-                {isPropiedades ? <PropiedadesLista/> : <VehiculosLista/> }
-            </div>
+            <ContenedorGlobal>
+                <HeaderDos/>
+                <div className={styles.containerGlobalLista}>
+                    {isPropiedades ? <PropiedadesLista/> : <VehiculosLista/> }
+                </div>
+                <Footer/>
+            </ContenedorGlobal>
         </>
     )
 }

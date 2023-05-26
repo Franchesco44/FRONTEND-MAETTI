@@ -15,7 +15,6 @@ const BeneficiosContainer = () => {
             const beneficios = await axios.get('https://api-maetti.up.railway.app/beneficiosSubidos')
             const data = await beneficios.data
             dispatch(setBeneficios(data))
-            console.log(data)
         } catch (error) {
             console.log(error)
         }
@@ -41,7 +40,7 @@ const BeneficiosContainer = () => {
                                 <div className={styles.cardBeneficios}>
                                     <div className={styles.logoContainer} style={{backgroundImage: `url(https://api-maetti.up.railway.app/${b.imagen})`}}/>
                                     <div className={styles.containerInfo}>
-                                        <strong>{isTranslate ? b.descripcionIngles : b.descripcion} </strong>
+                                        <h4 className={styles.descripcionBeneficio}>{isTranslate ? b.descripcionIngles : b.descripcion} </h4>
                                         <div className={styles.containerSocial}>
                                             <div className={styles.cardSocial}>
                                                 <Image
@@ -85,7 +84,7 @@ const BeneficiosContainer = () => {
                                 <div className={styles.cardBeneficios}>
                                     <div className={styles.logoContainer} style={{backgroundImage: `url(https://api-maetti.up.railway.app/${b.imagen})`}}/>
                                     <div className={styles.containerInfo}>
-                                        <strong>{isTranslate ? b.descripcionIngles : b.descripcion} </strong>
+                                        <h4 className={styles.descripcionBeneficio}>{isTranslate ? b.descripcionIngles : b.descripcion} </h4>
                                         <div className={styles.containerSocial}>
                                             <div className={styles.cardSocial}>
                                                 <Image
