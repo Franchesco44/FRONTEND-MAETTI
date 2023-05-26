@@ -14,7 +14,7 @@ const HeaderTres = () => {
                 alt="logomaetti"
                 />
                 <div className={styles.buttonsContainer}>
-                    <a href="#huespedes">{isTranslate ? "Guests Benefits" : "Beneficios de huéspedes"} </a>
+                    <a  href="#huespedes">{isTranslate ? "Guests Benefits" : "Beneficios de huéspedes"} </a>
                     <a href="#propietarios">{isTranslate ? "Owner Benefits" : "Beneficios de propietario"}</a>
                 </div>
             </div>

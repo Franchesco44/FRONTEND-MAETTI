@@ -200,6 +200,7 @@
     }
     .tituloContainer p{
         font-size: 15px;
+        padding: 0px 15px;
     }
     .containerSocial{
         padding: 5px 20px;
