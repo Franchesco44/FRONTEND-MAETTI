@@ -242,7 +242,7 @@ const FiltrosNav = () =>{
                 <div className={styles.containerTitleInput}>
                     <h2>{isTranslate ? "Order from" : "Ordenar por"} </h2>
                     <div className={styles.buttonsContainer}>
-                        <button className={mayorVehiculos ? styles.buttonActive :  styles.buttonInactive}
+                        <button style={{marginLeft:10, marginRight: 10}} className={mayorVehiculos ? styles.buttonActive :  styles.buttonInactive}
                         onClick={()=>{
                             if(menorVehiculos){
                                 setMenorVehiculos(false)
@@ -255,7 +255,7 @@ const FiltrosNav = () =>{
                             }
                         }}
                         >{isTranslate ? "Major to minor" : "Mayor a menor"} </button>
-                        <button className={menorVehiculos ? styles.buttonActive :  styles.buttonInactive}
+                        <button style={{marginLeft:10, marginRight: 10}} className={menorVehiculos ? styles.buttonActive :  styles.buttonInactive}
                         onClick={()=>{
                             if(mayorVehiculos){
                                 setMayorVehiculos(false)
@@ -332,7 +332,7 @@ const FiltrosNav = () =>{
                                             setSelected("8")
                                             setFiltro({...filtro, huespedes: 8})
                                         }
-                                    }} className={selected == "8" ? styles.buttonActive : styles.buttonInactive}>+ {o} </button>
+                                    }} className={selected == "8" ? styles.buttonNumber : styles.buttonNumberInactive}>+ {o} </button>
                                 )
                             }else if(o == "any"){
                                 return(
@@ -344,7 +344,7 @@ const FiltrosNav = () =>{
                                             setSelected("any")
                                             setFiltro({...filtro, huespedes: "any"})
                                         }
-                                    }} className={selected == o ? styles.buttonActive : styles.buttonInactive}>{isTranslate ? "Any" : "Todo"} </button>
+                                    }} className={selected == o ? styles.buttonNumber : styles.buttonNumberInactive}>{isTranslate ? "Any" : "Todo"} </button>
                                 )
                             }else{
                                 return(
@@ -356,7 +356,7 @@ const FiltrosNav = () =>{
                                             setSelected(o)
                                             setFiltro({...filtro, huespedes: Number(o)})
                                         }
-                                    }} className={selected == o ? styles.buttonActive : styles.buttonInactive}>{o} </button>
+                                    }} className={selected == o ? styles.buttonNumber : styles.buttonNumberInactive}>{o} </button>
                                 )
                             }
                         })}

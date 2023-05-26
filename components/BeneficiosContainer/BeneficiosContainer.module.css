@@ -252,13 +252,13 @@
 
 @media screen and (max-width: 429px){
     .descripcionBeneficio{
-        font-size: 9px;
+        font-size: 7px;
     }
     .containerSocial{
         padding: 5px 10px;
     }
     .logoContainer{
-        width: 54px;
+        width: 72px;
     }
 }
 

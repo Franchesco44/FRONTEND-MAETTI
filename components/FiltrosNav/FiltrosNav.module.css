@@ -172,6 +172,28 @@
     border-radius: 10px;
 }
 
+.buttonNumberInactive{
+    background-color: white;
+    border: 2px solid #0A2239;
+    color: #0A2239;
+    font-size: 15px;
+    padding: 5px 15px;
+    font-weight: bold!important;
+    border-radius: 10px;
+}
+
+.buttonNumber{
+    transition: 0.3s;
+    background-color: #0A2239;
+    border: none;
+    color: white!important;
+    font-size: 15px;
+    border: 2px solid #0A2239;
+    padding: 5px 15px;
+    font-weight: bold!important;
+    border-radius: 10px;
+}
+
 .containerInputBusqueda{
     position: relative;
     margin-left: 5px;
@@ -323,15 +345,23 @@
         font-size: 20px;
         margin-bottom: 5px;
     }
+    .buttonActive{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
     .buttonInactive{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .buttonNumberInactive{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .buttonNumber{
         margin-top: 5px;
         margin-bottom: 5px;
     }
     .inputStyle{
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
-    .buttonInactive{
         margin-top: 5px;
         margin-bottom: 5px;
     }
@@ -437,6 +467,18 @@
         margin-left: 5px;
         width: 40%;
     }
+    .buttonNumberInactive{
+        font-size: 12px;
+        padding: 3px 12px;
+        margin-right: 1px;
+        margin-left: 1px;
+    }
+    .buttonNumber{
+        font-size: 12px;
+        padding: 3px 12px;
+        margin-right: 1px;
+        margin-left: 1px;
+    }
     .containerTitleInput{
         margin-bottom: 5px;
     }
@@ -485,7 +527,20 @@
     }
 }
 
-
+@media screen and (max-width: 399px){
+    .buttonNumberInactive{
+        font-size: 8px;
+        padding: 3px 10px;
+        margin-right: 1px;
+        margin-left: 1px;
+    }
+    .buttonNumber{
+        font-size: 8px;
+        padding: 3px 10px;
+        margin-right: 1px;
+        margin-left: 1px;
+    }
+}
 
 @media screen and (max-width: 350px){
     .filterOpen{

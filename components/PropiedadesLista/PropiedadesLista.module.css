@@ -133,7 +133,7 @@
     .PropiedadesListaContainer{
         background-color: white;
         margin: 0px 10px;
-        padding: 5px 0px;
+        padding: 33px 0px;
     }
     .propiedad strong{
         font-size: 13px;
@@ -148,6 +148,7 @@
         margin-bottom: 5px;
     }
 }
+
 
 @media screen and (max-width: 330px){
     .listaPropiedades{
