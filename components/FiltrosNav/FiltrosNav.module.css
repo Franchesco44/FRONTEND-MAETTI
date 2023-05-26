@@ -434,8 +434,11 @@
         right: -40%;
         left: -50%;
     }
+    .optionsContainer{
+        justify-content: center;
+    }
     .inputStyle{
-        width: 40%;
+        width: 44%;
         padding: 0px 10px;
     }
     .inputStyle input{
@@ -443,6 +446,7 @@
     }
     .inputStyle input::placeholder{
         font-size: 10px;
+        color: rgb(55, 55, 55);
     }
     .inputStyle strong{
         font-size: 10px;
@@ -533,12 +537,14 @@
         padding: 3px 10px;
         margin-right: 1px;
         margin-left: 1px;
+        border-radius: 6px;
     }
     .buttonNumber{
         font-size: 8px;
         padding: 3px 10px;
         margin-right: 1px;
         margin-left: 1px;
+        border-radius: 6px;
     }
 }
 

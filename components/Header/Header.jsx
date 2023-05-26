@@ -14,8 +14,8 @@ const Header = ({text, img, button}) => {
                 <div className={styles.containerLogoBoton}>
                     <Image
                     src={"/letrasmaetti.png"}
-                    width={150}
-                    height={25}
+                    width={220}
+                    height={40}
                     alt="Logo letras maettti"
                     />
                     {button ? <a href="#quehacemos"> {isTranslate ? "+ INFORMATION" : "+ INFORMACIÓN"} </a> : ""}
