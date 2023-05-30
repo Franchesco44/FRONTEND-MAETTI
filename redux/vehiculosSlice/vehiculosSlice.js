@@ -4,7 +4,13 @@ const initialState = {
   data: [],
   dataCopy: [],
   isVehiculos: false,
-  busqueda: ""
+  busqueda: "",
+  filtro:{
+    min: 0,
+    max: 0,
+    orden: "",
+    ubicacion: ""
+}
 }
 export const vehiculosSlice = createSlice({
   name: 'vehiculos',
@@ -26,6 +32,7 @@ export const vehiculosSlice = createSlice({
       }
     },
     setBusquedaVehiculos: (state, payload) => {
+      state.filtro = payload.payload
       //Ubicacion
       if(payload.payload.ubicacion !== ""){
         console.log(payload.payload.ubicacion)

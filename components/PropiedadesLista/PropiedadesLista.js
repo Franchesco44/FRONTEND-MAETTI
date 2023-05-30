@@ -2,7 +2,7 @@ import styles from "./PropiedadesLista.module.css"
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from "react"
 import axios from "axios"
-import { setPropiedades } from "../../redux/propiedadesSlice/propiedadesSlice"
+import { setBusqueda, setPropiedades } from "../../redux/propiedadesSlice/propiedadesSlice"
 import Link from "next/link"
 import Carousel from 'react-bootstrap/Carousel'
 
@@ -11,13 +11,14 @@ const PropiedadesLista = () => {
     const dispatch = useDispatch()
     const propiedades = useSelector((state)=> state.propiedades.dataCopy)
     const isTranslate = useSelector((state) => state.translate.value)
+    const filtros = useSelector((state) => state.propiedades.filtro)
 
     const getPropiedades = async () => {
         try {
             const propiedades = await axios.get('https://api-maetti.up.railway.app/propiedadesSubidas')
             const data = await propiedades.data
             dispatch(setPropiedades(data))
-            console.log(data)
+            dispatch(setBusqueda(filtros))
         } catch (error) {
             console.log(error)
         }

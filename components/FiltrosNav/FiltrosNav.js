@@ -73,15 +73,24 @@ const FiltrosNav = () =>{
 
     useEffect(()=>{
         propiedades.forEach((element) => {
-            ubicacionesArray.push(element.zona)
+            if(element.zona === undefined){
+                return 
+            }else{
+                ubicacionesArray.push(element.zona)
+            }
         });
         const ubicacionesSinDuplicados = new Set(ubicacionesArray)
         setUbicaciones([...ubicacionesSinDuplicados])
+        console.log(ubicaciones)
     }, [propiedades])
 
     useEffect(()=>{
         vehiculos.forEach((element) => {
-            vehiculosArray.push(element.zona)
+            if(element.zona === undefined){
+                return
+            }else{
+                vehiculosArray.push(element.zona)
+            }
         })
         const vehiculosSinDuplicados = new Set(vehiculosArray)
         setUbisVehiculos([...vehiculosSinDuplicados])
@@ -100,6 +109,7 @@ const FiltrosNav = () =>{
             dispatch(setSugerencias(true))
         }else{
             dispatch(setFilterOpen(false))
+            console.log(ubicaciones)
             const filtroPropiedades = ubicaciones.filter((location) =>
                 location.toLowerCase().includes(event.target.value.toLowerCase())
             )
@@ -107,6 +117,8 @@ const FiltrosNav = () =>{
             setUbicacionPropiedad(event.target.value)
             setFiltro({...filtro, ubicacion: event.target.value})
             dispatch(setSugerencias(true))
+            
+            
         }
     }
 
