@@ -109,7 +109,6 @@ const FiltrosNav = () =>{
             dispatch(setSugerencias(true))
         }else{
             dispatch(setFilterOpen(false))
-            console.log(ubicaciones)
             const filtroPropiedades = ubicaciones.filter((location) =>
                 location.toLowerCase().includes(event.target.value.toLowerCase())
             )
@@ -117,8 +116,6 @@ const FiltrosNav = () =>{
             setUbicacionPropiedad(event.target.value)
             setFiltro({...filtro, ubicacion: event.target.value})
             dispatch(setSugerencias(true))
-            
-            
         }
     }
 
