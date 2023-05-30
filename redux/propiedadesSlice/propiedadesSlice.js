@@ -5,7 +5,15 @@ const initialState = {
   dataCopy: [],
   isPropiedades: true,
   isInicio: true,
-  busqueda: ""
+  busqueda: "",
+  filtro: {
+    min: 0,
+    max: 0,
+    orden: "",
+    huespedes: 0,
+    renta: "",
+    ubicacion: ""
+  }
 }
 export const propiedadesSlice = createSlice({
   name: 'propiedades',
@@ -24,9 +32,9 @@ export const propiedadesSlice = createSlice({
       }
     },
     setBusqueda: (state, payload) => {
+      state.filtro = payload.payload
       //Ubicacion
       if(payload.payload.ubicacion !== ""){
-        console.log(payload.payload.ubicacion)
         state.dataCopy = state.data.filter((p) => p.zona === payload.payload.ubicacion)
         state.busqueda = payload.payload.ubicacion
       }else{
