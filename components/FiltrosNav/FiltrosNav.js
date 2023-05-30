@@ -73,15 +73,24 @@ const FiltrosNav = () =>{
 
     useEffect(()=>{
         propiedades.forEach((element) => {
-            ubicacionesArray.push(element.zona)
+            if(element.zona === undefined){
+                return 
+            }else{
+                ubicacionesArray.push(element.zona)
+            }
         });
         const ubicacionesSinDuplicados = new Set(ubicacionesArray)
         setUbicaciones([...ubicacionesSinDuplicados])
+        console.log(ubicaciones)
     }, [propiedades])
 
     useEffect(()=>{
         vehiculos.forEach((element) => {
-            vehiculosArray.push(element.zona)
+            if(element.zona === undefined){
+                return
+            }else{
+                vehiculosArray.push(element.zona)
+            }
         })
         const vehiculosSinDuplicados = new Set(vehiculosArray)
         setUbisVehiculos([...vehiculosSinDuplicados])

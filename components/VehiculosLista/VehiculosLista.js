@@ -4,19 +4,20 @@ import { useEffect } from "react"
 import Link from "next/link"
 import Carousel from 'react-bootstrap/Carousel'
 import axios from "axios"
-import { setVehiculos } from "../../redux/vehiculosSlice/vehiculosSlice"
+import { setVehiculos, setBusquedaVehiculos } from "../../redux/vehiculosSlice/vehiculosSlice"
 
 const VehiculosLista = () => {
     const dispatch = useDispatch()
     const vehiculos = useSelector((state)=> state.vehiculos.dataCopy)
     const isTranslate = useSelector((state) => state.translate.value)
+    const filtros = useSelector((state) => state.vehiculos.filtro)
 
     const getVehiculos = async () => {
         try {
             const vehiculos = await axios.get('https://api-maetti.up.railway.app/vehiculosSubidos')
             const data = await vehiculos.data
             dispatch(setVehiculos(data))
-            console.log(data)
+            dispatch(setBusquedaVehiculos(filtros))
         } catch (error) {
             console.log(error)
         }
