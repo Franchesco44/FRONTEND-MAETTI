@@ -35,11 +35,10 @@ export const vehiculosSlice = createSlice({
       state.filtro = payload.payload
       //Ubicacion
       if(payload.payload.ubicacion !== ""){
-        console.log(payload.payload.ubicacion)
-        state.dataCopy = state.data.filter((p) => p.zona === payload.payload.ubicacion)
+        //state.dataCopy = state.data.filter((p) => p.zona === payload.payload.ubicacion)
+        state.dataCopy = state.data.filter((p) => p.zona.toLowerCase().includes(payload.payload.ubicacion.toLowerCase()))
         state.busqueda = payload.payload.ubicacion
       }else{
-        console.log("Sin ubicacion")
         state.dataCopy = state.data
       }
       //Rango de precios

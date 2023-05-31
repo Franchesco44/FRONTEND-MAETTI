@@ -36,7 +36,8 @@ export const propiedadesSlice = createSlice({
       state.filtro = payload.payload
       //Ubicacion
       if(payload.payload.ubicacion !== ""){
-        state.dataCopy = state.data.filter((p) => p.zona === payload.payload.ubicacion)
+        //state.dataCopy = state.data.filter((p) => p.zona === payload.payload.ubicacion)
+        state.dataCopy = state.data.filter((p) => p.zona.toLowerCase().includes(payload.payload.ubicacion.toLowerCase()))
         state.busqueda = payload.payload.ubicacion
       }else{
         state.dataCopy = state.data
