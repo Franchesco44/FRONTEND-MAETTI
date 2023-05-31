@@ -81,7 +81,6 @@ const FiltrosNav = () =>{
         });
         const ubicacionesSinDuplicados = new Set(ubicacionesArray)
         setUbicaciones([...ubicacionesSinDuplicados])
-        console.log(ubicaciones)
     }, [propiedades])
 
     useEffect(()=>{
@@ -181,6 +180,7 @@ const FiltrosNav = () =>{
             onClick={()=>{
                 dispatch(setSugerencias(false))
                 dispatch(setFilterOpen(false))
+                console.log(ubicacionPropiedad)
                 dispatch(setBusqueda(filtro))
             }}
             >
