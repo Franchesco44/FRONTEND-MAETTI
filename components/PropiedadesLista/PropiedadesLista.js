@@ -51,7 +51,12 @@ const PropiedadesLista = () => {
                                 </Carousel>
                                 <div className={styles.infoContainer}>
                                     <h4> {isTranslate ? p.tituloIngles : p.titulo} </h4>
-                                    <strong> ${p.precio} USD | {p.alquiler} </strong>
+                                    {isTranslate ? 
+                                    <strong> ${p.precio} USD | {p.alquiler === "noche" ? "night" : "month"}</strong>
+                                    : 
+                                    <strong> ${p.precio} USD | {p.alquiler}</strong>
+                                    }
+                                    
                                 </div>
                             </div>  
                         </Link>
