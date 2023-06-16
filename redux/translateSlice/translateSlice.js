@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
-  value: true
+  value: false
 }
 export const translateSlice = createSlice({
   name: 'translate',

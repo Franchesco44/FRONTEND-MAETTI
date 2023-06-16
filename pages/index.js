@@ -24,6 +24,7 @@ const propiedades = () => {
         <>
             <Head>
                 <title>{isTranslate ? "Home" : "Inicio"}</title>
+                
             </Head>
             <ContenedorGlobal>
                 <HeaderDos/>
