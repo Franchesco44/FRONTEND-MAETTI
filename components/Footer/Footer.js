@@ -27,7 +27,7 @@ const Footer = () => {
                     alt="instagrammaetti"
                     className={styles.icono}
                     />
-                    <a target={"_blank"} href="https://www.instagram.com/maettiagency/">@Maettiagency</a>
+                    <a target={"_blank"} href="https://www.instagram.com/maettioficial/">@maettioficial</a>
                 </div>
                 <div className={styles.itemFooter}>
                     <Image 
