@@ -11,9 +11,9 @@ const QueHacemos = () => {
                 <div className={styles.card}>
                     <strong>{isTranslate ? "Simple management" : ""} </strong>
                     <div className={styles.cardPartOne}>
-                        <strong> {isTranslate ? "WITHOUT EXCLUSIVITY 12% commission" : "SIN EXCLUSIVIDAD 12% de comisión"}</strong>
-                        <strong> {isTranslate ? "WITH EXCLUSIVITY 8% commission" : "CON EXCLUSIVIDAD 8% de comisión"}</strong>
-                        <strong> {isTranslate ? "(contract for 6 months of exclusivity)" : "(contrato de 6 meses de exclusividad)"}</strong>
+                        <strong> {isTranslate ? "SIMPLE PLAN" : "PLAN SIMPLE"}</strong>
+                        <strong> {isTranslate ? "12% OF COMMISSION" : "12% DE COMISION"}</strong>
+                        
                     </div>
                     <div className={styles.cardPartTwo}>
                         <ul>
@@ -29,9 +29,9 @@ const QueHacemos = () => {
                 <div className={styles.card}>
                     <strong>{isTranslate ? "Full management" : ""} </strong>
                     <div className={styles.cardPartOne}>
-                    <strong> {isTranslate ? "WITHOUT EXCLUSIVITY 12% commission" : "SIN EXCLUSIVIDAD 12% de comisión"}</strong>
-                        <strong> {isTranslate ? "WITH EXCLUSIVITY 8% commission" : "CON EXCLUSIVIDAD 8% de comisión"}</strong>
-                        <strong> {isTranslate ? "(contract for 6 months of exclusivity)" : "(contrato de 6 meses de exclusividad)"}</strong>
+                    <strong> {isTranslate ? "FULL MANAGMENT" : "GESTION COMPLETA"}</strong>
+                        <strong> {isTranslate ? "25% OF COMMISSION" : "25% DE COMISIÓN"}</strong>
+                        <strong> {isTranslate ? "(9 months of exclusivity)" : "(9 meses de exclusividad)"}</strong>
                     </div>
                     <div className={styles.cardPartTwo}>
                         <ul>
@@ -43,7 +43,7 @@ const QueHacemos = () => {
                             <li>{isTranslate ? "Confirmation of Reservations" : "Confirmación de reservas"}</li>
                             <li>{isTranslate ? "Check in y check out" : "Check in y check out"}</li>
                             <li>{isTranslate ? "Housekeeping" : "Limpieza"}</li>
-                            <li>{isTranslate ? "Only available for Bariloche at the moment" : "Sólo disponible para Bariloche por el momento"}</li>
+                            <li>{isTranslate ? "Only available for Bariloche, Mendoza and Capital Federal at the moment" : "Sólo disponible para Bariloche, Mendoza y Capital Federal por el momento"}</li>
                         </ul>
                     </div>
                 </div>
