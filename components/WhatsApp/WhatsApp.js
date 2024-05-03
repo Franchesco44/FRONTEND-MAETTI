@@ -11,7 +11,7 @@ const WhatsApp = () => {
             marginRight: 10,
             marginBottom: 10
         }}>
-            <a target={"_blank"} href="https://wa.me/5492944238597?text=Hola,%20Me%20gustaria%20mas%20informacion">
+            <a target={"_blank"} href="https://wa.me/5491124034641?text=Hola,%20Me%20gustaria%20mas%20informacion">
                 <Image
                 src={"/wp2.png"}
                 width={65}
