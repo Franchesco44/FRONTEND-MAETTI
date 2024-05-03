@@ -73,7 +73,7 @@ const propiedad = () => {
                                     width={30}
                                     height={30}
                                     />
-                                    <a className={styles.textoBoton} target={"_blank"} href={`https://wa.me/5492944238597?text=Hola!%20Como%20estas?%20Estoy%20interesado%20en%20la%20propiedad%20${tituloWp}`} >CONSULTAR POR WHATSAPP</a>
+                                    <a className={styles.textoBoton} target={"_blank"} href={`https://wa.me/5491124034641?text=Hola!%20Como%20estas?%20Estoy%20interesado%20en%20la%20propiedad%20${tituloWp}`} >CONSULTAR POR WHATSAPP</a>
                                 </a>
                             </div>
                             <strong className={styles.zona}> {propiedad.zona} </strong>
@@ -88,13 +88,13 @@ const propiedad = () => {
                             </div>
                             <h3> ${propiedad.precio}USD | {propiedad.alquiler?.toUpperCase()} </h3>
                             <div className={styles.containerBoton}>
-                                <a target={"_blank"} href={`https://wa.me/5492944238597?text=Hola!%20Como%20estas?%20Estoy%20interesado%20en%20la%20propiedad%20${tituloWp}`} className={styles.wp}>
+                                <a target={"_blank"} href={`https://wa.me/5491124034641?text=Hola!%20Como%20estas?%20Estoy%20interesado%20en%20la%20propiedad%20${tituloWp}`} className={styles.wp}>
                                     <Image
                                     src={'/wpblanco.png'}
                                     width={30}
                                     height={30}
                                     />
-                                    <a className={styles.textoBoton} target={"_blank"} href={`https://wa.me/5492944238597?text=Hola!%20Como%20estas?%20Estoy%20interesado%20en%20la%20propiedad%20${tituloWp}`} >CONSULTAR POR WHATSAPP</a>
+                                    <a className={styles.textoBoton} target={"_blank"} href={`https://wa.me/5491124034641?text=Hola!%20Como%20estas?%20Estoy%20interesado%20en%20la%20propiedad%20${tituloWp}`} >CONSULTAR POR WHATSAPP</a>
                                 </a>
                             </div>
                             <strong className={styles.zona}> {propiedad.zona} </strong>
